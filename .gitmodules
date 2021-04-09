@@ -1,0 +1,3 @@
+[submodule "libraries/spar-dev"]
+	path = libraries/spar-dev
+	url = git@github.com:GMAP/spar-dev.git

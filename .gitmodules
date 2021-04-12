@@ -1,3 +1,6 @@
 [submodule "libraries/spar-dev"]
 	path = libraries/spar-dev
 	url = git@github.com:GMAP/spar-dev.git
+[submodule "libraries/fastflow"]
+	path = libraries/fastflow
+	url = git@github.com:fastflow/fastflow.git

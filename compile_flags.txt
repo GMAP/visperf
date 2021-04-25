@@ -1,2 +1,3 @@
 -std=c++17
 -I./libraries/fastflow
+-I/usr/include/opencv4

@@ -22,8 +22,9 @@ class Worker : public ff_node {
 
     void *svc(void *task) {
         int *t = (int *)task;
-        std::cout << "Worker " << ff_node::get_my_id() << " received task "
-                  << *t << "\n";
+        std::cout << "Worker " << ff_node::get_my_id() << " (" << ff_getMyCore()
+                  << ")"
+                  << " received task " << *t << "\n";
         return task;
     }
 };

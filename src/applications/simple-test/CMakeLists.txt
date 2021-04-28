@@ -1,9 +1,11 @@
+cmake_minimum_required(VERSION 3.16)
+
 set(CMAKE_CXX_STANDARD 17)
 # set(CMAKE_CXX_FLAGS_DEBUG "-g")
 # set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 # Core to be used on mapping.
-add_compile_options(-DMAPPING_STRING="11")
+# add_compile_options(-DMAPPING_STRING="11")
 
 add_executable(ff-farm ff-farm.cpp)
 target_include_directories(ff-farm PRIVATE "../../../libraries/fastflow")

@@ -5,5 +5,5 @@ rm -rf $script_dir/../build
 mkdir $script_dir/../build
 cd $script_dir/../build
 
-cmake -DCMAKE_PREFIX_PATH="" ..
+cmake -DCMAKE_BUILD_TYPE=Debug ..
 cmake --build . --config Debug

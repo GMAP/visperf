@@ -1,0 +1,3892 @@
+perf 55920 [009] 40225.547397:          1                    cpu-cycles: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060e13a [unknown] ([kernel.kallsyms])
+	ffffffffb0608328 [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547410:          1                  cache-misses: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060e13a [unknown] ([kernel.kallsyms])
+	ffffffffb0608328 [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547413:          1                    cpu-cycles: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060e13a [unknown] ([kernel.kallsyms])
+	ffffffffb0608328 [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547416:          1                  cache-misses: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060e13a [unknown] ([kernel.kallsyms])
+	ffffffffb0608328 [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547418:          3                    cpu-cycles: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060e13a [unknown] ([kernel.kallsyms])
+	ffffffffb0608328 [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547422:          7                  cache-misses: 
+	ffffffffb08ef31c [unknown] ([kernel.kallsyms])
+	ffffffffb09045d8 [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547424:         20                    cpu-cycles: 
+	ffffffffb08ef31c [unknown] ([kernel.kallsyms])
+	ffffffffb09045d8 [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547428:         43                  cache-misses: 
+	ffffffffb0816746 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb12 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547430:        131                    cpu-cycles: 
+	ffffffffb0816746 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb12 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547436:        794                    cpu-cycles: 
+	ffffffffb060832d [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547439:          1                  instructions: 
+	ffffffffb060832d [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547442:       4516                    cpu-cycles: 
+	ffffffffb060832d [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547445:          1                  instructions: 
+	ffffffffb060832d [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547449:      27321                    cpu-cycles: 
+	ffffffffb0816723 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb12 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547451:          7                  instructions: 
+	ffffffffb0816723 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb12 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547459:         41                  instructions: 
+	ffffffffb0748803 [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547462:        267                  cache-misses: 
+	ffffffffb120001c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547464:        209                  instructions: 
+	ffffffffb120001c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547467:       1279                  instructions: 
+	ffffffffb120001c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547471:      14618                  instructions: 
+	ffffffffb117d4a8 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [009] 40225.547479:     160032                    cpu-cycles: 
+	ffffffffb06d6525 [unknown] ([kernel.kallsyms])
+	ffffffffb076d7bc [unknown] ([kernel.kallsyms])
+	ffffffffb076da90 [unknown] ([kernel.kallsyms])
+	ffffffffb06d55b4 [unknown] ([kernel.kallsyms])
+	ffffffffb06d84fc [unknown] ([kernel.kallsyms])
+	ffffffffb06d8695 [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f99735f19cb __GI___sched_setaffinity_new+0xb (inlined)
+	    559ca15c32bc affinity__set+0x8c (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cf7a evlist__enable+0x8a (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+migration/9    65 [009] 40225.547484:        475                  cache-misses: 
+	ffffffffb063c8a9 [unknown] ([kernel.kallsyms])
+	ffffffffb06da931 [unknown] ([kernel.kallsyms])
+	ffffffffb06fc85b [unknown] ([kernel.kallsyms])
+	ffffffffb06fd1e6 [unknown] ([kernel.kallsyms])
+	ffffffffb06fd72e [unknown] ([kernel.kallsyms])
+	ffffffffb06d4ea6 [unknown] ([kernel.kallsyms])
+	ffffffffb06d5720 [unknown] ([kernel.kallsyms])
+	ffffffffb076d980 [unknown] ([kernel.kallsyms])
+	ffffffffb06ca710 [unknown] ([kernel.kallsyms])
+	ffffffffb06c1994 [unknown] ([kernel.kallsyms])
+	ffffffffb0604482 [unknown] ([kernel.kallsyms])
+
+migration/9    65 [009] 40225.547488:     147863                  instructions: 
+	ffffffffb1180a5c [unknown] ([kernel.kallsyms])
+	ffffffffb06f235f [unknown] ([kernel.kallsyms])
+	ffffffffb076d728 [unknown] ([kernel.kallsyms])
+	ffffffffb076d995 [unknown] ([kernel.kallsyms])
+	ffffffffb06ca710 [unknown] ([kernel.kallsyms])
+	ffffffffb06c1994 [unknown] ([kernel.kallsyms])
+	ffffffffb0604482 [unknown] ([kernel.kallsyms])
+
+perf 55920 [010] 40225.547534:          1                    cpu-cycles: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060e13a [unknown] ([kernel.kallsyms])
+	ffffffffb0608328 [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547544:          1                    cpu-cycles: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060e13a [unknown] ([kernel.kallsyms])
+	ffffffffb0608328 [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547548:          1                  cache-misses: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060e13a [unknown] ([kernel.kallsyms])
+	ffffffffb0608328 [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547551:          4                    cpu-cycles: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060e13a [unknown] ([kernel.kallsyms])
+	ffffffffb0608328 [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547554:          1                  cache-misses: 
+	ffffffffb116ec32 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547556:         24                    cpu-cycles: 
+	ffffffffb116ec32 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547560:          6                  cache-misses: 
+	ffffffffb1200030 [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547562:        155                    cpu-cycles: 
+	ffffffffb1200030 [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547565:         41                  cache-misses: 
+	ffffffffb081672b [unknown] ([kernel.kallsyms])
+	ffffffffb081fb12 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547567:        997                    cpu-cycles: 
+	ffffffffb081672b [unknown] ([kernel.kallsyms])
+	ffffffffb081fb12 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547570:       6832                    cpu-cycles: 
+	ffffffffb0816733 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb12 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547577:          1                  instructions: 
+	ffffffffb060832d [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547581:      74146                    cpu-cycles: 
+	ffffffffb081fafa [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547583:          1                  instructions: 
+	ffffffffb081fafa [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547586:        279                  cache-misses: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060d08e [unknown] ([kernel.kallsyms])
+	ffffffffb0605f7c [unknown] ([kernel.kallsyms])
+	ffffffffb081441d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c44 [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547589:          6                  instructions: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060d08e [unknown] ([kernel.kallsyms])
+	ffffffffb0605f7c [unknown] ([kernel.kallsyms])
+	ffffffffb081441d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c44 [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [010] 40225.547596:         37                  instructions: 
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+migration/10    71 [010] 40225.547615:        650                  cache-misses: 
+	ffffffffb06e1970 [unknown] ([kernel.kallsyms])
+	ffffffffb06e8c89 [unknown] ([kernel.kallsyms])
+	ffffffffb06e8eee [unknown] ([kernel.kallsyms])
+	ffffffffb117bccc [unknown] ([kernel.kallsyms])
+	ffffffffb117c0c5 [unknown] ([kernel.kallsyms])
+	ffffffffb06ca757 [unknown] ([kernel.kallsyms])
+	ffffffffb06c1994 [unknown] ([kernel.kallsyms])
+	ffffffffb0604482 [unknown] ([kernel.kallsyms])
+
+migration/10    71 [010] 40225.547617:        189                  instructions: 
+	ffffffffb06e1970 [unknown] ([kernel.kallsyms])
+	ffffffffb06e8c89 [unknown] ([kernel.kallsyms])
+	ffffffffb06e8eee [unknown] ([kernel.kallsyms])
+	ffffffffb117bccc [unknown] ([kernel.kallsyms])
+	ffffffffb117c0c5 [unknown] ([kernel.kallsyms])
+	ffffffffb06ca757 [unknown] ([kernel.kallsyms])
+	ffffffffb06c1994 [unknown] ([kernel.kallsyms])
+	ffffffffb0604482 [unknown] ([kernel.kallsyms])
+
+migration/10    71 [010] 40225.547618:        457                  instructions: 
+	ffffffffb06e1970 [unknown] ([kernel.kallsyms])
+	ffffffffb06e8c89 [unknown] ([kernel.kallsyms])
+	ffffffffb06e8eee [unknown] ([kernel.kallsyms])
+	ffffffffb117bccc [unknown] ([kernel.kallsyms])
+	ffffffffb117c0c5 [unknown] ([kernel.kallsyms])
+	ffffffffb06ca757 [unknown] ([kernel.kallsyms])
+	ffffffffb06c1994 [unknown] ([kernel.kallsyms])
+	ffffffffb0604482 [unknown] ([kernel.kallsyms])
+
+migration/10    71 [010] 40225.547620:       8674                  instructions: 
+	ffffffffb06e7e11 [unknown] ([kernel.kallsyms])
+	ffffffffb06e8c89 [unknown] ([kernel.kallsyms])
+	ffffffffb06e8eee [unknown] ([kernel.kallsyms])
+	ffffffffb117bccc [unknown] ([kernel.kallsyms])
+	ffffffffb117c0c5 [unknown] ([kernel.kallsyms])
+	ffffffffb06ca757 [unknown] ([kernel.kallsyms])
+	ffffffffb06c1994 [unknown] ([kernel.kallsyms])
+	ffffffffb0604482 [unknown] ([kernel.kallsyms])
+
+swapper     0 [010] 40225.548362:     286649                    cpu-cycles: 
+	ffffffffb1180813 [unknown] ([kernel.kallsyms])
+	ffffffffb0f0d5f2 [unknown] ([kernel.kallsyms])
+	ffffffffb0f0d99e [unknown] ([kernel.kallsyms])
+	ffffffffb06db433 [unknown] ([kernel.kallsyms])
+	ffffffffb06db6f7 [unknown] ([kernel.kallsyms])
+	ffffffffb06db920 [unknown] ([kernel.kallsyms])
+	ffffffffb06636b9 [unknown] ([kernel.kallsyms])
+	ffffffffb06000e6 [unknown] ([kernel.kallsyms])
+
+swapper     0 [010] 40225.548382:     166199                  instructions: 
+	ffffffffb0e8aeb2 [unknown] ([kernel.kallsyms])
+	ffffffffb0e8b90a [unknown] ([kernel.kallsyms])
+	ffffffffb0e8d25e [unknown] ([kernel.kallsyms])
+	ffffffffb0e84027 [unknown] ([kernel.kallsyms])
+	ffffffffb0e3eed5 [unknown] ([kernel.kallsyms])
+	ffffffffb0e400e2 [unknown] ([kernel.kallsyms])
+	ffffffffc3431b7d [unknown] ([snd_usb_audio])
+	ffffffffb0e3d79a [unknown] ([kernel.kallsyms])
+	ffffffffb0e3dd91 [unknown] ([kernel.kallsyms])
+	ffffffffb06a0ef0 [unknown] ([kernel.kallsyms])
+	ffffffffb06a0fbf [unknown] ([kernel.kallsyms])
+	ffffffffb14000e1 [unknown] ([kernel.kallsyms])
+	ffffffffb12010e2 [unknown] ([kernel.kallsyms])
+	ffffffffb063537d [unknown] ([kernel.kallsyms])
+	ffffffffb06a1514 [unknown] ([kernel.kallsyms])
+	ffffffffb116fedc [unknown] ([kernel.kallsyms])
+	ffffffffb1200c1e [unknown] ([kernel.kallsyms])
+	ffffffffb0f0d63a [unknown] ([kernel.kallsyms])
+	ffffffffb0f0d99e [unknown] ([kernel.kallsyms])
+	ffffffffb06db433 [unknown] ([kernel.kallsyms])
+	ffffffffb06db6f7 [unknown] ([kernel.kallsyms])
+	ffffffffb06db920 [unknown] ([kernel.kallsyms])
+	ffffffffb06636b9 [unknown] ([kernel.kallsyms])
+	ffffffffb06000e6 [unknown] ([kernel.kallsyms])
+
+kwin_x11  1874 [009] 40225.549361:       1101                  cache-misses: 
+	    7fa6bf609dc0 QApplication::notify+0x0 (/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+	    7fa6bebe6939 QCoreApplication::notifyInternal2+0x189 (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bec3d8af QTimerInfoList::activateTimers+0x3cf (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bec3bb6e QEventDispatcherUNIX::processEvents+0x38e (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6b8dd56e1 [unknown] (/usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+	    7fa6bebe54da QEventLoop::exec+0x12a (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bebed245 QCoreApplication::exec+0x95 (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6c03249ee kdemain+0x54e (/usr/lib/x86_64-linux-gnu/libkdeinit5_kwin_x11.so)
+	    7fa6c01500b2 __libc_start_main+0xf2 (/usr/lib/x86_64-linux-gnu/libc-2.31.so)
+	    560d9731909d _start+0x2d (/usr/bin/kwin_x11)
+
+kwin_x11  1874 [009] 40225.549376:        983                  cache-misses: 
+	    7fa6bffd2e75 KWin::Toplevel::resetAndFetchDamage+0x15 (/usr/lib/x86_64-linux-gnu/libkwin.so.5.18.5)
+	    7fa6bfed1486 KWin::Compositor::performCompositing+0x2e6 (/usr/lib/x86_64-linux-gnu/libkwin.so.5.18.5)
+	    7fa6bec12cf4 QObject::event+0x1d4 (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bf600a65 QApplicationPrivate::notify_helper+0x85 (/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+	    7fa6bf60a0ef QApplication::notify+0x32f (/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+	    7fa6bebe6939 QCoreApplication::notifyInternal2+0x189 (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bec3d8af QTimerInfoList::activateTimers+0x3cf (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bec3bb6e QEventDispatcherUNIX::processEvents+0x38e (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6b8dd56e1 [unknown] (/usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+	    7fa6bebe54da QEventLoop::exec+0x12a (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bebed245 QCoreApplication::exec+0x95 (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6c03249ee kdemain+0x54e (/usr/lib/x86_64-linux-gnu/libkdeinit5_kwin_x11.so)
+	    7fa6c01500b2 __libc_start_main+0xf2 (/usr/lib/x86_64-linux-gnu/libc-2.31.so)
+	    560d9731909d _start+0x2d (/usr/bin/kwin_x11)
+
+swapper     0 [009] 40225.549466:     307465                    cpu-cycles: 
+	ffffffffb06da920 [unknown] ([kernel.kallsyms])
+	ffffffffb06fd1e6 [unknown] ([kernel.kallsyms])
+	ffffffffb06fd8b8 [unknown] ([kernel.kallsyms])
+	ffffffffb117bace [unknown] ([kernel.kallsyms])
+	ffffffffb117c3ac [unknown] ([kernel.kallsyms])
+	ffffffffb06db680 [unknown] ([kernel.kallsyms])
+	ffffffffb06db920 [unknown] ([kernel.kallsyms])
+	ffffffffb06636b9 [unknown] ([kernel.kallsyms])
+	ffffffffb06000e6 [unknown] ([kernel.kallsyms])
+
+kwin_x11  1874 [009] 40225.549474:       2821                  cache-misses: 
+	    7fa6bf2b312d QRegion::operator+=+0x2d (/usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8)
+	    7fa6bffd4e17 KWin::Toplevel::getDamageRegionReply+0x1f7 (/usr/lib/x86_64-linux-gnu/libkwin.so.5.18.5)
+	    7fa6bfed13b3 KWin::Compositor::performCompositing+0x213 (/usr/lib/x86_64-linux-gnu/libkwin.so.5.18.5)
+	    7fa6bec12cf4 QObject::event+0x1d4 (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bf600a65 QApplicationPrivate::notify_helper+0x85 (/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+	    7fa6bf60a0ef QApplication::notify+0x32f (/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+	    7fa6bebe6939 QCoreApplication::notifyInternal2+0x189 (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bec3d8af QTimerInfoList::activateTimers+0x3cf (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bec3bb6e QEventDispatcherUNIX::processEvents+0x38e (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6b8dd56e1 [unknown] (/usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+	    7fa6bebe54da QEventLoop::exec+0x12a (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bebed245 QCoreApplication::exec+0x95 (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6c03249ee kdemain+0x54e (/usr/lib/x86_64-linux-gnu/libkdeinit5_kwin_x11.so)
+	    7fa6c01500b2 __libc_start_main+0xf2 (/usr/lib/x86_64-linux-gnu/libc-2.31.so)
+	    560d9731909d _start+0x2d (/usr/bin/kwin_x11)
+
+kwin_x11  1874 [009] 40225.549517:       3377                  cache-misses: 
+	    7fa6a29bdbd0 [unknown] (/usr/lib/x86_64-linux-gnu/libnvidia-glcore.so.465.19.01)
+	    7fa6a2aadfd5 [unknown] (/usr/lib/x86_64-linux-gnu/libnvidia-glcore.so.465.19.01)
+	    7fa6a2a0a62d [unknown] (/usr/lib/x86_64-linux-gnu/libnvidia-glcore.so.465.19.01)
+	    7fa6a29c29c4 [unknown] (/usr/lib/x86_64-linux-gnu/libnvidia-glcore.so.465.19.01)
+	    7fa6a29e8944 [unknown] (/usr/lib/x86_64-linux-gnu/libnvidia-glcore.so.465.19.01)
+	    7fa6a3d6de3b [unknown] (/usr/lib/x86_64-linux-gnu/libGLX_nvidia.so.465.19.01)
+	    7fa6b34fa98d [unknown] (/usr/lib/x86_64-linux-gnu/qt5/plugins/org.kde.kwin.platforms/KWinX11Platform.so)
+	    7fa6b34fa618 [unknown] (/usr/lib/x86_64-linux-gnu/qt5/plugins/org.kde.kwin.platforms/KWinX11Platform.so)
+	    7fa6b08f9a03 KWin::SceneOpenGL::paint+0x313 (/usr/lib/x86_64-linux-gnu/qt5/plugins/org.kde.kwin.scenes/KWinSceneOpenGL.so)
+	    7fa6bfed1650 KWin::Compositor::performCompositing+0x4b0 (/usr/lib/x86_64-linux-gnu/libkwin.so.5.18.5)
+	    7fa6bec12cf4 QObject::event+0x1d4 (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bf600a65 QApplicationPrivate::notify_helper+0x85 (/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+	    7fa6bf60a0ef QApplication::notify+0x32f (/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8)
+	    7fa6bebe6939 QCoreApplication::notifyInternal2+0x189 (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bec3d8af QTimerInfoList::activateTimers+0x3cf (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bec3bb6e QEventDispatcherUNIX::processEvents+0x38e (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6b8dd56e1 [unknown] (/usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.12.8)
+	    7fa6bebe54da QEventLoop::exec+0x12a (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6bebed245 QCoreApplication::exec+0x95 (/usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8)
+	    7fa6c03249ee kdemain+0x54e (/usr/lib/x86_64-linux-gnu/libkdeinit5_kwin_x11.so)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551254:          1                    cpu-cycles: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060e13a [unknown] ([kernel.kallsyms])
+	ffffffffb0608328 [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551264:          1                    cpu-cycles: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060e13a [unknown] ([kernel.kallsyms])
+	ffffffffb0608328 [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551268:          1                  cache-misses: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060e13a [unknown] ([kernel.kallsyms])
+	ffffffffb0608328 [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551271:          4                    cpu-cycles: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060e13a [unknown] ([kernel.kallsyms])
+	ffffffffb0608328 [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551275:          1                  cache-misses: 
+	ffffffffb091010a [unknown] ([kernel.kallsyms])
+	ffffffffb0910422 [unknown] ([kernel.kallsyms])
+	ffffffffb0910453 [unknown] ([kernel.kallsyms])
+	ffffffffb0904544 [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551277:         24                    cpu-cycles: 
+	ffffffffb091010a [unknown] ([kernel.kallsyms])
+	ffffffffb0910422 [unknown] ([kernel.kallsyms])
+	ffffffffb0910453 [unknown] ([kernel.kallsyms])
+	ffffffffb0904544 [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551280:          6                  cache-misses: 
+	ffffffffb09045a9 [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551282:        141                    cpu-cycles: 
+	ffffffffb09045a9 [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551285:         42                  cache-misses: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060d08e [unknown] ([kernel.kallsyms])
+	ffffffffb0605f7c [unknown] ([kernel.kallsyms])
+	ffffffffb081441d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c44 [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551288:        981                    cpu-cycles: 
+	ffffffffb0676316 [unknown] ([kernel.kallsyms])
+	ffffffffb060d08e [unknown] ([kernel.kallsyms])
+	ffffffffb0605f7c [unknown] ([kernel.kallsyms])
+	ffffffffb081441d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c44 [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551294:          1                  instructions: 
+	ffffffffb060832d [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551303:          1                  instructions: 
+	ffffffffb060832d [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551306:       5890                    cpu-cycles: 
+	ffffffffb060832d [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551309:          5                  instructions: 
+	ffffffffb060832d [unknown] ([kernel.kallsyms])
+	ffffffffb081445d [unknown] ([kernel.kallsyms])
+	ffffffffb0817c8e [unknown] ([kernel.kallsyms])
+	ffffffffb0817f6e [unknown] ([kernel.kallsyms])
+	ffffffffb081924c [unknown] ([kernel.kallsyms])
+	ffffffffb0812853 [unknown] ([kernel.kallsyms])
+	ffffffffb07487fe [unknown] ([kernel.kallsyms])
+	ffffffffb074890c [unknown] ([kernel.kallsyms])
+	ffffffffb0819d2b [unknown] ([kernel.kallsyms])
+	ffffffffb0819eb4 [unknown] ([kernel.kallsyms])
+	ffffffffb08116ea [unknown] ([kernel.kallsyms])
+	ffffffffb081f748 [unknown] ([kernel.kallsyms])
+	ffffffffb081fb23 [unknown] ([kernel.kallsyms])
+	ffffffffb09045bd [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551312:        269                  cache-misses: 
+	ffffffffb09100f7 [unknown] ([kernel.kallsyms])
+	ffffffffb0910422 [unknown] ([kernel.kallsyms])
+	ffffffffb0910453 [unknown] ([kernel.kallsyms])
+	ffffffffb0904544 [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551315:         32                  instructions: 
+	ffffffffb09100f7 [unknown] ([kernel.kallsyms])
+	ffffffffb0910422 [unknown] ([kernel.kallsyms])
+	ffffffffb0910453 [unknown] ([kernel.kallsyms])
+	ffffffffb0904544 [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551317:      15235                    cpu-cycles: 
+	ffffffffb09100f7 [unknown] ([kernel.kallsyms])
+	ffffffffb0910422 [unknown] ([kernel.kallsyms])
+	ffffffffb0910453 [unknown] ([kernel.kallsyms])
+	ffffffffb0904544 [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551319:        195                  instructions: 
+	ffffffffb09100f7 [unknown] ([kernel.kallsyms])
+	ffffffffb0910422 [unknown] ([kernel.kallsyms])
+	ffffffffb0910453 [unknown] ([kernel.kallsyms])
+	ffffffffb0904544 [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551323:       1426                  instructions: 
+	ffffffffb09100f7 [unknown] ([kernel.kallsyms])
+	ffffffffb0910422 [unknown] ([kernel.kallsyms])
+	ffffffffb0910453 [unknown] ([kernel.kallsyms])
+	ffffffffb0904544 [unknown] ([kernel.kallsyms])
+	ffffffffb090460a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f997360350b __ioctl+0xb (inlined)
+	    559ca1667764 perf_evsel__run_ioctl+0x74 (inlined)
+	    559ca1667764 perf_evsel__enable_cpu+0x74 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfd4 evlist__enable+0xe4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551326:      15545                  instructions: 
+	    559ca16665b5 perf_cpu_map__cpu+0x45 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154cfef evlist__enable+0xff (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551331:      56068                    cpu-cycles: 
+	ffffffffb06e01ec [unknown] ([kernel.kallsyms])
+	ffffffffb06e02fc [unknown] ([kernel.kallsyms])
+	ffffffffb06e3cb7 [unknown] ([kernel.kallsyms])
+	ffffffffb06d4587 [unknown] ([kernel.kallsyms])
+	ffffffffb06d54a4 [unknown] ([kernel.kallsyms])
+	ffffffffb06d84fc [unknown] ([kernel.kallsyms])
+	ffffffffb06d8695 [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f99735f19cb __GI___sched_setaffinity_new+0xb (inlined)
+	    559ca15c3368 affinity__cleanup+0x78 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca154d00c evlist__enable+0x11c (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c3920 __cmd_record+0x1cc0 (inlined)
+	    559ca14c3920 cmd_record+0x1cc0 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551338:        546                  cache-misses: 
+	    7f9973581130 __GI__IO_default_xsputn+0x0 (inlined)
+	    7f997356692c __vfprintf_internal+0xf4c (/usr/lib/x86_64-linux-gnu/libc-2.31.so)
+	    7f997357b119 __vsnprintf_internal+0xa9 (/usr/lib/x86_64-linux-gnu/libc-2.31.so)
+	    7f997361cfd0 ___snprintf_chk+0xa0 (inlined)
+	    559ca15d2671 snprintf+0x71 (inlined)
+	    559ca15d2671 perf_event__get_comm_ids+0x71 (inlined)
+	    559ca15d2db2 perf_event__prepare_comm+0x102 (inlined)
+	    559ca15d2db2 perf_event__synthesize_comm+0x102 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c36e1 __cmd_record+0x1a81 (inlined)
+	    559ca14c36e1 cmd_record+0x1a81 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551349:       1136                  cache-misses: 
+	ffffffffb08b7d3f [unknown] ([kernel.kallsyms])
+	ffffffffb0918edf [unknown] ([kernel.kallsyms])
+	ffffffffb0990cab [unknown] ([kernel.kallsyms])
+	ffffffffb08e7b61 [unknown] ([kernel.kallsyms])
+	ffffffffb08e967d [unknown] ([kernel.kallsyms])
+	ffffffffb08fdc01 [unknown] ([kernel.kallsyms])
+	ffffffffb08fdf3b [unknown] ([kernel.kallsyms])
+	ffffffffb0900a51 [unknown] ([kernel.kallsyms])
+	ffffffffb08e8650 [unknown] ([kernel.kallsyms])
+	ffffffffb08e9aa6 [unknown] ([kernel.kallsyms])
+	ffffffffb08e9bc0 [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c62b34 __libc_open64+0xd4 (inlined)
+	    559ca15d267d open64+0x7d (inlined)
+	    559ca15d267d perf_event__get_comm_ids+0x7d (inlined)
+	    559ca15d2db2 perf_event__prepare_comm+0x102 (inlined)
+	    559ca15d2db2 perf_event__synthesize_comm+0x102 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c36e1 __cmd_record+0x1a81 (inlined)
+	    559ca14c36e1 cmd_record+0x1a81 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551356:     145072                  instructions: 
+	ffffffffb0bb3b12 [unknown] ([kernel.kallsyms])
+	ffffffffb0997d38 [unknown] ([kernel.kallsyms])
+	ffffffffb0998c1b [unknown] ([kernel.kallsyms])
+	ffffffffb0992122 [unknown] ([kernel.kallsyms])
+	ffffffffb09197e2 [unknown] ([kernel.kallsyms])
+	ffffffffb0919c69 [unknown] ([kernel.kallsyms])
+	ffffffffb08eb8da [unknown] ([kernel.kallsyms])
+	ffffffffb08ee1a7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee23a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c623cc __libc_read+0x4c (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f9973c623cc __libc_read+0x4c (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    559ca15d2696 read+0x96 (inlined)
+	    559ca15d2696 perf_event__get_comm_ids+0x96 (inlined)
+	    559ca15d2db2 perf_event__prepare_comm+0x102 (inlined)
+	    559ca15d2db2 perf_event__synthesize_comm+0x102 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c36e1 __cmd_record+0x1a81 (inlined)
+	    559ca14c36e1 cmd_record+0x1a81 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551361:     173660                    cpu-cycles: 
+	ffffffffb091a230 [unknown] ([kernel.kallsyms])
+	ffffffffb091a270 [unknown] ([kernel.kallsyms])
+	ffffffffb09976df [unknown] ([kernel.kallsyms])
+	ffffffffb0998c39 [unknown] ([kernel.kallsyms])
+	ffffffffb0992122 [unknown] ([kernel.kallsyms])
+	ffffffffb09197e2 [unknown] ([kernel.kallsyms])
+	ffffffffb0919c69 [unknown] ([kernel.kallsyms])
+	ffffffffb08eb8da [unknown] ([kernel.kallsyms])
+	ffffffffb08ee1a7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee23a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c623cc __libc_read+0x4c (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f9973c623cc __libc_read+0x4c (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    559ca15d2696 read+0x96 (inlined)
+	    559ca15d2696 perf_event__get_comm_ids+0x96 (inlined)
+	    559ca15d2db2 perf_event__prepare_comm+0x102 (inlined)
+	    559ca15d2db2 perf_event__synthesize_comm+0x102 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c36e1 __cmd_record+0x1a81 (inlined)
+	    559ca14c36e1 cmd_record+0x1a81 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+swapper     0 [010] 40225.551370:     231983                    cpu-cycles: 
+	ffffffffb0e8d1f8 [unknown] ([kernel.kallsyms])
+	ffffffffb0e84027 [unknown] ([kernel.kallsyms])
+	ffffffffb0e3eed5 [unknown] ([kernel.kallsyms])
+	ffffffffb0e400e2 [unknown] ([kernel.kallsyms])
+	ffffffffc3431b7d [unknown] ([unknown])
+	ffffffffb0e3d79a [unknown] ([kernel.kallsyms])
+	ffffffffb0e3dd91 [unknown] ([kernel.kallsyms])
+	ffffffffb06a0ef0 [unknown] ([kernel.kallsyms])
+	ffffffffb06a0fbf [unknown] ([kernel.kallsyms])
+	ffffffffb14000e1 [unknown] ([kernel.kallsyms])
+	ffffffffb12010e2 [unknown] ([kernel.kallsyms])
+	ffffffffb063537d [unknown] ([kernel.kallsyms])
+	ffffffffb06a1514 [unknown] ([kernel.kallsyms])
+	ffffffffb116fedc [unknown] ([kernel.kallsyms])
+	ffffffffb1200c1e [unknown] ([kernel.kallsyms])
+	ffffffffb0f0d63a [unknown] ([kernel.kallsyms])
+	ffffffffb0f0d99e [unknown] ([kernel.kallsyms])
+	ffffffffb06db433 [unknown] ([kernel.kallsyms])
+	ffffffffb06db6f7 [unknown] ([kernel.kallsyms])
+	ffffffffb06db920 [unknown] ([kernel.kallsyms])
+	ffffffffb06636b9 [unknown] ([kernel.kallsyms])
+	ffffffffb06000e6 [unknown] ([kernel.kallsyms])
+
+perf 55920 [011] 40225.551379:       4346                  cache-misses: 
+	ffffffffb1180e20 [unknown] ([kernel.kallsyms])
+	ffffffffb0933407 [unknown] ([kernel.kallsyms])
+	ffffffffb09caafe [unknown] ([kernel.kallsyms])
+	ffffffffb09cecb4 [unknown] ([kernel.kallsyms])
+	ffffffffb09cef4a [unknown] ([kernel.kallsyms])
+	ffffffffb09d3604 [unknown] ([kernel.kallsyms])
+	ffffffffb0924226 [unknown] ([kernel.kallsyms])
+	ffffffffb090cf8d [unknown] ([kernel.kallsyms])
+	ffffffffb090cfd5 [unknown] ([kernel.kallsyms])
+	ffffffffb090d461 [unknown] ([kernel.kallsyms])
+	ffffffffb090d787 [unknown] ([kernel.kallsyms])
+	ffffffffb09bc764 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd093 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd720 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    559ca1669d56 ion+0xa6 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c0baf record__write+0x3f (inlined)
+	    559ca14c0baf process_synthesized_event+0x3f (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca15d29b1 perf_tool__process_synth_event+0x81 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca15d2d73 perf_event__synthesize_comm+0xc3 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c36e1 __cmd_record+0x1a81 (inlined)
+	    559ca14c36e1 cmd_record+0x1a81 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551424:     338867                    cpu-cycles: 
+	ffffffffb082feb7 [unknown] ([kernel.kallsyms])
+	ffffffffb083020d [unknown] ([kernel.kallsyms])
+	ffffffffb0831551 [unknown] ([kernel.kallsyms])
+	ffffffffb08337e1 [unknown] ([kernel.kallsyms])
+	ffffffffb09d16a1 [unknown] ([kernel.kallsyms])
+	ffffffffb082dee2 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd0e0 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd720 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    559ca1669d56 ion+0xa6 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c0f28 record__write+0x58 (inlined)
+	    559ca14c0f28 record__pushfn+0x58 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca155c5f4 perf_mmap__push+0xd4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c078d record__mmap_read_evlist+0x3fd (inlined)
+	    559ca14c2dfb record__mmap_read_all+0x119b (inlined)
+	    559ca14c2dfb __cmd_record+0x119b (inlined)
+	    559ca14c2dfb cmd_record+0x119b (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551441:     280611                  instructions: 
+	ffffffffb1200ac8 [unknown] ([kernel.kallsyms])
+	ffffffffb082dea5 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd0e0 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd720 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    559ca1669d56 ion+0xa6 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c0f28 record__write+0x58 (inlined)
+	    559ca14c0f28 record__pushfn+0x58 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca155c5f4 perf_mmap__push+0xd4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c078d record__mmap_read_evlist+0x3fd (inlined)
+	    559ca14c2dfb record__mmap_read_all+0x119b (inlined)
+	    559ca14c2dfb __cmd_record+0x119b (inlined)
+	    559ca14c2dfb cmd_record+0x119b (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551473:       8281                  cache-misses: 
+	ffffffffb082fe34 [unknown] ([kernel.kallsyms])
+	ffffffffb083020d [unknown] ([kernel.kallsyms])
+	ffffffffb0831551 [unknown] ([kernel.kallsyms])
+	ffffffffb08337e1 [unknown] ([kernel.kallsyms])
+	ffffffffb09d16a1 [unknown] ([kernel.kallsyms])
+	ffffffffb082dee2 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd0e0 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd720 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    559ca1669d56 ion+0xa6 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c0f28 record__write+0x58 (inlined)
+	    559ca14c0f28 record__pushfn+0x58 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca155c5f4 perf_mmap__push+0xd4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c078d record__mmap_read_evlist+0x3fd (inlined)
+	    559ca14c2dfb record__mmap_read_all+0x119b (inlined)
+	    559ca14c2dfb __cmd_record+0x119b (inlined)
+	    559ca14c2dfb cmd_record+0x119b (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551533:     348177                  instructions: 
+	ffffffffb089060c [unknown] ([kernel.kallsyms])
+	ffffffffb0891a21 [unknown] ([kernel.kallsyms])
+	ffffffffb08a8b37 [unknown] ([kernel.kallsyms])
+	ffffffffb082dbf2 [unknown] ([kernel.kallsyms])
+	ffffffffb083150f [unknown] ([kernel.kallsyms])
+	ffffffffb08337e1 [unknown] ([kernel.kallsyms])
+	ffffffffb09d16a1 [unknown] ([kernel.kallsyms])
+	ffffffffb082dee2 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd0e0 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd720 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    559ca1669d56 ion+0xa6 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c0f28 record__write+0x58 (inlined)
+	    559ca14c0f28 record__pushfn+0x58 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca155c5f4 perf_mmap__push+0xd4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c078d record__mmap_read_evlist+0x3fd (inlined)
+	    559ca14c2dfb record__mmap_read_all+0x119b (inlined)
+	    559ca14c2dfb __cmd_record+0x119b (inlined)
+	    559ca14c2dfb cmd_record+0x119b (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551549:     462602                    cpu-cycles: 
+	ffffffffb08536f7 [unknown] ([kernel.kallsyms])
+	ffffffffb08d467b [unknown] ([kernel.kallsyms])
+	ffffffffb083000e [unknown] ([kernel.kallsyms])
+	ffffffffb083020d [unknown] ([kernel.kallsyms])
+	ffffffffb0831551 [unknown] ([kernel.kallsyms])
+	ffffffffb08337e1 [unknown] ([kernel.kallsyms])
+	ffffffffb09d16a1 [unknown] ([kernel.kallsyms])
+	ffffffffb082dee2 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd0e0 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd720 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    559ca1669d56 ion+0xa6 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c0f28 record__write+0x58 (inlined)
+	    559ca14c0f28 record__pushfn+0x58 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca155c5f4 perf_mmap__push+0xd4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c078d record__mmap_read_evlist+0x3fd (inlined)
+	    559ca14c2dfb record__mmap_read_all+0x119b (inlined)
+	    559ca14c2dfb __cmd_record+0x119b (inlined)
+	    559ca14c2dfb cmd_record+0x119b (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551655:     423151                  instructions: 
+	ffffffffb06fedb1 [unknown] ([kernel.kallsyms])
+	ffffffffb11721c6 [unknown] ([kernel.kallsyms])
+	ffffffffb1200ade [unknown] ([kernel.kallsyms])
+	ffffffffb0b498f4 [unknown] ([kernel.kallsyms])
+	ffffffffb082dea5 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd0e0 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd720 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    559ca1669d56 ion+0xa6 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c0f28 record__write+0x58 (inlined)
+	    559ca14c0f28 record__pushfn+0x58 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca155c5f4 perf_mmap__push+0xd4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c078d record__mmap_read_evlist+0x3fd (inlined)
+	    559ca14c2dfb record__mmap_read_all+0x119b (inlined)
+	    559ca14c2dfb __cmd_record+0x119b (inlined)
+	    559ca14c2dfb cmd_record+0x119b (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551683:      10010                  cache-misses: 
+	ffffffffb0932911 [unknown] ([kernel.kallsyms])
+	ffffffffb09c9f0f [unknown] ([kernel.kallsyms])
+	ffffffffb09d176e [unknown] ([kernel.kallsyms])
+	ffffffffb082dee2 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd0e0 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd720 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    559ca1669d56 ion+0xa6 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c0f28 record__write+0x58 (inlined)
+	    559ca14c0f28 record__pushfn+0x58 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca155c5f4 perf_mmap__push+0xd4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c078d record__mmap_read_evlist+0x3fd (inlined)
+	    559ca14c2dfb record__mmap_read_all+0x119b (inlined)
+	    559ca14c2dfb __cmd_record+0x119b (inlined)
+	    559ca14c2dfb cmd_record+0x119b (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551713:     520911                    cpu-cycles: 
+	ffffffffb076bae6 [unknown] ([kernel.kallsyms])
+	ffffffffb076bbe5 [unknown] ([kernel.kallsyms])
+	ffffffffb09caf76 [unknown] ([kernel.kallsyms])
+	ffffffffb09cec35 [unknown] ([kernel.kallsyms])
+	ffffffffb09cef74 [unknown] ([kernel.kallsyms])
+	ffffffffb09d3604 [unknown] ([kernel.kallsyms])
+	ffffffffb0924226 [unknown] ([kernel.kallsyms])
+	ffffffffb093305a [unknown] ([kernel.kallsyms])
+	ffffffffb09d2480 [unknown] ([kernel.kallsyms])
+	ffffffffb082df26 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd0e0 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd720 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    559ca1669d56 ion+0xa6 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c0f28 record__write+0x58 (inlined)
+	    559ca14c0f28 record__pushfn+0x58 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca155c5f4 perf_mmap__push+0xd4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c078d record__mmap_read_evlist+0x3fd (inlined)
+	    559ca14c2dfb record__mmap_read_all+0x119b (inlined)
+	    559ca14c2dfb __cmd_record+0x119b (inlined)
+	    559ca14c2dfb cmd_record+0x119b (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551796:     478555                  instructions: 
+	ffffffffb09cb2a4 [unknown] ([kernel.kallsyms])
+	ffffffffb09cec35 [unknown] ([kernel.kallsyms])
+	ffffffffb09cef74 [unknown] ([kernel.kallsyms])
+	ffffffffb09d3604 [unknown] ([kernel.kallsyms])
+	ffffffffb0924226 [unknown] ([kernel.kallsyms])
+	ffffffffb093305a [unknown] ([kernel.kallsyms])
+	ffffffffb09d2480 [unknown] ([kernel.kallsyms])
+	ffffffffb082df26 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd0e0 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd720 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    559ca1669d56 ion+0xa6 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c0f28 record__write+0x58 (inlined)
+	    559ca14c0f28 record__pushfn+0x58 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca155c5f4 perf_mmap__push+0xd4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c078d record__mmap_read_evlist+0x3fd (inlined)
+	    559ca14c2dfb record__mmap_read_all+0x119b (inlined)
+	    559ca14c2dfb __cmd_record+0x119b (inlined)
+	    559ca14c2dfb cmd_record+0x119b (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+perf 55920 [011] 40225.551893:     554933                    cpu-cycles: 
+	ffffffffb0872703 [unknown] ([kernel.kallsyms])
+	ffffffffb08730ba [unknown] ([kernel.kallsyms])
+	ffffffffb067d1b2 [unknown] ([kernel.kallsyms])
+	ffffffffb11721c6 [unknown] ([kernel.kallsyms])
+	ffffffffb1200ade [unknown] ([kernel.kallsyms])
+	ffffffffb0b498f4 [unknown] ([kernel.kallsyms])
+	ffffffffb082dea5 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd0e0 [unknown] ([kernel.kallsyms])
+	ffffffffb09bd720 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f9973c6232f __libc_write+0x4f (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    559ca1669d56 ion+0xa6 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c0f28 record__write+0x58 (inlined)
+	    559ca14c0f28 record__pushfn+0x58 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca155c5f4 perf_mmap__push+0xd4 (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	    559ca14c078d record__mmap_read_evlist+0x3fd (inlined)
+	    559ca14c2dfb record__mmap_read_all+0x119b (inlined)
+	    559ca14c2dfb __cmd_record+0x119b (inlined)
+	    559ca14c2dfb cmd_record+0x119b (/usr/lib/linux-hwe-5.8-tools-5.8.0-50/perf)
+	ffffffffffffffff [unknown] ([unknown])
+
+EMT 20913 [011] 40225.551951:      10250                  cache-misses: 
+	    7f16f8718bd3 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dce22 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+EMT 20913 [011] 40225.552086:     581822                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+EMT 20913 [011] 40225.552282:     603615                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+EMT 20913 [011] 40225.552318:     524583                  instructions: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+swapper     0 [010] 40225.552363:       1123                  cache-misses: 
+	ffffffffb0e8a024 [unknown] ([kernel.kallsyms])
+	ffffffffb0e8a646 [unknown] ([kernel.kallsyms])
+	ffffffffb0e8e43c [unknown] ([kernel.kallsyms])
+	ffffffffb0e8e841 [unknown] ([kernel.kallsyms])
+	ffffffffb0e8f98a [unknown] ([kernel.kallsyms])
+	ffffffffb0e8faf1 [unknown] ([kernel.kallsyms])
+	ffffffffb070eef2 [unknown] ([kernel.kallsyms])
+	ffffffffb070f063 [unknown] ([kernel.kallsyms])
+	ffffffffb070f0eb [unknown] ([kernel.kallsyms])
+	ffffffffb0713513 [unknown] ([kernel.kallsyms])
+	ffffffffb12010e2 [unknown] ([kernel.kallsyms])
+	ffffffffb116ff21 [unknown] ([kernel.kallsyms])
+	ffffffffb1200c1e [unknown] ([kernel.kallsyms])
+	ffffffffb0f0d63a [unknown] ([kernel.kallsyms])
+	ffffffffb0f0d99e [unknown] ([kernel.kallsyms])
+	ffffffffb06db433 [unknown] ([kernel.kallsyms])
+	ffffffffb06db6f7 [unknown] ([kernel.kallsyms])
+	ffffffffb06db920 [unknown] ([kernel.kallsyms])
+	ffffffffb06636b9 [unknown] ([kernel.kallsyms])
+	ffffffffb06000e6 [unknown] ([kernel.kallsyms])
+
+EMT 20913 [011] 40225.552488:     624147                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+EMT 20913 [011] 40225.552698:     640924                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.552831:     243083                    cpu-cycles: 
+	ffffffffb08cf22a [unknown] ([kernel.kallsyms])
+	ffffffffb08d8001 [unknown] ([kernel.kallsyms])
+	ffffffffb083edcc [unknown] ([kernel.kallsyms])
+	ffffffffb083ef0a [unknown] ([kernel.kallsyms])
+	ffffffffb083fd54 [unknown] ([kernel.kallsyms])
+	ffffffffb0840178 [unknown] ([kernel.kallsyms])
+	ffffffffb0876ab0 [unknown] ([kernel.kallsyms])
+	ffffffffb0878ec9 [unknown] ([kernel.kallsyms])
+	ffffffffb08791e0 [unknown] ([kernel.kallsyms])
+	ffffffffb087928d [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7fe75fe9eadb [unknown] ([unknown])
+
+:55925 55925 [009] 40225.552848:       4786                  cache-misses: 
+	ffffffffb089d358 [unknown] ([kernel.kallsyms])
+	ffffffffb086c0b5 [unknown] ([kernel.kallsyms])
+	ffffffffb0872f9a [unknown] ([kernel.kallsyms])
+	ffffffffb08730ba [unknown] ([kernel.kallsyms])
+	ffffffffb067d1b2 [unknown] ([kernel.kallsyms])
+	ffffffffb11721c6 [unknown] ([kernel.kallsyms])
+	ffffffffb1200ade [unknown] ([kernel.kallsyms])
+	    7fe75fe1b58b [unknown] ([unknown])
+
+:55925 55925 [009] 40225.552857:     343861                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.552873:     205396                    cpu-cycles: 
+	ffffffffb08b7c65 [unknown] ([kernel.kallsyms])
+	ffffffffb069709e [unknown] ([kernel.kallsyms])
+	ffffffffb0878a9d [unknown] ([kernel.kallsyms])
+	ffffffffb0878d42 [unknown] ([kernel.kallsyms])
+	ffffffffb08791e0 [unknown] ([kernel.kallsyms])
+	ffffffffb087928d [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7fe75fe9eadb [unknown] ([unknown])
+
+:55927 55927 [010] 40225.552889:        991                  cache-misses: 
+	ffffffffb088e43c [unknown] ([kernel.kallsyms])
+	ffffffffb08905e7 [unknown] ([kernel.kallsyms])
+	ffffffffb0891a21 [unknown] ([kernel.kallsyms])
+	ffffffffb08a8b37 [unknown] ([kernel.kallsyms])
+	ffffffffb067e918 [unknown] ([kernel.kallsyms])
+	ffffffffb086be8b [unknown] ([kernel.kallsyms])
+	ffffffffb086c2ca [unknown] ([kernel.kallsyms])
+	ffffffffb0872f9a [unknown] ([kernel.kallsyms])
+	ffffffffb08730ba [unknown] ([kernel.kallsyms])
+	ffffffffb067d1b2 [unknown] ([kernel.kallsyms])
+	ffffffffb11721c6 [unknown] ([kernel.kallsyms])
+	ffffffffb1200ade [unknown] ([kernel.kallsyms])
+	    7fe75fe1b58b [unknown] ([unknown])
+
+:55927 55927 [010] 40225.552909:        927                  cache-misses: 
+	ffffffffb0ce24c7 [unknown] ([kernel.kallsyms])
+	ffffffffb0ce5233 [unknown] ([kernel.kallsyms])
+	ffffffffb0cdcb1f [unknown] ([kernel.kallsyms])
+	ffffffffb0cdafa4 [unknown] ([kernel.kallsyms])
+	ffffffffb0cdb0c1 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7fe75fe9421f [unknown] ([unknown])
+
+EMT 20913 [011] 40225.552915:     655878                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.552922:     214956                    cpu-cycles: 
+	    5622f25a88cd [unknown] ([unknown])
+
+:55927 55927 [010] 40225.552932:     133616                  instructions: 
+	    5622f25a6bc0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.552960:     183993                    cpu-cycles: 
+	    5622f25a6bfc [unknown] ([unknown])
+
+:55925 55925 [009] 40225.552997:     261795                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.552999:     302881                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.553000:     117833                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.553028:     227395                    cpu-cycles: 
+	    5622f25a9f97 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.553061:     156885                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.553090:     339230                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.553110:     303360                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.553134:     331508                  instructions: 
+	    5622f25ac585 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.553136:     668649                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.553146:     218138                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.553209:     409848                    cpu-cycles: 
+	    5622f25ac585 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.553226:     380777                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.553263:     270761                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.553264:     366650                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.553350:     466851                    cpu-cycles: 
+	    5622f25ac585 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.553362:     679445                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.553363:     436312                    cpu-cycles: 
+	    5622f25a6bb3 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.553407:     409148                  instructions: 
+	    5622f25a6bfe [unknown] ([unknown])
+
+:55927 55927 [010] 40225.553427:     309294                  instructions: 
+	    5622f25a6bb9 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.553510:     511816                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.553517:     481296                    cpu-cycles: 
+	    5622f25a6bb3 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.553565:     447706                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.553591:     688596                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.553596:     329693                  instructions: 
+	    5622f25a6bb9 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.553686:     547401                    cpu-cycles: 
+	    5622f25a6bfe [unknown] ([unknown])
+
+:55927 55927 [010] 40225.553689:     518272                    cpu-cycles: 
+	    5622f25a6bee [unknown] ([unknown])
+
+:55925 55925 [009] 40225.553738:     479882                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.553781:     349489                  instructions: 
+	    5622f25a6bb3 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.553824:     696340                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.553871:     548102                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.553873:     576620                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.553923:     506663                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.553964:     364781                  instructions: 
+	    5622f25a7a2b [unknown] ([unknown])
+
+EMT 20913 [011] 40225.554059:     702912                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.554063:     573552                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.554070:     600861                    cpu-cycles: 
+	    5622f25a6bf6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.554118:     529025                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.554157:     381499                  instructions: 
+	    5622f25a6baa [unknown] ([unknown])
+
+:55927 55927 [010] 40225.554264:     595139                    cpu-cycles: 
+	    5622f25ab2d6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.554275:     620976                    cpu-cycles: 
+	    5622f25ac8bd [unknown] ([unknown])
+
+EMT 20913 [011] 40225.554296:     708523                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.554321:     547705                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.554370:     395413                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.554471:     613428                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.554487:     637945                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.554533:     563367                  instructions: 
+	    5622f25a6baa [unknown] ([unknown])
+
+EMT 20913 [011] 40225.554535:     713402                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.554579:     404211                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.554685:     629074                    cpu-cycles: 
+	    5622f25a6bfe [unknown] ([unknown])
+
+:55925 55925 [009] 40225.554705:     652290                    cpu-cycles: 
+	    5622f25a6baa [unknown] ([unknown])
+
+:55925 55925 [009] 40225.554749:     576196                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.554775:     717530                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.554793:     413968                  instructions: 
+	    5622f25a6bf6 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.554904:     642321                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.554927:     664424                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.554970:     587388                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.555011:     422843                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.555017:     721150                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.555128:     653683                    cpu-cycles: 
+	    5622f25a6bc0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.555153:     674822                    cpu-cycles: 
+	    5622f25a6bee [unknown] ([unknown])
+
+:55925 55925 [009] 40225.555198:     597099                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.555232:     430536                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.555239:       2270                  cache-misses: 
+	ffffffffb06e3d00 [unknown] ([kernel.kallsyms])
+	ffffffffb0730282 [unknown] ([kernel.kallsyms])
+	ffffffffb0741fd5 [unknown] ([kernel.kallsyms])
+	ffffffffb0742280 [unknown] ([kernel.kallsyms])
+	ffffffffb0730f57 [unknown] ([kernel.kallsyms])
+	ffffffffb07317d9 [unknown] ([kernel.kallsyms])
+	ffffffffb06651f4 [unknown] ([kernel.kallsyms])
+	ffffffffb1171d46 [unknown] ([kernel.kallsyms])
+	ffffffffb1200cc2 [unknown] ([kernel.kallsyms])
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.555265:     723349                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.555365:     634771                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.555387:     653392                    cpu-cycles: 
+	    5622f25ac585 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.555450:     576762                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.555486:     417489                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.555513:     724207                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.555587:     639198                    cpu-cycles: 
+	    5622f25a6bb6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.555612:     659031                    cpu-cycles: 
+	    5622f25ab263 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.555695:     576042                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.555720:     416575                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.555760:     724820                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.555809:     649177                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.555839:     668081                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.555916:     577644                  instructions: 
+	    5622f25a7a2f [unknown] ([unknown])
+
+:55927 55927 [010] 40225.555950:     420089                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.556006:     726175                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.556034:     659501                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.556067:     676628                    cpu-cycles: 
+	    5622f25ac592 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.556143:     586850                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.556192:     424584                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.556251:     727682                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.556263:     668546                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.556299:     684972                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.556379:     594548                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.556441:     426523                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.556496:     676188                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.556498:     729209                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.556533:     691483                    cpu-cycles: 
+	    5622f25ab267 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.556607:     598748                  instructions: 
+	    5622f25ab21f [unknown] ([unknown])
+
+:55927 55927 [010] 40225.556678:     426700                  instructions: 
+	    5622f25ab2c6 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.556731:     682209                    cpu-cycles: 
+	    5622f25a6bb3 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.556745:     730341                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.556769:     697354                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.556837:     606072                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.556914:     429505                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.556968:     687682                    cpu-cycles: 
+	    5622f25ab2d8 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.556991:     731605                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.557006:     702572                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.557069:     612659                  instructions: 
+	    5622f25a6bfe [unknown] ([unknown])
+
+:55927 55927 [010] 40225.557151:     432860                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.557206:     692597                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.557238:     732813                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.557245:     707268                    cpu-cycles: 
+	    5622f25a88e6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.557303:     618771                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.557355:     444791                  instructions: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55927 55927 [010] 40225.557402:     435711                  instructions: 
+	    5622f25a6bb6 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.557447:     696669                    cpu-cycles: 
+	    5622f25a6bb6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.557486:     711435                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.557487:     734125                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.557539:     624010                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.557643:     435545                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.557688:     700084                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.557728:     714842                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.557735:     734287                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.557778:     628464                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.557883:     437506                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.557930:     703202                    cpu-cycles: 
+	    5622f25a6bf6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.557971:     717843                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.557983:     735076                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.558017:     632302                  instructions: 
+	    5622f25a7a3b [unknown] ([unknown])
+
+:55927 55927 [010] 40225.558123:     439718                  instructions: 
+	    5622f25a6bb9 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.558174:     706218                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.558214:     720430                    cpu-cycles: 
+	    5622f25ac834 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.558231:     736012                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.558259:     635627                  instructions: 
+	    5622f25ac837 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.558375:     442109                  instructions: 
+	    5622f25a6bb9 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.558418:     708588                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.558459:     722678                    cpu-cycles: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.558479:     736800                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.558502:     638441                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.558619:     441571                  instructions: 
+	    5622f25a87e0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.558663:     710604                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.558705:     724598                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.558728:     737356                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.558748:     640744                  instructions: 
+	    5622f25a7a38 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.558864:     442947                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.558910:     712391                    cpu-cycles: 
+	    5622f25a9fd0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.558951:     726116                    cpu-cycles: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.558976:     737978                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.558993:     641979                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.559109:     444246                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.559155:     713646                    cpu-cycles: 
+	    5622f25a6bf6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.559198:     727571                    cpu-cycles: 
+	    5622f25ac585 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.559225:     738562                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.559244:     643684                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.559371:     445179                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.559405:     715588                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.559448:     729325                    cpu-cycles: 
+	    5622f25ac585 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.559476:     738845                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.559490:     643111                  instructions: 
+	    5622f25ac585 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.559617:     442627                  instructions: 
+	    5622f25a6bb6 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.559653:     715600                    cpu-cycles: 
+	    5622f25a6be5 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.559695:     729434                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.559725:     738319                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.559735:     644527                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.559862:     443514                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.559900:     716543                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.559943:     730398                    cpu-cycles: 
+	    5622f25ac544 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.559974:     738566                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.559983:     646057                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.560108:     444806                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.560148:     717398                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.560191:     731150                    cpu-cycles: 
+	    5622f25a6bee [unknown] ([unknown])
+
+EMT 20913 [011] 40225.560224:     738991                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.560229:     646874                  instructions: 
+	    5622f25a7a32 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.560366:     445629                  instructions: 
+	    5622f25a6bee [unknown] ([unknown])
+
+:55927 55927 [010] 40225.560396:     718192                    cpu-cycles: 
+	    5622f25a6bb6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.560439:     731771                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.560473:     739145                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.560476:     648058                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.560613:     443967                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.560645:     718851                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.560688:     732415                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.560722:     739308                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.560723:     649180                  instructions: 
+	    5622f25ab222 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.560859:     444627                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55927 55927 [010] 40225.560894:     719369                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.560937:     733069                    cpu-cycles: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.560972:     739640                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.560977:     650094                  instructions: 
+	    5622f25a7a23 [unknown] ([unknown])
+
+alsa-source-USB  1785 [010] 40225.560989:       1581                  cache-misses: 
+	ffffffffb09483a3 [unknown] ([kernel.kallsyms])
+	ffffffffb0906b0f [unknown] ([kernel.kallsyms])
+	ffffffffb09079d8 [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7efd71d73bf6 __ppoll+0xa6 (inlined)
+	    7efd721491f3 pa_rtpoll_run+0x123 (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd6cc79efc [unknown] (/usr/lib/pulse-13.99.1/modules/libalsa-util.so)
+	    7efd720e272b [unknown] (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-13.99.so)
+	    7efd71fb9608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7efd71d80292 __GI___clone+0x42 (inlined)
+
+alsa-source-USB  1785 [010] 40225.561013:       1393                  cache-misses: 
+	    7efd6ccf7dff [unknown] (/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0)
+	    7efd6cce903b snd_pcm_avail+0x6b (/usr/lib/x86_64-linux-gnu/libasound.so.2.0.0)
+	    7efd6cc586da pa_alsa_safe_avail+0x3a (/usr/lib/pulse-13.99.1/modules/libalsa-util.so)
+	    7efd6cc7a0db [unknown] (/usr/lib/pulse-13.99.1/modules/libalsa-util.so)
+	    7efd720e272b [unknown] (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-13.99.so)
+	    7efd71fb9608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7efd71d80292 __GI___clone+0x42 (inlined)
+
+alsa-source-USB  1785 [010] 40225.561029:       3070                  cache-misses: 
+	    7efd640ddc41 [unknown] (/usr/lib/pulse-13.99.1/modules/module-echo-cancel.so)
+	    7efd72171db7 pa_source_output_push+0x217 (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd7217a866 pa_source_post+0x196 (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd6cc7a24c [unknown] (/usr/lib/pulse-13.99.1/modules/libalsa-util.so)
+	    7efd720e272b [unknown] (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-13.99.so)
+	    7efd71fb9608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7efd71d80292 __GI___clone+0x42 (inlined)
+
+alsa-source-USB  1785 [010] 40225.561073:       8378                  cache-misses: 
+	    7efd640785f9 webrtc::IFChannelBuffer::RefreshF+0x49 (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6407866c webrtc::IFChannelBuffer::fbuf_const+0xc (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd64057c18 webrtc::AudioBuffer::split_bands_const_f+0x18 (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd640604f1 webrtc::NoiseSuppressionImpl::AnalyzeCaptureAudio+0x41 (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6405c4d3 webrtc::AudioProcessingImpl::ProcessStreamLocked+0xb3 (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6405c8ba webrtc::AudioProcessingImpl::ProcessStream+0xfa (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6c292a00 pa_webrtc_ec_record+0xf0 (/usr/lib/pulse-13.99.1/modules/libwebrtc-util.so)
+	    7efd640de1fc [unknown] (/usr/lib/pulse-13.99.1/modules/module-echo-cancel.so)
+	    7efd72171db7 pa_source_output_push+0x217 (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd7217a866 pa_source_post+0x196 (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd6cc7a24c [unknown] (/usr/lib/pulse-13.99.1/modules/libalsa-util.so)
+	    7efd720e272b [unknown] (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-13.99.so)
+	    7efd71fb9608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7efd71d80292 __GI___clone+0x42 (inlined)
+
+alsa-source-USB  1785 [010] 40225.561098:     445405                  instructions: 
+	    7efd6403dc1e [unknown] (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd64088f7a [unknown] (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6403a260 [unknown] (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6403c8a7 WebRtcAec_ProcessFrames+0xf7 (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6403eace WebRtcAec_Process+0x45e (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	ffffffffffffffff [unknown] ([unknown])
+
+alsa-source-USB  1785 [010] 40225.561159:     719659                    cpu-cycles: 
+	    7efd64089c9c [unknown] (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6403da90 [unknown] (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6403de7c aec_rdft_forward_128+0x1c (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd64088fde [unknown] (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6403a260 [unknown] (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6403c8a7 WebRtcAec_ProcessFrames+0xf7 (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6403eace WebRtcAec_Process+0x45e (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	ffffffffffffffff [unknown] ([unknown])
+
+:55925 55925 [009] 40225.561186:     733268                    cpu-cycles: 
+	    5622f25a6bee [unknown] ([unknown])
+
+EMT 20913 [011] 40225.561221:     739898                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+alsa-source-USB  1785 [010] 40225.561225:     447987                  instructions: 
+	    7efd7188b3ff [unknown] (/usr/lib/x86_64-linux-gnu/libspeexdsp.so.1.5.0)
+	    7efd7188b1f5 [unknown] (/usr/lib/x86_64-linux-gnu/libspeexdsp.so.1.5.0)
+	    7efd7188c0dc speex_resampler_process_float+0x11c (/usr/lib/x86_64-linux-gnu/libspeexdsp.so.1.5.0)
+	    7efd7188c625 speex_resampler_process_interleaved_float+0x65 (/usr/lib/x86_64-linux-gnu/libspeexdsp.so.1.5.0)
+	    7efd7218b512 [unknown] (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd721454c7 [unknown] (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd7214729c pa_resampler_run+0x19c (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd72171da3 pa_source_output_push+0x203 (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd7217a873 pa_source_post+0x1a3 (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd640de2a2 [unknown] (/usr/lib/pulse-13.99.1/modules/module-echo-cancel.so)
+	    7efd72171db7 pa_source_output_push+0x217 (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd7217a866 pa_source_post+0x196 (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd6cc7a24c [unknown] (/usr/lib/pulse-13.99.1/modules/libalsa-util.so)
+	    7efd720e272b [unknown] (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-13.99.so)
+	    7efd71fb9608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7efd71d80292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.561225:     648989                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+alsa-source-USB  1785 [010] 40225.561338:     502278                  instructions: 
+	    7efd640560c9 webrtc::PoleZeroFilter::Filter+0x1f9 (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd64056bf5 webrtc::VadAudioProc::ExtractFeatures+0x45 (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd64057236 webrtc::VoiceActivityDetector::ProcessChunk+0x106 (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd64045585 webrtc::Agc::Process+0x15 (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd64046b6d webrtc::AgcManagerDirect::Process+0x3d (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6405c5c1 webrtc::AudioProcessingImpl::ProcessStreamLocked+0x1a1 (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6405c8ba webrtc::AudioProcessingImpl::ProcessStream+0xfa (/usr/lib/x86_64-linux-gnu/libwebrtc_audio_processing.so.1.0.0)
+	    7efd6c292a00 pa_webrtc_ec_record+0xf0 (/usr/lib/pulse-13.99.1/modules/libwebrtc-util.so)
+	    7efd640de1fc [unknown] (/usr/lib/pulse-13.99.1/modules/module-echo-cancel.so)
+	    7efd72171db7 pa_source_output_push+0x217 (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd7217a866 pa_source_post+0x196 (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecore-13.99.so)
+	    7efd6cc7a24c [unknown] (/usr/lib/pulse-13.99.1/modules/libalsa-util.so)
+	    7efd720e272b [unknown] (/usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-13.99.so)
+	    7efd71fb9608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7efd71d80292 __GI___clone+0x42 (inlined)
+
+:55926 55926 [010] 40225.561410:     714754                    cpu-cycles: 
+	    7fe75fe15750 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.561425:      13318                  cache-misses: 
+	ffffffffb0b4c9b9 [unknown] ([kernel.kallsyms])
+	ffffffffb0cdaf81 [unknown] ([kernel.kallsyms])
+	ffffffffb0cdb0c1 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7fe75fe9421f [unknown] ([unknown])
+
+:55925 55925 [009] 40225.561436:     733524                    cpu-cycles: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.561471:     740079                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.561474:     649412                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.561574:     346262                  instructions: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55926 55926 [010] 40225.561624:     578182                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.561664:     714365                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.561686:     733763                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.561723:     740267                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.561745:     649711                  instructions: 
+	    5622f25ac585 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.561906:     712982                    cpu-cycles: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.561936:     733774                    cpu-cycles: 
+	    5622f25a6bb3 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.561945:     569235                  instructions: 
+	    5622f25a6bee [unknown] ([unknown])
+
+EMT 20913 [011] 40225.561972:     739636                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.561992:     643664                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.562153:     715688                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.562184:     733870                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.562221:     739824                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.562238:     644393                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.562256:     553505                  instructions: 
+	    5622f25a6bbc [unknown] ([unknown])
+
+:55926 55926 [010] 40225.562399:     716999                    cpu-cycles: 
+	    5622f25a6bf6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.562433:     734302                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.562471:     740129                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.562483:     645917                  instructions: 
+	    5622f25ab222 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.562571:     539845                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.562647:     718205                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.562683:     734717                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.562720:     740391                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.562730:     647286                  instructions: 
+	    5622f25a7a35 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.562868:     525869                  instructions: 
+	    5622f25a6bbc [unknown] ([unknown])
+
+:55926 55926 [010] 40225.562895:     718979                    cpu-cycles: 
+	    5622f25a6bb3 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.562932:     734942                    cpu-cycles: 
+	    5622f25ab287 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.562971:     740677                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.562985:     648420                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.563139:     719675                    cpu-cycles: 
+	    5622f25a6bb9 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.563161:     515582                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.563183:     735107                    cpu-cycles: 
+	    5622f25a6bb9 [unknown] ([unknown])
+
+EMT 20913 [011] 40225.563220:     740222                    cpu-cycles: 
+	ffffa1d35065b842 [unknown] ([unknown])
+	    7f170afca50b __ioctl+0xb (inlined)
+	    7f170adacc90 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f16f8648158 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85dcdcb [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f85db2c8 [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f16f863ff2f [unknown] (/usr/lib/virtualbox/VBoxVMM.so)
+	    7f170acdbb27 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170ad9f581 [unknown] (/usr/lib/virtualbox/VBoxRT.so)
+	    7f170b0b4608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7f170afd5292 __GI___clone+0x42 (inlined)
+
+:55925 55925 [009] 40225.563263:     646786                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.563342:     270616                  instructions: 
+	    5622f25a6bb3 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.563399:     721447                    cpu-cycles: 
+	ffffffffb120003b [unknown] ([kernel.kallsyms])
+
+:55925 55925 [009] 40225.563443:     734996                    cpu-cycles: 
+	    5622f25ba5a8 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.563456:     502356                  instructions: 
+	ffffffffb08eaa6f [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7fe75fe9421f [unknown] ([unknown])
+
+:55929 55929 [011] 40225.563464:     241574                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.563486:     740410                    cpu-cycles: 
+	    5622f25a7a04 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.563541:     638747                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.563576:     273240                  instructions: 
+	    5622f25a7a07 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.563640:     718168                    cpu-cycles: 
+	ffffffffb06baae1 [unknown] ([kernel.kallsyms])
+	ffffffffb0ce20fb [unknown] ([kernel.kallsyms])
+	ffffffffb0ce525d [unknown] ([kernel.kallsyms])
+	ffffffffb0cdcb1f [unknown] ([kernel.kallsyms])
+	ffffffffb0cdafa4 [unknown] ([kernel.kallsyms])
+	ffffffffb0cdb0c1 [unknown] ([kernel.kallsyms])
+	ffffffffb08eab23 [unknown] ([kernel.kallsyms])
+	ffffffffb08ebc45 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee2c7 [unknown] ([kernel.kallsyms])
+	ffffffffb08ee35a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7fe75fe9421f [unknown] ([unknown])
+
+:55925 55925 [009] 40225.563687:     731536                    cpu-cycles: 
+	    5622f25bdaec [unknown] ([unknown])
+
+:55929 55929 [011] 40225.563698:     314992                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.563717:     492926                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.563736:     734816                    cpu-cycles: 
+	    5622f25a6bfc [unknown] ([unknown])
+
+:55925 55925 [009] 40225.563834:     630598                  instructions: 
+	    5622f25a6bbc [unknown] ([unknown])
+
+:55929 55929 [011] 40225.563846:     356613                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.563882:     721433                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.563929:     733748                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.563981:     734932                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.563983:     490169                  instructions: 
+	    5622f25a6bee [unknown] ([unknown])
+
+:55929 55929 [011] 40225.564010:     387551                  instructions: 
+	    5622f25a6bb6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.564092:     619062                  instructions: 
+	    5622f25ae033 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.564123:     724422                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.564170:     736568                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.564184:     412573                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.564228:     736815                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.564246:     486537                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.564343:     616755                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.564366:     727714                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.564372:     435253                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.564412:     740035                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.564473:     737768                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.564521:     483431                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.564570:     453110                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.564594:     616378                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.564608:     730675                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.564655:     743155                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.564717:     739916                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.564776:     467906                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.564780:     478106                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.564844:     616039                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.564852:     733304                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.564898:     745915                    cpu-cycles: 
+	    5622f25a6bf6 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.564963:     741949                    cpu-cycles: 
+	    5622f25a6bbc [unknown] ([unknown])
+
+:55929 55929 [011] 40225.564989:     480360                  instructions: 
+	    5622f25bbdd5 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.565037:     475869                  instructions: 
+	    5622f25a6bbc [unknown] ([unknown])
+
+:55925 55925 [009] 40225.565094:     615875                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.565098:     735689                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.565143:     748254                    cpu-cycles: 
+	    5622f25bdaf7 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.565203:     490929                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.565212:     743696                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.565292:     474215                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.565343:     737384                    cpu-cycles: 
+	    5622f25ab2fc [unknown] ([unknown])
+
+:55925 55925 [009] 40225.565345:     615869                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.565389:     750270                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.565426:     501050                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.565459:     744006                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.565560:     473089                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.565590:     738995                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.565595:     615814                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.565635:     751971                    cpu-cycles: 
+	    5622f25a6bb6 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.565653:     508735                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.565705:     745274                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.565815:     469215                  instructions: 
+	    5622f25a6baa [unknown] ([unknown])
+
+:55926 55926 [010] 40225.565837:     740228                    cpu-cycles: 
+	    5622f25a79ec [unknown] ([unknown])
+
+:55925 55925 [009] 40225.565845:     615723                  instructions: 
+	    5622f25bc23f [unknown] ([unknown])
+
+:55925 55925 [009] 40225.565882:     753449                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.565884:     515194                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.565952:     746539                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.566069:     467994                  instructions: 
+	    5622f25a6bf6 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.566084:     741264                    cpu-cycles: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.566097:     615738                  instructions: 
+	    5622f25a6bc0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.566117:     520623                  instructions: 
+	    5622f25b0a90 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.566129:     754705                    cpu-cycles: 
+	    5622f25a6bb9 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.566200:     747731                    cpu-cycles: 
+	    5622f25a6bee [unknown] ([unknown])
+
+:55926 55926 [010] 40225.566320:     467215                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.566335:     742384                    cpu-cycles: 
+	ffffffffb0e899e9 [unknown] ([kernel.kallsyms])
+	ffffffffb0e8f80c [unknown] ([kernel.kallsyms])
+	ffffffffb0e8faf1 [unknown] ([kernel.kallsyms])
+	ffffffffb070eef2 [unknown] ([kernel.kallsyms])
+	ffffffffb070f063 [unknown] ([kernel.kallsyms])
+	ffffffffb070f0eb [unknown] ([kernel.kallsyms])
+	ffffffffb0713513 [unknown] ([kernel.kallsyms])
+	ffffffffb116fecf [unknown] ([kernel.kallsyms])
+	ffffffffb1200c1e [unknown] ([kernel.kallsyms])
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.566348:     615044                  instructions: 
+	    5622f25a7a23 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.566353:     525358                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.566377:     755641                    cpu-cycles: 
+	    5622f25a6bf6 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.566448:     748703                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.566577:     742298                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.566591:     529235                  instructions: 
+	    5622f25a79ec [unknown] ([unknown])
+
+:55926 55926 [010] 40225.566597:     466868                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.566598:     614823                  instructions: 
+	    5622f25a7a23 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.566625:     756365                    cpu-cycles: 
+	    5622f25a6bfc [unknown] ([unknown])
+
+:55929 55929 [011] 40225.566696:     749363                    cpu-cycles: 
+	    5622f25a6bee [unknown] ([unknown])
+
+:55926 55926 [010] 40225.566826:     745109                    cpu-cycles: 
+	    5622f25a6bb9 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.566833:     532517                  instructions: 
+	    5622f25b0a4f [unknown] ([unknown])
+
+:55926 55926 [010] 40225.566849:     461137                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.566869:     614656                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.566877:     757026                    cpu-cycles: 
+	    5622f25a6bc0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.566946:     749932                    cpu-cycles: 
+	    5622f25a7a04 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.567077:     745688                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.567083:     534728                  instructions: 
+	    5622f25a6bc0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.567101:     460716                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.567126:     756355                    cpu-cycles: 
+	    5622f25a6bf6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.567167:     608979                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.567198:     750018                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.567349:     745279                    cpu-cycles: 
+	    5622f25a6bee [unknown] ([unknown])
+
+:55929 55929 [011] 40225.567357:     535807                  instructions: 
+	    5622f25a6bc0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.567391:     459816                  instructions: 
+	    5622f25a6bb6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.567399:     756903                    cpu-cycles: 
+	    5622f25a6bf6 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.567473:     749148                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.567487:     595830                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.567607:     737696                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.567611:     529985                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.567648:     451889                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.567658:     748844                    cpu-cycles: 
+	    5622f25a7a2b [unknown] ([unknown])
+
+:55929 55929 [011] 40225.567730:     740615                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.567782:     579527                  instructions: 
+	    5622f25bc23f [unknown] ([unknown])
+
+:55929 55929 [011] 40225.567859:     529033                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.567863:     734783                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.567898:     450394                  instructions: 
+	    5622f25a6bd4 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.567916:     745372                    cpu-cycles: 
+	    5622f25a6bee [unknown] ([unknown])
+
+:55929 55929 [011] 40225.567984:     737853                    cpu-cycles: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.568068:     568514                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.568106:     529485                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.568117:     732665                    cpu-cycles: 
+	    5622f25a6bfe [unknown] ([unknown])
+
+:55926 55926 [010] 40225.568144:     450481                  instructions: 
+	    5622f25ab2ea [unknown] ([unknown])
+
+:55925 55925 [009] 40225.568171:     742813                    cpu-cycles: 
+	    5622f25a6bee [unknown] ([unknown])
+
+:55929 55929 [011] 40225.568237:     736409                    cpu-cycles: 
+	    5622f25a6bb6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.568343:     559704                  instructions: 
+	    5622f25a6bb6 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.568354:     530213                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.568370:     731008                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.568404:     451309                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.568426:     740742                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.568490:     735220                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.568602:     530907                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.568620:     553330                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.568623:     729895                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.568651:     449089                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.568680:     739038                    cpu-cycles: 
+	    5622f25a7a23 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.568742:     734285                    cpu-cycles: 
+	    5622f25b096f [unknown] ([unknown])
+
+:55929 55929 [011] 40225.568850:     531449                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.568876:     728954                    cpu-cycles: 
+	    5622f25a6bb9 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.568878:     546576                  instructions: 
+	    5622f25a6bb9 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.568898:     449888                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.568935:     737395                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.568995:     733417                    cpu-cycles: 
+	    5622f25a6baa [unknown] ([unknown])
+
+:55929 55929 [011] 40225.569100:     531899                  instructions: 
+	    5622f25a79fe [unknown] ([unknown])
+
+:55926 55926 [010] 40225.569128:     727991                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.569133:     544342                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.569145:     450461                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.569189:     735794                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.569247:     732535                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.569350:     531862                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.569380:     727286                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.569396:     451358                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.569404:     542986                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.569441:     734463                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.569499:     731768                    cpu-cycles: 
+	    5622f25a6bfc [unknown] ([unknown])
+
+:55929 55929 [011] 40225.569600:     531799                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.569632:     726618                    cpu-cycles: 
+	    5622f25a6bf6 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.569645:     451055                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.569665:     537838                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.569694:     733427                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.569752:     731129                    cpu-cycles: 
+	    5622f25a6bfc [unknown] ([unknown])
+
+:55929 55929 [011] 40225.569866:     531932                  instructions: 
+	    5622f25a6bb3 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.569879:     451249                  instructions: 
+	    5622f25a6bb9 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.569889:     725694                    cpu-cycles: 
+	    5622f25a6baa [unknown] ([unknown])
+
+:55925 55925 [009] 40225.569927:     535024                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.569946:     732415                    cpu-cycles: 
+	    5622f25a6bb3 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.570006:     730060                    cpu-cycles: 
+	    5622f25bbd72 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.570115:     455191                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.570116:     528019                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.570140:     723301                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.570186:     531901                  instructions: 
+	    5622f25ae033 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.570197:     731678                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.570257:     728630                    cpu-cycles: 
+	    5622f25a6bf2 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.570364:     527780                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.570365:     458439                  instructions: 
+	    5622f25a6bc3 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.570390:     722902                    cpu-cycles: 
+	    5622f25a6bb3 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.570446:     731229                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.570454:     529546                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.570508:     728093                    cpu-cycles: 
+	    5622f25b0a93 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.570612:     528284                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.570613:     458606                  instructions: 
+	    5622f25a6bfe [unknown] ([unknown])
+
+:55926 55926 [010] 40225.570641:     722757                    cpu-cycles: 
+	    5622f25a6bf6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.570697:     731901                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.570713:     525051                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.570758:     727688                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.570854:     458941                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.570858:     529033                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.570891:     722548                    cpu-cycles: 
+	    5622f25a6bb9 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.570948:     731507                    cpu-cycles: 
+	    5622f25a6bfc [unknown] ([unknown])
+
+:55925 55925 [009] 40225.570970:     522775                  instructions: 
+	    5622f25a7a23 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.571008:     727782                    cpu-cycles: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.571093:     461166                  instructions: 
+	    5622f25a7a04 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.571119:       6139                  cache-misses: 
+	ffffffffb0bbc217 [unknown] ([kernel.kallsyms])
+	ffffffffb0890605 [unknown] ([kernel.kallsyms])
+	ffffffffb0891a21 [unknown] ([kernel.kallsyms])
+	ffffffffb0891c34 [unknown] ([kernel.kallsyms])
+	ffffffffb0f51723 [unknown] ([kernel.kallsyms])
+	ffffffffc2efc1c6 [unknown] ([ath10k_pci])
+	ffffffffc2efc5cb [unknown] ([unknown])
+	ffffffffc2efc675 [unknown] ([unknown])
+	ffffffffc32a08ec [unknown] ([ath10k_core])
+	ffffffffc32a09da [unknown] ([unknown])
+	ffffffffc2efd28c [unknown] ([unknown])
+	ffffffffb0f6e7e2 [unknown] ([kernel.kallsyms])
+	ffffffffb14000e1 [unknown] ([kernel.kallsyms])
+	ffffffffb12010e2 [unknown] ([kernel.kallsyms])
+	ffffffffb063537d [unknown] ([kernel.kallsyms])
+	ffffffffb06a1514 [unknown] ([kernel.kallsyms])
+	ffffffffb116fedc [unknown] ([kernel.kallsyms])
+	ffffffffb1200c1e [unknown] ([kernel.kallsyms])
+	    5622f25a6bb3 [unknown] ([unknown])
+
+:55926 55926 [010] 40225.571141:     722497                    cpu-cycles: 
+	    5622f25ab2ea [unknown] ([unknown])
+
+:55929 55929 [011] 40225.571149:     529857                  instructions: 
+	    5622f25a6bb6 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.571199:     731169                    cpu-cycles: 
+	    5622f25a6bb9 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.571229:     520951                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.571270:     727189                    cpu-cycles: 
+	    5622f25a6bfc [unknown] ([unknown])
+
+:55928 55928 [010] 40225.571353:       8730                  cache-misses: 
+	    7fe75ff8768e [unknown] ([unknown])
+
+:55928 55928 [010] 40225.571397:     721963                    cpu-cycles: 
+	ffffffffb0bbf1e4 [unknown] ([kernel.kallsyms])
+	ffffffffb0697e43 [unknown] ([kernel.kallsyms])
+	ffffffffb069f8dc [unknown] ([kernel.kallsyms])
+	ffffffffb06a026b [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7fe76017a6c6 [unknown] ([unknown])
+
+:55929 55929 [011] 40225.571413:     520836                  instructions: 
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:55925 55925 [009] 40225.571440:       2210                  cache-misses: 
+	    5622f25ae07e [unknown] ([unknown])
+
+:55925 55925 [009] 40225.571457:     730180                    cpu-cycles: 
+	ffffffffb086d9d0 [unknown] ([kernel.kallsyms])
+	ffffffffb086e185 [unknown] ([kernel.kallsyms])
+	ffffffffb0893c3a [unknown] ([kernel.kallsyms])
+	ffffffffb0895338 [unknown] ([kernel.kallsyms])
+	ffffffffb089535a [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+	    7fe75fe9ebdb [unknown] ([unknown])
+
+:55926 55926 [010] 40225.571483:     462614                  instructions: 
+	ffffffffb06e8fb3 [unknown] ([kernel.kallsyms])
+	ffffffffb117b823 [unknown] ([kernel.kallsyms])
+	ffffffffb117c0c5 [unknown] ([kernel.kallsyms])
+	ffffffffb0604a95 [unknown] ([kernel.kallsyms])
+	ffffffffb116eb99 [unknown] ([kernel.kallsyms])
+	ffffffffb116ede9 [unknown] ([kernel.kallsyms])
+	ffffffffb1171d56 [unknown] ([kernel.kallsyms])
+	ffffffffb1200cc2 [unknown] ([kernel.kallsyms])
+	    5622f25a6bb0 [unknown] ([unknown])
+
+:-1    -1 [011] 40225.571522:     722983                    cpu-cycles: 
+	ffffffffb06e8b74 [unknown] ([kernel.kallsyms])
+	ffffffffb06e8f41 [unknown] ([kernel.kallsyms])
+	ffffffffb117b823 [unknown] ([kernel.kallsyms])
+	ffffffffb06d7da5 [unknown] ([kernel.kallsyms])
+	ffffffffb069feaa [unknown] ([kernel.kallsyms])
+	ffffffffb06a026b [unknown] ([kernel.kallsyms])
+	ffffffffb116ec19 [unknown] ([kernel.kallsyms])
+	ffffffffb120008c [unknown] ([kernel.kallsyms])
+
+Timer  2799 [010] 40225.571669:       8730                  cache-misses: 
+	    55f24729844b [unknown] (/usr/lib/firefox/firefox)
+	    55f247298f19 [unknown] (/usr/lib/firefox/firefox)
+	    55f247295117 malloc+0x27 (/usr/lib/firefox/firefox)
+	    55f24729d0b8 moz_xmalloc+0x8 (/usr/lib/firefox/firefox)
+	    7fce21c72cda [unknown] (/usr/lib/firefox/libxul.so)
+	    7fce21c74c0c [unknown] (/usr/lib/firefox/libxul.so)
+	    7fce21c74348 [unknown] (/usr/lib/firefox/libxul.so)
+	    7fce21c7925d [unknown] (/usr/lib/firefox/libxul.so)
+	    7fce21c7c855 [unknown] (/usr/lib/firefox/libxul.so)
+	    7fce221e8a27 [unknown] (/usr/lib/firefox/libxul.so)
+	    7fce221a8b27 [unknown] (/usr/lib/firefox/libxul.so)
+	    7fce21c774d8 [unknown] (/usr/lib/firefox/libxul.so)
+	    7fce2c20cc88 [unknown] (/usr/lib/firefox/libnspr4.so)
+	    7fce2c76c608 start_thread+0xd8 (/usr/lib/x86_64-linux-gnu/libpthread-2.31.so)
+	    7fce2c340292 __GI___clone+0x42 (inlined)
+
+swapper     0 [009] 40225.571822:       2210                  cache-misses: 
+	ffffffffb06fc88d [unknown] ([kernel.kallsyms])
+	ffffffffb06fd1e6 [unknown] ([kernel.kallsyms])
+	ffffffffb06fd8b8 [unknown] ([kernel.kallsyms])
+	ffffffffb117bace [unknown] ([kernel.kallsyms])
+	ffffffffb117c3ac [unknown] ([kernel.kallsyms])
+	ffffffffb06db680 [unknown] ([kernel.kallsyms])
+	ffffffffb06db920 [unknown] ([kernel.kallsyms])
+	ffffffffb06636b9 [unknown] ([kernel.kallsyms])
+	ffffffffb06000e6 [unknown] ([kernel.kallsyms])
+

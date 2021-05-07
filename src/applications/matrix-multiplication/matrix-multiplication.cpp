@@ -1,8 +1,7 @@
 #include <cmath>
 #include <iostream>
-#include <thread>
 
-#define MATRIX_SIZE 50
+#define MATRIX_SIZE 1000
 
 using namespace std;
 
@@ -59,21 +58,7 @@ void display_matrix(int c[MATRIX_SIZE][MATRIX_SIZE]) {
     }
 }
 
-void dump_task() {
-    int i = 0;
-    while (i < pow(MATRIX_SIZE, 1)) {
-        i++;
-        cout << i;
-    }
-}
-
 int main() {
-    int num_threads = 10;
-    thread threads[num_threads];
-    for (int i = 0; i < num_threads; i++) {
-        threads[i] = thread(&dump_task);
-    }
-
     cout << "Filling matrices..." << endl;
     fill_matrix(a);
     fill_matrix(b);
@@ -91,10 +76,6 @@ int main() {
 
     cout << "Displaying result matrix..." << endl;
     display_matrix(c);
-
-    for (int i = 0; i < num_threads; i++) {
-        threads[i].join();
-    }
 
     return 0;
 }

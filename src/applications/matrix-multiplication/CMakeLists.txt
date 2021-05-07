@@ -5,4 +5,4 @@ set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 add_executable(matrix-multiplication matrix-multiplication.cpp)
-target_link_libraries(matrix-multiplication pthread)
+# target_link_libraries(matrix-multiplication pthread)

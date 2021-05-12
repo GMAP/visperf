@@ -1,59 +1,34 @@
-import dash
-import dash_bootstrap_components as dbc
-import dash_core_components as dcc
-import dash_html_components as html
-from dash.dependencies import Input, Output
-from pages import not_found, cpu_cores
+import sys
+import json
+import argparse
+from plots.utils import csv_stat_to_df
+from shared import shared_data
+from shared.main_dash import app, make_layout
 
-app = dash.Dash(
-    __name__,
-    external_stylesheets=[dbc.themes.SKETCHY],
-    title="VisCPU",
+arg_parser = argparse.ArgumentParser()
+arg_parser.add_argument(
+    "--d1",
+    type=open,
+    required=True,
+    help="Data collected from an experiment.",
 )
-
-SIDEBAR_STYLE = {
-    "position": "fixed",
-    "top": 0,
-    "left": 0,
-    "bottom": 0,
-    "width": "16rem",
-    "padding": "2rem 1rem",
-    "backgroundColor": "#f8f9fa",
-}
-
-CONTENT_STYLE = {
-    "marginLeft": "18rem",
-    "marginRight": "2rem",
-    "padding": "2rem 1rem",
-}
-
-sidebar = html.Div(
-    [
-        html.H2("VisCPU", className="display-5 text-center"),
-        html.Hr(),
-        dbc.Nav(
-            [
-                dbc.NavLink("CPU cores", href="/", active="exact"),
-                dbc.NavLink("More", href="/more", active="exact"),
-            ],
-            vertical=True,
-            pills=True,
-        ),
-    ],
-    style=SIDEBAR_STYLE,
+arg_parser.add_argument(
+    "--d2",
+    type=open,
+    required=True,
+    help="Data collected from an experiment, which will be compared to the data set 'd1'.",
 )
+args = vars(arg_parser.parse_args())
 
-content = html.Div(id="page-content", style=CONTENT_STYLE)
-app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
+d1 = csv_stat_to_df(args["d1"])
+d2 = csv_stat_to_df(args["d2"])
+with open("config.json") as f:
+    config = json.load(f)
 
-
-@app.callback(Output("page-content", "children"), [Input("url", "pathname")])
-def render_page_content(pathname):
-    if pathname == "/":
-        return cpu_cores.get_page()
-
-    return not_found.get_page(pathname)
-
+shared_data.d1_global = d1
+shared_data.d2_global = d2
+shared_data.config_global = config
 
 if __name__ == "__main__":
+    app.layout = make_layout()
     app.run_server(debug=True)

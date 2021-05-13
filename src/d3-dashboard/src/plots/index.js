@@ -1,4 +1,3 @@
-import TestPlot from './TestPlot.js';
-import CorePlot from './CorePlot.js';
+import CpuPlot from './CpuPlot.js';
 
-export { TestPlot, CorePlot };
+export { CpuPlot };

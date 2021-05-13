@@ -33,6 +33,88 @@ export default function Plots({ dataFile }) {
     return (
         <div>
             <Plot
+                title="Variation of CPU cycles"
+                description="This plot compares the variation in the CPU cycles considering all captures made during the execution of the experiments."
+            >
+                <Grid container spacing={8}>
+                    <Grid item sm={4}>
+                        <CpuPlot
+                            timeSeries={false}
+                            title="Experiment 1"
+                            cpuLabels={dataFile['cpu_labels']}
+                            data={
+                                dataFile['dataset-1']['aggregated'][
+                                    'cpu-cycles'
+                                ]['mean']
+                            }
+                        />
+                    </Grid>
+                    <Grid item sm={4}>
+                        <CpuPlot
+                            timeSeries={false}
+                            title="Experiment 2"
+                            cpuLabels={dataFile['cpu_labels']}
+                            data={
+                                dataFile['dataset-2']['aggregated'][
+                                    'cpu-cycles'
+                                ]['mean']
+                            }
+                        />
+                    </Grid>
+                    <Grid item sm={4}>
+                        <CpuPlot
+                            d3ColorScale="interpolateRdBu"
+                            timeSeries={false}
+                            title="Comparison"
+                            cpuLabels={dataFile['cpu_labels']}
+                            data={dataFile['comparison']['cpu-cycles']['mean']}
+                        />
+                    </Grid>
+                </Grid>
+            </Plot>
+            <Plot
+                title="Variation of instructions"
+                description="This plot compares the variation in the instructions executed considering all captures made during the execution of the experiments."
+            >
+                <Grid container spacing={8}>
+                    <Grid item sm={4}>
+                        <CpuPlot
+                            timeSeries={false}
+                            title="Experiment 1"
+                            cpuLabels={dataFile['cpu_labels']}
+                            data={
+                                dataFile['dataset-1']['aggregated'][
+                                    'instructions'
+                                ]['mean']
+                            }
+                        />
+                    </Grid>
+                    <Grid item sm={4}>
+                        <CpuPlot
+                            timeSeries={false}
+                            title="Experiment 2"
+                            cpuLabels={dataFile['cpu_labels']}
+                            data={
+                                dataFile['dataset-2']['aggregated'][
+                                    'instructions'
+                                ]['mean']
+                            }
+                        />
+                    </Grid>
+                    <Grid item sm={4}>
+                        <CpuPlot
+                            d3ColorScale="interpolateRdBu"
+                            timeSeries={false}
+                            title="Comparison"
+                            cpuLabels={dataFile['cpu_labels']}
+                            data={
+                                dataFile['comparison']['instructions']['mean']
+                            }
+                        />
+                    </Grid>
+                </Grid>
+            </Plot>
+            <Plot
                 title="Compare CPU cycles"
                 description="This plot compares the CPU cycle used while experiments were running."
             >

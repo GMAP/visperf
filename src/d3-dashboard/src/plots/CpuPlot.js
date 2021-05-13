@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Slider from '@material-ui/core/Slider';
+// import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import * as d3 from 'd3';
 
@@ -17,33 +18,56 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function CpuPlot({ data, cpuLabels, title, squareSize = 80 }) {
+export default function CpuPlot({
+    data,
+    cpuLabels,
+    title,
+    d3ColorScale = 'interpolateYlOrRd',
+    timeSeries = true,
+    squareSize = 80,
+}) {
     const classes = useStyles();
     const plotRef = useRef();
-    let svg = useRef(undefined);
+    // const legendRef = useRef();
+    let svg = useRef(null);
 
-    const captures = data['captures'];
-    const times = Object.keys(captures).map((x) => parseFloat(x));
-    const sliderConfig = {
-        min: Math.min(...times),
-        max: Math.max(...times),
-        marks: times.map((x) => ({ value: x })),
-    };
+    let captures = null;
+    let times = null;
+    let sliderConfig = { min: 0 };
+    if (timeSeries) {
+        captures = data['captures'];
+        times = Object.keys(captures).map((x) => parseFloat(x));
+        sliderConfig = {
+            min: Math.min(...times),
+            max: Math.max(...times),
+            marks: times.map((x) => ({ value: x })),
+        };
+    }
 
     const [sliderValue, setSliderValue] = useState(sliderConfig.min);
 
     useEffect(() => {
-        const dataPlot = captures[sliderValue];
+        let dataPlot = null;
+        if (timeSeries) {
+            dataPlot = captures[sliderValue];
+        } else {
+            dataPlot = data;
+        }
         const width = squareSize * dataPlot[0].length;
         const height = squareSize * dataPlot.length;
 
+        // const legendSvg = d3
+        //     .select(legendRef.current)
+        //     .attr('width', 20)
+        //     .attr('height', height)
+        //     .append('g');
+
         const colorScale = d3
-            .scaleSequential(d3['interpolateYlOrRd'])
+            .scaleSequential(d3[d3ColorScale])
             .domain([
                 Math.min(...[].concat(...dataPlot)),
                 Math.max(...[].concat(...dataPlot)),
             ]);
-
         const x = d3
             .scaleLinear()
             .range([0, width])
@@ -52,6 +76,7 @@ export default function CpuPlot({ data, cpuLabels, title, squareSize = 80 }) {
             .scaleLinear()
             .range([0, height])
             .domain([0, dataPlot.length]);
+
         if (svg.current) {
             const row = svg.current.selectAll('.row').data(dataPlot);
             row.selectAll('.cell')
@@ -62,7 +87,7 @@ export default function CpuPlot({ data, cpuLabels, title, squareSize = 80 }) {
                     })),
                 )
                 .transition()
-                .duration(500)
+                .duration(300)
                 .attr('x', (_, i) => x(i))
                 .attr('y', (d, _) => y(d.row))
                 .style('fill', (d) => colorScale(d.value));
@@ -115,18 +140,29 @@ export default function CpuPlot({ data, cpuLabels, title, squareSize = 80 }) {
     return (
         <div>
             {title && <h4 className={classes.title}>{title}</h4>}
+            {/* <Grid container> */}
+            {/*     <Grid item sm={10}> */}
             <div className={classes.plotContainer} ref={plotRef}></div>
-            <Slider
-                min={sliderConfig.min}
-                step={null}
-                marks={sliderConfig.marks}
-                max={sliderConfig.max}
-                value={sliderValue}
-                onChange={(_, value) => setSliderValue(value)}
-            />
-            <p className={classes.sliderLabel}>
-                Application execution at <b>{sliderValue} sec.</b>
-            </p>
+            {/* </Grid> */}
+            {/* <Grid item sm={2}> */}
+            {/*     <div ref={legendRef}></div> */}
+            {/* </Grid> */}
+            {/* </Grid> */}
+            {timeSeries && (
+                <div>
+                    <Slider
+                        min={sliderConfig.min}
+                        step={null}
+                        marks={sliderConfig.marks}
+                        max={sliderConfig.max}
+                        value={sliderValue}
+                        onChange={(_, value) => setSliderValue(value)}
+                    />
+                    <p className={classes.sliderLabel}>
+                        Application execution at <b>{sliderValue} sec.</b>
+                    </p>
+                </div>
+            )}
         </div>
     );
 }

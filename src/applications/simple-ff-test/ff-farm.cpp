@@ -4,8 +4,8 @@
 using namespace ff;
 
 bool use_mapping = true;
-int emitter_core = 9;
-int worker_core = 10;
+int emitter_core = 1;
+int worker_core = 5;
 int collector_core = 11;
 
 class Worker : public ff_node {

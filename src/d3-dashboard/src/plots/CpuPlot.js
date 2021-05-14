@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Slider from '@material-ui/core/Slider';
-// import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import * as d3 from 'd3';
 
@@ -28,7 +27,6 @@ export default function CpuPlot({
 }) {
     const classes = useStyles();
     const plotRef = useRef();
-    // const legendRef = useRef();
     let svg = useRef(null);
 
     let captures = null;
@@ -55,12 +53,6 @@ export default function CpuPlot({
         }
         const width = squareSize * dataPlot[0].length;
         const height = squareSize * dataPlot.length;
-
-        // const legendSvg = d3
-        //     .select(legendRef.current)
-        //     .attr('width', 20)
-        //     .attr('height', height)
-        //     .append('g');
 
         const colorScale = d3
             .scaleSequential(d3[d3ColorScale])
@@ -135,22 +127,16 @@ export default function CpuPlot({
                 .attr('y', (d) => y(d.row) + squareSize / 2)
                 .text((d, i) => cpuLabels[d.row][i]);
         }
-    }, [sliderValue]); // eslint-disable-line react-hooks/exhaustive-deps
+    }, [sliderValue, data]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <div>
             {title && <h4 className={classes.title}>{title}</h4>}
-            {/* <Grid container> */}
-            {/*     <Grid item sm={10}> */}
             <div className={classes.plotContainer} ref={plotRef}></div>
-            {/* </Grid> */}
-            {/* <Grid item sm={2}> */}
-            {/*     <div ref={legendRef}></div> */}
-            {/* </Grid> */}
-            {/* </Grid> */}
             {timeSeries && (
                 <div>
                     <Slider
+                        track="inverted"
                         min={sliderConfig.min}
                         step={null}
                         marks={sliderConfig.marks}

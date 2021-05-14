@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { CpuPlot } from '../plots';
+import { ComparisonContainer } from './';
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -30,131 +31,99 @@ function Plot({ children, title, description }) {
 }
 
 export default function Plots({ dataFile }) {
+    const [event, setComparisonEvent] = useState(dataFile['events'][0]);
+    const [eventTimeSeries, setComparisonEventTimeSeries] = useState(
+        dataFile['events'][0],
+    );
+    const [baseExperiment, setComparisonBaseExperiment] = useState(
+        'comparison-1-2',
+    );
+
     return (
         <div>
             <Plot
-                title="Variation of CPU cycles"
-                description="This plot compares the variation in the CPU cycles considering all captures made during the execution of the experiments."
+                title="Comparison between experiments"
+                description="This plot allows you to compare the captured events during experiment execution."
             >
-                <Grid container spacing={8}>
-                    <Grid item sm={4}>
-                        <CpuPlot
-                            timeSeries={false}
-                            title="Experiment 1"
-                            cpuLabels={dataFile['cpu_labels']}
-                            data={
-                                dataFile['dataset-1']['aggregated'][
-                                    'cpu-cycles'
-                                ]['mean']
-                            }
-                        />
+                <ComparisonContainer
+                    events={dataFile['events']}
+                    setComparisonEvent={(e) => setComparisonEvent(e)}
+                    setComparisonBaseExperiment={(e) =>
+                        setComparisonBaseExperiment(e)
+                    }
+                >
+                    <Grid container spacing={8}>
+                        <Grid item sm={4}>
+                            <CpuPlot
+                                squareSize={70}
+                                timeSeries={false}
+                                title="Experiment 1"
+                                cpuLabels={dataFile['cpu_labels']}
+                                data={
+                                    dataFile['dataset-1']['aggregated'][event][
+                                        'mean'
+                                    ]
+                                }
+                            />
+                        </Grid>
+                        <Grid item sm={4}>
+                            <CpuPlot
+                                squareSize={70}
+                                timeSeries={false}
+                                title="Experiment 2"
+                                cpuLabels={dataFile['cpu_labels']}
+                                data={
+                                    dataFile['dataset-2']['aggregated'][event][
+                                        'mean'
+                                    ]
+                                }
+                            />
+                        </Grid>
+                        <Grid item sm={4}>
+                            <CpuPlot
+                                d3ColorScale="interpolateRdBu"
+                                timeSeries={false}
+                                title="Comparison"
+                                cpuLabels={dataFile['cpu_labels']}
+                                data={dataFile[baseExperiment][event]['mean']}
+                            />
+                        </Grid>
                     </Grid>
-                    <Grid item sm={4}>
-                        <CpuPlot
-                            timeSeries={false}
-                            title="Experiment 2"
-                            cpuLabels={dataFile['cpu_labels']}
-                            data={
-                                dataFile['dataset-2']['aggregated'][
-                                    'cpu-cycles'
-                                ]['mean']
-                            }
-                        />
-                    </Grid>
-                    <Grid item sm={4}>
-                        <CpuPlot
-                            d3ColorScale="interpolateRdBu"
-                            timeSeries={false}
-                            title="Comparison"
-                            cpuLabels={dataFile['cpu_labels']}
-                            data={dataFile['comparison']['cpu-cycles']['mean']}
-                        />
-                    </Grid>
-                </Grid>
+                </ComparisonContainer>
             </Plot>
             <Plot
-                title="Variation of instructions"
-                description="This plot compares the variation in the instructions executed considering all captures made during the execution of the experiments."
+                title="Compare time series of experiments"
+                description="This plot compares the events captured during the execution of the experiments. The slider allows you to see each of the captures made."
             >
-                <Grid container spacing={8}>
-                    <Grid item sm={4}>
-                        <CpuPlot
-                            timeSeries={false}
-                            title="Experiment 1"
-                            cpuLabels={dataFile['cpu_labels']}
-                            data={
-                                dataFile['dataset-1']['aggregated'][
-                                    'instructions'
-                                ]['mean']
-                            }
-                        />
+                <ComparisonContainer
+                    events={dataFile['events']}
+                    setComparisonEvent={(e) => setComparisonEventTimeSeries(e)}
+                >
+                    <Grid container spacing={8}>
+                        <Grid item sm={6}>
+                            <CpuPlot
+                                title="Experiment 1"
+                                cpuLabels={dataFile['cpu_labels']}
+                                data={
+                                    dataFile['dataset-1']['raw'][
+                                        eventTimeSeries
+                                    ]
+                                }
+                            />
+                        </Grid>
+                        <Grid item sm={6}>
+                            <CpuPlot
+                                title="Experiment 2"
+                                cpuLabels={dataFile['cpu_labels']}
+                                data={
+                                    dataFile['dataset-2']['raw'][
+                                        eventTimeSeries
+                                    ]
+                                }
+                            />
+                        </Grid>
                     </Grid>
-                    <Grid item sm={4}>
-                        <CpuPlot
-                            timeSeries={false}
-                            title="Experiment 2"
-                            cpuLabels={dataFile['cpu_labels']}
-                            data={
-                                dataFile['dataset-2']['aggregated'][
-                                    'instructions'
-                                ]['mean']
-                            }
-                        />
-                    </Grid>
-                    <Grid item sm={4}>
-                        <CpuPlot
-                            d3ColorScale="interpolateRdBu"
-                            timeSeries={false}
-                            title="Comparison"
-                            cpuLabels={dataFile['cpu_labels']}
-                            data={
-                                dataFile['comparison']['instructions']['mean']
-                            }
-                        />
-                    </Grid>
-                </Grid>
-            </Plot>
-            <Plot
-                title="Compare CPU cycles"
-                description="This plot compares the CPU cycle used while experiments were running."
-            >
-                <Grid container spacing={8}>
-                    <Grid item sm={6}>
-                        <CpuPlot
-                            title="Experiment 1"
-                            cpuLabels={dataFile['cpu_labels']}
-                            data={dataFile['dataset-1']['raw']['cpu-cycles']}
-                        />
-                    </Grid>
-                    <Grid item sm={6}>
-                        <CpuPlot
-                            title="Experiment 2"
-                            cpuLabels={dataFile['cpu_labels']}
-                            data={dataFile['dataset-2']['raw']['cpu-cycles']}
-                        />
-                    </Grid>
-                </Grid>
-            </Plot>
-            <Plot
-                title="Compare instructions executed"
-                description="This plot compares the number of instructions executed on each CPU during the execution of experiments."
-            >
-                <Grid container spacing={8}>
-                    <Grid item sm={6}>
-                        <CpuPlot
-                            title="Experiment 1"
-                            cpuLabels={dataFile['cpu_labels']}
-                            data={dataFile['dataset-1']['raw']['instructions']}
-                        />
-                    </Grid>
-                    <Grid item sm={6}>
-                        <CpuPlot
-                            title="Experiment 2"
-                            cpuLabels={dataFile['cpu_labels']}
-                            data={dataFile['dataset-2']['raw']['instructions']}
-                        />
-                    </Grid>
-                </Grid>
+                </ComparisonContainer>
             </Plot>
         </div>
     );

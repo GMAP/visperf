@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: theme.spacing(4),
     },
     formControl: {
-        minWidth: 120,
+        minWidth: 150,
     },
 }));
 
@@ -19,11 +19,13 @@ export default function ComparisonContainer({
     children,
     events,
     setComparisonEvent,
+    setComparisonVisualization,
     setComparisonBaseExperiment,
 }) {
     const classes = useStyles();
     const [event, setEvent] = useState(events[0]);
     const [baseExperiment, setBaseExperiment] = useState('comparison-1-2');
+    const [visualization, setVisualization] = useState('parallel-coordinates');
 
     return (
         <div>
@@ -39,7 +41,6 @@ export default function ComparisonContainer({
                             <InputLabel id="select-event">Event</InputLabel>
                             <Select
                                 labelId="select-event"
-                                id="demo-simple-select"
                                 value={event}
                                 onChange={(e) => {
                                     setEvent(e.target.value);
@@ -54,6 +55,30 @@ export default function ComparisonContainer({
                             </Select>
                         </FormControl>
                     </Grid>
+                    {setComparisonVisualization && (
+                        <Grid item>
+                            <FormControl className={classes.formControl}>
+                                <InputLabel id="select-visualization">
+                                    Comparison Plot
+                                </InputLabel>
+                                <Select
+                                    labelId="select-visualization"
+                                    value={visualization}
+                                    onChange={(e) => {
+                                        setVisualization(e.target.value);
+                                        setComparisonVisualization(
+                                            e.target.value,
+                                        );
+                                    }}
+                                >
+                                    <MenuItem value="parallel-coordinates">
+                                        Parallel Coordinates
+                                    </MenuItem>
+                                    <MenuItem value="cpus">CPUs</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </Grid>
+                    )}
                     {setComparisonBaseExperiment && (
                         <Grid item>
                             <FormControl className={classes.formControl}>
@@ -62,7 +87,6 @@ export default function ComparisonContainer({
                                 </InputLabel>
                                 <Select
                                     labelId="select-base-experiment"
-                                    id="demo-simple-select"
                                     value={baseExperiment}
                                     onChange={(e) => {
                                         setBaseExperiment(e.target.value);

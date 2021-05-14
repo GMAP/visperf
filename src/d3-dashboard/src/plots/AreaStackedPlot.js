@@ -1,9 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Slider from '@material-ui/core/Slider';
-import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import * as d3 from 'd3';
-import { LegendColorScale } from './';
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -19,15 +17,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function CpuPlot({
+export default function AreaStackedPlot({
     data,
     cpuLabels,
     title,
-    margin = 10,
     d3ColorScale = 'interpolateYlOrRd',
     timeSeries = true,
     squareSize = 80,
-    legendPoints = [0, 100],
 }) {
     const classes = useStyles();
     const plotRef = useRef();
@@ -48,16 +44,16 @@ export default function CpuPlot({
 
     const [sliderValue, setSliderValue] = useState(sliderConfig.min);
 
-    let dataPlot = null;
-    if (timeSeries) {
-        dataPlot = captures[sliderValue];
-    } else {
-        dataPlot = data;
-    }
-    const width = squareSize * dataPlot[0].length;
-    const height = squareSize * dataPlot.length;
-
     useEffect(() => {
+        let dataPlot = null;
+        if (timeSeries) {
+            dataPlot = captures[sliderValue];
+        } else {
+            dataPlot = data;
+        }
+        const width = squareSize * dataPlot[0].length;
+        const height = squareSize * dataPlot.length;
+
         const colorScale = d3
             .scaleSequential(d3[d3ColorScale])
             .domain([
@@ -91,10 +87,9 @@ export default function CpuPlot({
             svg.current = d3
                 .select(plotRef.current)
                 .append('svg')
-                .attr('width', width + margin * 2)
-                .attr('height', height + margin * 2)
-                .append('g')
-                .attr('transform', 'translate(' + margin + ',' + margin + ')');
+                .attr('width', width)
+                .attr('height', height)
+                .append('g');
             const row = svg.current
                 .selectAll('.row')
                 .data(dataPlot)
@@ -115,11 +110,8 @@ export default function CpuPlot({
                 .attr('y', (d, _) => y(d.row))
                 .attr('width', squareSize * 0.98)
                 .attr('height', squareSize * 0.98)
-                .attr('rx', 3)
-                .style('stroke', 'black')
-                .style('stroke-width', 2)
+                .attr('rx', 7)
                 .style('fill', (d) => colorScale(d.value));
-
             row.selectAll('.label')
                 .data((d, i) =>
                     d.map((a) => ({
@@ -130,32 +122,18 @@ export default function CpuPlot({
                 .enter()
                 .append('text')
                 .attr('class', 'label')
-
                 .style('text-anchor', 'middle')
                 .attr('font-weight', 500)
                 .attr('x', (_, i) => x(i) + squareSize / 2)
                 .attr('y', (d) => y(d.row) + squareSize / 2)
                 .text((d, i) => cpuLabels[d.row][i]);
         }
-    }, [sliderValue, dataPlot]); // eslint-disable-line react-hooks/exhaustive-deps
+    }, [sliderValue, data]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <div>
             {title && <h4 className={classes.title}>{title}</h4>}
-            <Grid container justify="center">
-                <Grid item>
-                    <div className={classes.plotContainer} ref={plotRef}></div>
-                </Grid>
-                <Grid item>
-                    <LegendColorScale
-                        legendPoints={legendPoints}
-                        margin={margin}
-                        d3ColorScale={d3ColorScale}
-                        width={20}
-                        height={height}
-                    />
-                </Grid>
-            </Grid>
+            <div className={classes.plotContainer} ref={plotRef}></div>
             {timeSeries && (
                 <div>
                     <Slider

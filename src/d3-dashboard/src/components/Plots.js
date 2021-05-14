@@ -38,6 +38,9 @@ export default function Plots({ dataFile }) {
     const [baseExperiment, setComparisonBaseExperiment] = useState(
         'comparison-1-2',
     );
+    const [visualization, setComparisonVisualization] = useState(
+        'parallel-coordinates',
+    );
 
     return (
         <div>
@@ -51,11 +54,15 @@ export default function Plots({ dataFile }) {
                     setComparisonBaseExperiment={(e) =>
                         setComparisonBaseExperiment(e)
                     }
+                    setComparisonVisualization={(e) =>
+                        setComparisonVisualization(e)
+                    }
                 >
                     <Grid container spacing={8}>
-                        <Grid item sm={4}>
+                        <Grid item sm={true}>
                             <CpuPlot
-                                squareSize={70}
+                                margin={5}
+                                squareSize={60}
                                 timeSeries={false}
                                 title="Experiment 1"
                                 cpuLabels={dataFile['cpu_labels']}
@@ -66,9 +73,10 @@ export default function Plots({ dataFile }) {
                                 }
                             />
                         </Grid>
-                        <Grid item sm={4}>
+                        <Grid item sm={true}>
                             <CpuPlot
-                                squareSize={70}
+                                margin={5}
+                                squareSize={60}
                                 timeSeries={false}
                                 title="Experiment 2"
                                 cpuLabels={dataFile['cpu_labels']}
@@ -79,9 +87,13 @@ export default function Plots({ dataFile }) {
                                 }
                             />
                         </Grid>
-                        <Grid item sm={4}>
+                    </Grid>
+                    <Grid container>
+                        <Grid item sm={true}>
                             <CpuPlot
+                                margin={5}
                                 d3ColorScale="interpolateRdBu"
+                                legendPoints={[0, 50, 100]}
                                 timeSeries={false}
                                 title="Comparison"
                                 cpuLabels={dataFile['cpu_labels']}
@@ -100,7 +112,7 @@ export default function Plots({ dataFile }) {
                     setComparisonEvent={(e) => setComparisonEventTimeSeries(e)}
                 >
                     <Grid container spacing={8}>
-                        <Grid item sm={6}>
+                        <Grid item sm={true}>
                             <CpuPlot
                                 title="Experiment 1"
                                 cpuLabels={dataFile['cpu_labels']}
@@ -111,7 +123,7 @@ export default function Plots({ dataFile }) {
                                 }
                             />
                         </Grid>
-                        <Grid item sm={6}>
+                        <Grid item sm={true}>
                             <CpuPlot
                                 title="Experiment 2"
                                 cpuLabels={dataFile['cpu_labels']}

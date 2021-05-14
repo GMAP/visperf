@@ -3,10 +3,10 @@
 #include <vector>
 using namespace ff;
 
-bool use_mapping = true;
-int emitter_core = 9;
-int worker_core = 10;
-int collector_core = 11;
+bool use_mapping = false;
+int emitter_core = 1;
+int worker_core = 4;
+int collector_core = 9;
 
 class Worker : public ff_node {
   public:

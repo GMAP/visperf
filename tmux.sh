@@ -15,6 +15,15 @@ if [ "$session_exists" = "" ]; then
     tmux split-window -h -p 50
     tmux send-keys -t 2 "conda activate dnn" C-m
     tmux select-pane -t 0
+
+    tmux new-window -t $session:1 -n "dash"
+    tmux send-keys -t "dash" "cd src/d3-dashboard" C-m "conda activate dnn" C-m "vim -c 'Lex'" C-m
+    tmux split-window -v -p 25
+    tmux send-keys -t 1 "cd src/d3-dashboard" C-m "conda activate dnn" C-m
+    tmux select-pane -t 1
+    tmux split-window -h -p 50
+    tmux send-keys -t 2 "cd src/d3-dashboard" C-m "conda activate dnn" C-m
+    tmux select-pane -t 0
 fi
 
 tmux select-window -t $session:0

@@ -130,9 +130,8 @@ export default function CpuPlot({
                 .enter()
                 .append('text')
                 .attr('class', 'label')
-
                 .style('text-anchor', 'middle')
-                .attr('font-weight', 500)
+                .attr('font-weight', 400)
                 .attr('x', (_, i) => x(i) + squareSize / 2)
                 .attr('y', (d) => y(d.row) + squareSize / 2)
                 .text((d, i) => cpuLabels[d.row][i]);
@@ -141,7 +140,7 @@ export default function CpuPlot({
 
     return (
         <div>
-            {title && <h4 className={classes.title}>{title}</h4>}
+            {title && <h3 className={classes.title}>{title}</h3>}
             <Grid container justify="center">
                 <Grid item>
                     <div className={classes.plotContainer} ref={plotRef}></div>

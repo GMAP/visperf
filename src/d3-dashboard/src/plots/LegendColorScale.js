@@ -21,7 +21,6 @@ export default function LegendColorScale({
     let svg = useRef(null);
 
     useEffect(() => {
-        console.log(d3ColorScale, legendPoints);
         const colorScale = d3
             .scaleSequential(d3[d3ColorScale])
             .domain([legendPoints[0], legendPoints[legendPoints.length - 1]]);

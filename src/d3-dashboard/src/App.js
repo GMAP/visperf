@@ -39,9 +39,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function App() {
     const classes = useStyles();
-    const [dataFile, setDataFile] = useState(undefined);
+    const [dataFile, setDataFile] = useState(null);
     const [readingFile, setReadingFile] = useState(false);
-    const [jsonDataFile, setJsonDataFile] = useState(undefined);
+    const [jsonDataFile, setJsonDataFile] = useState(null);
 
     async function readFile(file) {
         setDataFile(file);

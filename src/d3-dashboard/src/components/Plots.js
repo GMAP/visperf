@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import { CpuPlot } from '../plots';
+import { CpuPlot, ParallelCoordinatePlot } from '../plots';
 import { ComparisonContainer } from './';
+import { flatten2dArray, transposeArrays } from '../utils';
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -28,6 +29,55 @@ function Plot({ children, title, description }) {
             {children}
         </Paper>
     );
+}
+
+function loadComparisonPlot(visualization, dataFile, baseExperiment, event) {
+    if (visualization === 'parallel-coordinates') {
+        const experiment1 = flatten2dArray(
+            dataFile['dataset-1']['aggregated'][event]['mean'],
+        );
+        const experiment2 = flatten2dArray(
+            dataFile['dataset-2']['aggregated'][event]['mean'],
+        );
+        return (
+            <ParallelCoordinatePlot
+                margin={{ top: 10, left: 40, bottom: 40, right: 40 }}
+                width={600}
+                height={60 * dataFile['cpu_labels'].length}
+                dimensions={[
+                    {
+                        name: 'CPU',
+                        labels: flatten2dArray(dataFile['cpu_labels']),
+                    },
+                    {
+                        name: 'Experiment 1',
+                        hideLabels: false,
+                    },
+                    { name: 'Experiment 2', hideLabels: false },
+                ]}
+                timeSeries={false}
+                title="Comparison"
+                data={transposeArrays([
+                    flatten2dArray(dataFile['cpu_labels']).map((_, i) => i),
+                    experiment1,
+                    experiment2,
+                ])}
+            />
+        );
+    } else if (visualization === 'cpus') {
+        return (
+            <CpuPlot
+                margin={5}
+                d3ColorScale="interpolateRdBu"
+                legendPoints={[0, 50, 100]}
+                timeSeries={false}
+                title="Comparison"
+                cpuLabels={dataFile['cpu_labels']}
+                data={dataFile[baseExperiment][event]['mean']}
+            />
+        );
+    }
+    return null;
 }
 
 export default function Plots({ dataFile }) {
@@ -90,15 +140,12 @@ export default function Plots({ dataFile }) {
                     </Grid>
                     <Grid container>
                         <Grid item sm={true}>
-                            <CpuPlot
-                                margin={5}
-                                d3ColorScale="interpolateRdBu"
-                                legendPoints={[0, 50, 100]}
-                                timeSeries={false}
-                                title="Comparison"
-                                cpuLabels={dataFile['cpu_labels']}
-                                data={dataFile[baseExperiment][event]['mean']}
-                            />
+                            {loadComparisonPlot(
+                                visualization,
+                                dataFile,
+                                baseExperiment,
+                                event,
+                            )}
                         </Grid>
                     </Grid>
                 </ComparisonContainer>

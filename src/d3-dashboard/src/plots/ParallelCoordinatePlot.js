@@ -33,7 +33,7 @@ export default function ParallelCoordinatePlot({
         d['scale'] = d3
             .scaleLinear()
             .domain(d3.extent(data, (d) => d[i]))
-            .range([0, height]);
+            .range(d.reverseScale ? [0, height] : [height, 0]);
     });
 
     useEffect(() => {

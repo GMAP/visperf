@@ -31,53 +31,43 @@ function Plot({ children, title, description }) {
     );
 }
 
-function loadComparisonPlot(visualization, dataFile, baseExperiment, event) {
-    if (visualization === 'parallel-coordinates') {
-        const experiment1 = flatten2dArray(
-            dataFile['dataset-1']['aggregated'][event]['mean'],
-        );
-        const experiment2 = flatten2dArray(
-            dataFile['dataset-2']['aggregated'][event]['mean'],
-        );
-        return (
-            <ParallelCoordinatePlot
-                margin={{ top: 10, left: 40, bottom: 40, right: 40 }}
-                width={600}
-                height={60 * dataFile['cpu_labels'].length}
-                dimensions={[
-                    {
-                        name: 'CPU',
-                        labels: flatten2dArray(dataFile['cpu_labels']),
-                    },
-                    {
-                        name: 'Experiment 1',
-                        hideLabels: false,
-                    },
-                    { name: 'Experiment 2', hideLabels: false },
-                ]}
-                timeSeries={false}
-                title="Comparison"
-                data={transposeArrays([
-                    flatten2dArray(dataFile['cpu_labels']).map((_, i) => i),
-                    experiment1,
-                    experiment2,
-                ])}
-            />
-        );
-    } else if (visualization === 'cpus') {
-        return (
-            <CpuPlot
-                margin={5}
-                d3ColorScale="interpolateRdBu"
-                legendPoints={[0, 50, 100]}
-                timeSeries={false}
-                title="Comparison"
-                cpuLabels={dataFile['cpu_labels']}
-                data={dataFile[baseExperiment][event]['mean']}
-            />
-        );
-    }
-    return null;
+function loadParallelCoordinatesPlot(dataFile, event) {
+    const experiment1 = flatten2dArray(
+        dataFile['dataset-1']['aggregated'][event]['mean_relative'],
+    );
+    const experiment2 = flatten2dArray(
+        dataFile['dataset-2']['aggregated'][event]['mean_relative'],
+    );
+    const intersection = flatten2dArray(
+        dataFile['comparison-2-1'][event]['mean_relative'],
+    );
+    return (
+        <ParallelCoordinatePlot
+            margin={{ top: 10, left: 40, bottom: 40, right: 50 }}
+            width={700}
+            height={50 * dataFile['cpu_labels'].length}
+            dimensions={[
+                {
+                    name: 'CPU',
+                    labels: flatten2dArray(dataFile['cpu_labels']),
+                    reverseScale: true,
+                },
+                {
+                    name: 'Experiment 1 (%)',
+                    hideLabels: false,
+                },
+                { name: 'Experiment 2 (%)', hideLabels: false },
+                { name: 'Intersection (%)', hideLabels: false },
+            ]}
+            timeSeries={false}
+            data={transposeArrays([
+                flatten2dArray(dataFile['cpu_labels']).map((_, i) => i),
+                experiment1,
+                experiment2,
+                intersection,
+            ])}
+        />
+    );
 }
 
 export default function Plots({ dataFile }) {
@@ -101,53 +91,70 @@ export default function Plots({ dataFile }) {
                 <ComparisonContainer
                     events={dataFile['events']}
                     setComparisonEvent={(e) => setComparisonEvent(e)}
-                    setComparisonBaseExperiment={(e) =>
-                        setComparisonBaseExperiment(e)
+                    setComparisonBaseExperiment={
+                        visualization === 'cpus'
+                            ? (e) => setComparisonBaseExperiment(e)
+                            : null
                     }
                     setComparisonVisualization={(e) =>
                         setComparisonVisualization(e)
                     }
                 >
-                    <Grid container spacing={8}>
-                        <Grid item sm={true}>
-                            <CpuPlot
-                                margin={5}
-                                squareSize={60}
-                                timeSeries={false}
-                                title="Experiment 1"
-                                cpuLabels={dataFile['cpu_labels']}
-                                data={
-                                    dataFile['dataset-1']['aggregated'][event][
-                                        'mean'
-                                    ]
-                                }
-                            />
+                    {visualization === 'cpus' ? (
+                        <Grid container spacing={4}>
+                            <Grid item>
+                                <CpuPlot
+                                    margin={5}
+                                    squareSize={45}
+                                    fontSize=".9em"
+                                    timeSeries={false}
+                                    title="Experiment 1"
+                                    cpuLabels={dataFile['cpu_labels']}
+                                    data={
+                                        dataFile['dataset-1']['aggregated'][
+                                            event
+                                        ]['mean_relative']
+                                    }
+                                />
+                            </Grid>
+                            <Grid item>
+                                <CpuPlot
+                                    margin={5}
+                                    squareSize={45}
+                                    timeSeries={false}
+                                    fontSize=".9em"
+                                    title="Experiment 2"
+                                    cpuLabels={dataFile['cpu_labels']}
+                                    data={
+                                        dataFile['dataset-2']['aggregated'][
+                                            event
+                                        ]['mean_relative']
+                                    }
+                                />
+                            </Grid>
+                            <Grid item sm={true}>
+                                <CpuPlot
+                                    margin={5}
+                                    d3ColorScale="interpolateRdBu"
+                                    legendPoints={[0, 50, 100]}
+                                    timeSeries={false}
+                                    title="Comparison"
+                                    cpuLabels={dataFile['cpu_labels']}
+                                    data={
+                                        dataFile[baseExperiment][event][
+                                            'mean_relative'
+                                        ]
+                                    }
+                                />
+                            </Grid>
                         </Grid>
-                        <Grid item sm={true}>
-                            <CpuPlot
-                                margin={5}
-                                squareSize={60}
-                                timeSeries={false}
-                                title="Experiment 2"
-                                cpuLabels={dataFile['cpu_labels']}
-                                data={
-                                    dataFile['dataset-2']['aggregated'][event][
-                                        'mean'
-                                    ]
-                                }
-                            />
+                    ) : (
+                        <Grid container>
+                            <Grid item sm={true}>
+                                {loadParallelCoordinatesPlot(dataFile, event)}
+                            </Grid>
                         </Grid>
-                    </Grid>
-                    <Grid container>
-                        <Grid item sm={true}>
-                            {loadComparisonPlot(
-                                visualization,
-                                dataFile,
-                                baseExperiment,
-                                event,
-                            )}
-                        </Grid>
-                    </Grid>
+                    )}
                 </ComparisonContainer>
             </Plot>
             <Plot

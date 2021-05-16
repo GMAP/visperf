@@ -23,6 +23,7 @@ export default function CpuPlot({
     data,
     cpuLabels,
     title,
+    fontSize = '1em',
     margin = 10,
     d3ColorScale = 'interpolateYlOrRd',
     timeSeries = true,
@@ -132,6 +133,7 @@ export default function CpuPlot({
                 .attr('class', 'label')
                 .style('text-anchor', 'middle')
                 .attr('font-weight', 400)
+                .attr('font-size', fontSize)
                 .attr('x', (_, i) => x(i) + squareSize / 2)
                 .attr('y', (d) => y(d.row) + squareSize / 2)
                 .text((d, i) => cpuLabels[d.row][i]);

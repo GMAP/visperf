@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import { TrendingDown, TrendingUp } from '@material-ui/icons';
 import { CpuPlot, ParallelCoordinatePlot } from '../plots';
 import { ComparisonContainer } from './';
 import { flatten2dArray, transposeArrays } from '../utils';
 
-const useStyles = makeStyles((theme) => ({
+const useStylesPlot = makeStyles((theme) => ({
     container: {
         marginTop: theme.spacing(2),
         paddingLeft: theme.spacing(2),
@@ -19,8 +20,21 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+const useStylesPlots = makeStyles((theme) => ({
+    labelValueContainer: {
+        marginTop: theme.spacing(3),
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+    },
+    labelValue: {
+        margin: 'auto',
+    },
+}));
+
 function Plot({ children, title, description }) {
-    const classes = useStyles();
+    const classes = useStylesPlot();
 
     return (
         <Paper elevation={1} className={classes.container}>
@@ -71,6 +85,7 @@ function loadParallelCoordinatesPlot(dataFile, event) {
 }
 
 export default function Plots({ dataFile }) {
+    const classes = useStylesPlots();
     const [event, setComparisonEvent] = useState(dataFile['events'][0]);
     const [eventTimeSeries, setComparisonEventTimeSeries] = useState(
         dataFile['events'][0],
@@ -81,6 +96,7 @@ export default function Plots({ dataFile }) {
     const [visualization, setComparisonVisualization] = useState(
         'parallel-coordinates',
     );
+    const valueResumed = dataFile[baseExperiment][event]['mean_value'];
 
     return (
         <div>
@@ -91,10 +107,8 @@ export default function Plots({ dataFile }) {
                 <ComparisonContainer
                     events={dataFile['events']}
                     setComparisonEvent={(e) => setComparisonEvent(e)}
-                    setComparisonBaseExperiment={
-                        visualization === 'cpus'
-                            ? (e) => setComparisonBaseExperiment(e)
-                            : null
+                    setComparisonBaseExperiment={(e) =>
+                        setComparisonBaseExperiment(e)
                     }
                     setComparisonVisualization={(e) =>
                         setComparisonVisualization(e)
@@ -155,6 +169,25 @@ export default function Plots({ dataFile }) {
                             </Grid>
                         </Grid>
                     )}
+                    <Grid item sm={12} className={classes.labelValueContainer}>
+                        <Grid container>
+                            <Grid item className={classes.labelValue}>
+                                <h1>
+                                    {valueResumed.toFixed(2)}%
+                                    &nbsp;&nbsp;&nbsp;
+                                    {valueResumed > 0 ? (
+                                        <TrendingUp />
+                                    ) : valueResumed < 0 ? (
+                                        <TrendingDown />
+                                    ) : null}
+                                </h1>
+                            </Grid>
+                            <Grid item sm={12}>
+                                How the event counter changed between
+                                experiments.
+                            </Grid>
+                        </Grid>
+                    </Grid>
                 </ComparisonContainer>
             </Plot>
             <Plot

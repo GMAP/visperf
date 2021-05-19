@@ -12,6 +12,6 @@ run-perf-test-2: default
 	sudo perf stat --no-metric-only --all-cpus --no-aggr --interval-print 75 --output data/perf-test-2.csv --field-separator "," --event ${events} -- ./build/ff-farm 12 500000
 
 record: default
-	sudo perf record -D 0 --timestamp --sample-cpu --raw-samples -g --call-graph dwarf -F 97 --period --raw-samples --running-time --all-user --timestamp -s -o data/perf-record.data -e ${events} -- ./build/ff-farm 12 1000000
-	sudo perf script --show-info -i data/perf-record.data > data/perf-record.txt
+	sudo perf record --delay 0 --sample-cpu -g --call-graph dwarf --freq 997 --period --running-time --all-user --timestamp --output data/perf-record.data --event ${events} -- ./build/ff-farm 12 1000000
+	sudo perf script --max-stack=2 --show-info --input data/perf-record.data > data/perf-record.txt
 	sudo chown water:water data/perf-record.txt

@@ -1,9 +1,10 @@
 #include <ff/ff.hpp>
 #include <iostream>
 #include <vector>
+#define USE_MAPPING
+
 using namespace ff;
 
-bool use_mapping = false;
 int emitter_core = 1;
 int worker_core = 4;
 int collector_core = 9;
@@ -11,12 +12,11 @@ int collector_core = 9;
 class Worker : public ff_node {
   public:
     int svc_init() {
-        if (!use_mapping) {
-            return 0;
-        }
+#ifdef USE_MAPPING
         if (ff_mapThreadToCpu(worker_core) != 0) {
             printf("Cannot map Worker to CPU %d\n", worker_core);
         }
+#endif
         return 0;
     }
 
@@ -32,12 +32,11 @@ class Worker : public ff_node {
 class Collector : public ff_node {
   public:
     int svc_init() {
-        if (!use_mapping) {
-            return 0;
-        }
+#ifdef USE_MAPPING
         if (ff_mapThreadToCpu(collector_core) != 0) {
             printf("Cannot map Collector to CPU %d\n", collector_core);
         }
+#endif
         return 0;
     }
 
@@ -55,12 +54,11 @@ class Emitter : public ff_node {
     Emitter(int max_task) : ntask(max_task){};
 
     int svc_init() {
-        if (!use_mapping) {
-            return 0;
-        }
+#ifdef USE_MAPPING
         if (ff_mapThreadToCpu(emitter_core) != 0) {
             printf("Cannot map Emitter to CPU %d\n", emitter_core);
         }
+#endif
         return 0;
     }
 

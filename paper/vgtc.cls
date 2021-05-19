@@ -75,7 +75,7 @@
 %      - new caption style
 %      - new reference style
 %      - copyrightspace reduced to 0.5in
-% - borrows *heavily* from Daniel Kartch's 'siggraph' class. 
+% - borrows *heavily* from Daniel Kartch's 'siggraph' class.
 % - also uses pieces of 'apalike.sty' and 'authordate1-4.cls'
 % - version 0.1 2001/06/01 Stephen Spencer (spencer@acm.org)
 % - version 0.2 2001/10/15 Stephen Spencer
@@ -169,10 +169,10 @@
 
 %%% the following code has partly been adapted from egpubl.cls
 %\newif\ifpdf  % determine if we are running PDFLaTeX or not
-%\ifx\pdfoutput\undefined \pdffalse % we are not running PDFLaTeX 
-%\else 
-% %\pdfoutput=1 % we are running PDFLaTeX 
-% \pdftrue 
+%\ifx\pdfoutput\undefined \pdffalse % we are not running PDFLaTeX
+%\else
+% %\pdfoutput=1 % we are running PDFLaTeX
+% \pdftrue
 %\fi
 
 \newcommand{\vgtcinsertpkg}{}
@@ -202,7 +202,7 @@
    colorlinks=false,       % don't change coloring of links
    nesting=true,
    linktocpage}
-  
+
 	%% it is recomended to use ``\autoref{sec:bla}'' instead of ``Fig.~\ref{sec:bla}''
   %% the following lines re-define the respective tags used in the \autoref calls
   \newcommand{\subfigureautorefname}{Fig.} % in case someone uses subfigures
@@ -719,7 +719,7 @@ Manuscript received xx xxx. 201x; accepted xx xxx. 201x. Date of Publication xx 
              \vspace{14pt}%
            \else%
 	    \vspace{1\baselineskip}\fi%
-           \large\sffamily\vgtc@sectionfont 
+           \large\sffamily\vgtc@sectionfont
            \begin{tabular}[t]{c}%
                \@author
            \end{tabular}\par%
@@ -729,7 +729,7 @@ Manuscript received xx xxx. 201x; accepted xx xxx. 201x. Date of Publication xx 
            \fi%
           \ifvgtcjournal\vspace{0.08in}\else\vspace{\titlespace}\fi%
            \ifx\vgtc@teaser\vgtc@empty \else%
-             { 
+             {
                \begingroup%
                    \def\@captype{figure}%
                    \vgtc@teaser%

@@ -1,7 +1,45 @@
 \section{Perf}
 
-Write about Perf.
+Perf is a profiling tool included in the Linux kernel. It can be user for CPU performance counters, tracepoints, kprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/kprobes.html}}, and uprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/uprobetracer.html}}~\cite{perf_wiki}. Performance counters are hardware registers that count events of the CPU, such as instructions executed and cache-misses. Perf also supports software events, such as page misses. In turn, tracepoints are placed in the source code to collect timestamps and stack traces.
+
+Perf has low overhead, as it is integrated into the kernel. Another main feature is that Perf supports counters in different architectures, which makes Perf a widely used tool.
+
+There are several subcommands available in Perf. Below we list the main subcommands:
+
+\begin{itemize}
+	\item \texttt{perf stat}: get event counts;
+	\item \texttt{perf record}: record events for later analysis;
+	\item \texttt{perf report}: report events recorded;
+	\item \texttt{perf top}: see live event count;
+	\item \texttt{perf list}: list available events for current architecture;
+\end{itemize}
+
+Discuss other subcommands.
 
 \subsection{Events}
 
-Explain Perf events captured and why they are important.
+\texttt{perf list} shows events from several sources. Hardware events are provided by the processor and its PMUs (Performance Monitoring Unit), which may vary among different companies.
+
+Software event
+
+Hardware cache event
+
+Next, we discuss what each counter used in our experiments captures.
+
+\begin{itemize}
+	\item \textbf{cpu-cycles}: number of fetch-decode-execute cycles the CPU executed;
+	\item \textbf{instructions}: number of instructions the CPU executed;
+	\item \textbf{cache-misses}: number of cache-misses;
+	\item \textbf{cache-references}: number of references found in cache;
+	\item \textbf{L1-dcache-load-misses}: number of misses when loading data from L1 cache;
+	\item \textbf{L1-dcache-loads}: number of data loads from L1 cache;
+	\item \textbf{L1-dcache-stores}: number of data stores made in L1 cache;
+	\item \textbf{L1-icache-load-misses}: number of misses when loading instructions from L1 cache;
+	\item \textbf{L1-icache-loads}: number of instructions load from L1 cache;
+	\item \textbf{L1-icache-stores}: number of instructions store made in L1 cache;
+	\item \textbf{LLC-loads}: number of references loaded from LLC (Last Level Cache, usually L3);
+	\item \textbf{LLC-load-misses}: number of references missed when loading from LLC;
+	\item \textbf{LLC-stores}: number of references store made loading in LLC;
+	\item \textbf{mem-stores}: number of stores made in the main memory;
+	\item \textbf{mem-loads}: number of loads made from the main memory;
+\end{itemize}

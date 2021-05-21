@@ -11,7 +11,12 @@ run-perf-test-2: default
 	@# Using all cores.
 	sudo perf stat --no-metric-only --all-cpus --no-aggr --interval-print 75 --output data/perf-test-2.csv --field-separator "," --event ${events} -- ./build/ff-farm 12 500000
 
-record: default
-	sudo perf record --delay 0 --sample-cpu -g --call-graph dwarf --freq 997 --period --running-time --all-user --timestamp --output data/perf-record.data --event ${events} -- ./build/ff-farm 12 1000000
-	sudo perf script --max-stack=2 --show-info --input data/perf-record.data > data/perf-record.txt
-	sudo chown water:water data/perf-record.txt
+record-test-1: default
+	sudo perf record --delay 0 --sample-cpu -g --call-graph dwarf --freq 997 --period --running-time --all-user --timestamp --output data/perf-record-1.data --event ${events} -- ./build/ff-farm 12 1000000
+	sudo perf script --max-stack 5 --show-info --input data/perf-record-1.data > data/perf-record-1.txt
+	sudo chown water:water data/perf-record-1.txt data/perf-record-1.data
+
+record-test-2: default
+	sudo perf record --delay 0 --sample-cpu -g --call-graph dwarf --freq 997 --period --running-time --all-user --timestamp --output data/perf-record-2.data --event ${events} -- ./build/ff-farm 12 1000000
+	sudo perf script --max-stack 5 --show-info --input data/perf-record-2.data > data/perf-record-2.txt
+	sudo chown water:water data/perf-record-2.txt data/perf-record-2.data

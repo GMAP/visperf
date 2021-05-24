@@ -8,7 +8,7 @@ if [ "$session_exists" = "" ]; then
     tmux new-session -d -s $session -x "$(tput cols)" -y "$(tput lines)"
 
     tmux rename-window -t 0 "main"
-    tmux send-keys -t "default" "conda activate dnn" C-m "vim -c 'Lex'" C-m
+    tmux send-keys -t "main" "conda activate dnn" C-m "vim -c 'Lex'" C-m
     tmux split-window -v -p 25
     tmux send-keys -t 1 "conda activate dnn" C-m
     tmux select-pane -t 1
@@ -17,7 +17,7 @@ if [ "$session_exists" = "" ]; then
     tmux select-pane -t 0
 
     tmux new-window -t $session:1 -n "vis"
-    tmux send-keys -t "dash" "cd src/d3-dashboard" C-m "conda activate dnn" C-m "vim -c 'Lex'" C-m
+    tmux send-keys -t "vis" "cd src/d3-dashboard" C-m "conda activate dnn" C-m "vim -c 'Lex'" C-m
     tmux split-window -v -p 25
     tmux send-keys -t 1 "cd src/d3-dashboard" C-m "conda activate dnn" C-m
     tmux select-pane -t 1

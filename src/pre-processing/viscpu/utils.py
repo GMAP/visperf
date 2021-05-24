@@ -27,6 +27,17 @@ def transform_cpu_data(df, cpu_setup):
     return __fill_cpu_setup(df, copy.deepcopy(cpu_setup))
 
 
+def get_event_thread_data(df, cpu_setup, event, thread):
+    times = df["time_second"].unique().tolist()
+    captures = {}
+    for t in times:
+        df_filtered = df[
+            (df["event"] == event) & (df["time_second"] == t) & (df["tid"] == thread)
+        ]
+        captures[t] = transform_cpu_data(df_filtered, cpu_setup)
+    return (times, captures)
+
+
 def get_event_data(df, cpu_setup, event):
     times = df["time"].unique()
     captures = {}

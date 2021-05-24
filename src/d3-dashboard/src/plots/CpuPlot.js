@@ -87,7 +87,12 @@ export default function CpuPlot({
                 .duration(300)
                 .attr('x', (_, i) => x(i))
                 .attr('y', (d, _) => y(d.row))
-                .style('fill', (d) => colorScale(d.value));
+                .style('fill', (d) => {
+                    if (d.value === 0) {
+                        return '#eee';
+                    }
+                    return colorScale(d.value);
+                });
         } else {
             svg.current = d3
                 .select(plotRef.current)
@@ -119,7 +124,12 @@ export default function CpuPlot({
                 .attr('rx', 3)
                 .style('stroke', 'black')
                 .style('stroke-width', 2)
-                .style('fill', (d) => colorScale(d.value));
+                .style('fill', (d) => {
+                    if (d.value === 0) {
+                        return '#eee';
+                    }
+                    return colorScale(d.value);
+                });
 
             row.selectAll('.label')
                 .data((d, i) =>

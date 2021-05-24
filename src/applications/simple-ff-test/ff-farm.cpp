@@ -1,7 +1,7 @@
 #include <ff/ff.hpp>
 #include <iostream>
 #include <vector>
-#define USE_MAPPING
+/* #define USE_MAPPING */
 
 using namespace ff;
 

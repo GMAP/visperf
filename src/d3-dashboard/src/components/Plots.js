@@ -71,7 +71,7 @@ function loadParallelCoordinatesPlot(dataFile, event) {
                     hideLabels: false,
                 },
                 { name: 'Experiment 2 (%)', hideLabels: false },
-                { name: 'Intersection (%)', hideLabels: false },
+                { name: 'Difference (%)', hideLabels: false },
             ]}
             timeSeries={false}
             data={transposeArrays([
@@ -152,7 +152,7 @@ export default function Plots({ dataFile }) {
                                     d3ColorScale="interpolateRdBu"
                                     legendPoints={[0, 50, 100]}
                                     timeSeries={false}
-                                    title="Comparison"
+                                    title="Difference"
                                     cpuLabels={dataFile['cpu_labels']}
                                     data={
                                         dataFile[baseExperiment][event][

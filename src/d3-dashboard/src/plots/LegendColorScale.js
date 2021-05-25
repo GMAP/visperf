@@ -11,9 +11,12 @@ export default function LegendColorScale({
     d3ColorScale,
     width,
     height,
+    margin,
     legendPoints,
+    legendPositions,
+    legendLabels,
+    invert = true,
     rotation = 90,
-    margin = 10,
 }) {
     const classes = useStyles();
     const legendRef = useRef();
@@ -23,15 +26,22 @@ export default function LegendColorScale({
     useEffect(() => {
         const colorScale = d3
             .scaleSequential(d3[d3ColorScale])
-            .domain([legendPoints[0], legendPoints[legendPoints.length - 1]]);
+            .domain(
+                invert
+                    ? [legendPoints[legendPoints.length - 1], legendPoints[0]]
+                    : [legendPoints[0], legendPoints[legendPoints.length - 1]],
+            );
 
         svg.current = d3
             .select(legendRef.current)
             .append('svg')
-            .attr('width', width + margin * 2)
-            .attr('height', height + margin * 2)
+            .attr('width', width + margin.left + margin.right)
+            .attr('height', height + margin.top + margin.bottom)
             .append('g')
-            .attr('transform', 'translate(' + margin + ',' + margin + ')');
+            .attr(
+                'transform',
+                'translate(' + margin.left + ',' + margin.top + ')',
+            );
 
         const linearGradient = svg.current
             .append('defs')
@@ -56,6 +66,18 @@ export default function LegendColorScale({
             .style('stroke', 'black')
             .style('stroke-width', 1)
             .style('fill', `url(#${gradientId})`);
+
+        for (let i = 0; i < legendPoints.length; i++) {
+            svg.current
+                .append('text')
+                .attr('class', 'label')
+                .style('text-anchor', 'middle')
+                .attr('font-weight', 400)
+                .attr('font-size', 12)
+                .attr('x', () => width + 10)
+                .attr('y', () => legendPositions[i] * height)
+                .text(() => legendLabels[i]);
+        }
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (

@@ -151,6 +151,9 @@ export default function Plots({ dataFile }) {
                                     margin={5}
                                     d3ColorScale="interpolateRdBu"
                                     legendPoints={[0, 50, 100]}
+                                    legendPositions={[0.02, 0.5, 0.98]}
+                                    legendLabels={['∞', '0', '-∞']}
+                                    legendInvert={false}
                                     timeSeries={false}
                                     title="Difference"
                                     cpuLabels={dataFile['cpu_labels']}

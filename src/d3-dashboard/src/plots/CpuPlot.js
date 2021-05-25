@@ -29,6 +29,9 @@ export default function CpuPlot({
     timeSeries = true,
     squareSize = 80,
     legendPoints = [0, 100],
+    legendPositions = [0.02, 0.98],
+    legendLabels = ['∞', '0'],
+    legendInvert = true,
 }) {
     const classes = useStyles();
     const plotRef = useRef();
@@ -57,14 +60,13 @@ export default function CpuPlot({
     }
     const width = squareSize * dataPlot[0].length;
     const height = squareSize * dataPlot.length;
+    const minValue = Math.min(...[].concat(...dataPlot));
+    const maxValue = Math.max(...[].concat(...dataPlot));
 
     useEffect(() => {
         const colorScale = d3
             .scaleSequential(d3[d3ColorScale])
-            .domain([
-                Math.min(...[].concat(...dataPlot)),
-                Math.max(...[].concat(...dataPlot)),
-            ]);
+            .domain([minValue, maxValue]);
         const x = d3
             .scaleLinear()
             .range([0, width])
@@ -160,7 +162,15 @@ export default function CpuPlot({
                 <Grid item>
                     <LegendColorScale
                         legendPoints={legendPoints}
-                        margin={margin}
+                        legendPositions={legendPositions}
+                        legendLabels={legendLabels}
+                        invert={legendInvert}
+                        margin={{
+                            top: margin,
+                            left: 5,
+                            bottom: margin,
+                            right: 22,
+                        }}
                         d3ColorScale={d3ColorScale}
                         width={20}
                         height={height}

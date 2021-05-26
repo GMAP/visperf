@@ -3,12 +3,16 @@ import math
 import copy
 
 
+def create_cpu_label(cpu):
+    return f"CPU{cpu}"
+
+
 def cpu_labels(cpu_setup, cpus_per_row):
     cpu = []
     for x, setup_row in enumerate(cpu_setup):
         row = []
         for y in range(cpus_per_row):
-            row.append(f"CPU{x * cpus_per_row + y}")
+            row.append(create_cpu_label(x * cpus_per_row + y))
         cpu.append(row)
     return cpu
 
@@ -19,7 +23,6 @@ def get_event_data(df, cpu_setup, event):
     for t in times:
         df_filtered = df[(df["event"] == event) & (df["time_second"] == t)]
         captures[t] = transform_cpu_data(df_filtered, cpu_setup)
-    # print(captures)
     return (times, captures)
 
 
@@ -63,6 +66,48 @@ def parse_info_line(line):
         parse_counter(l[4]),
         parse_cpu(l[2]),
     ]
+
+
+def get_unique_functions_threads(df, event, time):
+    unique_functions = {}
+    unique_threads = {}
+    for i, row in df[(df["time_second"] == time) & (df["event"] == event)].iterrows():
+        cpu = create_cpu_label(row["cpu"])
+        if cpu not in unique_threads:
+            unique_threads[cpu] = {}
+        if cpu not in unique_functions:
+            unique_functions[cpu] = {}
+
+        tid = row["tid"]
+        unique_threads[cpu][tid] = unique_threads[cpu].get(tid, 0) + row["counter"]
+
+        for function in row["stack"].split("|"):
+            if function not in unique_functions[cpu]:
+                unique_functions[cpu][function] = (
+                    unique_functions[cpu].get(function, 0) + row["counter"]
+                )
+    return unique_functions, unique_threads
+
+
+def get_search_functions_threads(df, event):
+    unique_functions = {}
+    unique_threads = {}
+    for i, row in df[(df["event"] == event)].iterrows():
+        tid = row["tid"]
+        unique_threads[tid] = unique_threads.get(tid, 0) + 1
+        functions = row["stack"].split("|")
+        for function in functions:
+            unique_functions[function] = unique_functions.get(function, 0) + 1
+
+    functions_sorted = [
+        dict(text=f"{x[0]} ({x[1]})", value=x[0], type="function")
+        for x in sorted(unique_functions.items(), key=lambda x: x[1], reverse=True)
+    ]
+    threads_sorted = [
+        dict(text=f"{x[0]} ({x[1]})", value=x[0], type="thread")
+        for x in sorted(unique_threads.items(), key=lambda x: x[1], reverse=True)
+    ]
+    return functions_sorted + threads_sorted
 
 
 def agg_stack(stack):

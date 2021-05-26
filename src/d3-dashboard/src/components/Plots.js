@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { TrendingDown, TrendingUp } from '@material-ui/icons';
 import { CpuPlot, ParallelCoordinatePlot } from '../plots';
-import { ComparisonContainer } from './';
+import { ComparisonContainer, AutocompleteFunctionsThreads } from './';
 import { flatten2dArray, transposeArrays } from '../utils';
 
 const useStylesPlot = makeStyles((theme) => ({
@@ -96,6 +96,8 @@ export default function Plots({ dataFile }) {
     const [visualization, setComparisonVisualization] = useState(
         'parallel-coordinates',
     );
+    const [filterFunctionThread1, setFilterFunctionThread1] = useState([]);
+    const [filterFunctionThread2, setFilterFunctionThread2] = useState([]);
     const valueResumed = dataFile[baseExperiment][event]['mean_value'];
 
     return (
@@ -203,6 +205,18 @@ export default function Plots({ dataFile }) {
                 >
                     <Grid container spacing={8}>
                         <Grid item sm={true}>
+                            <AutocompleteFunctionsThreads
+                                id="autocomplete-time-series-dataset-1"
+                                data={
+                                    dataFile['dataset-1'][
+                                        'search_function_threads'
+                                    ][eventTimeSeries]
+                                }
+                                onChangeFilter={(filter) =>
+                                    setFilterFunctionThread1(filter)
+                                }
+                            />
+
                             <CpuPlot
                                 title="Experiment 1"
                                 cpuLabels={dataFile['cpu_labels']}
@@ -211,9 +225,32 @@ export default function Plots({ dataFile }) {
                                         eventTimeSeries
                                     ]
                                 }
+                                functions={
+                                    dataFile['dataset-1']['functions']['raw'][
+                                        eventTimeSeries
+                                    ]
+                                }
+                                threads={
+                                    dataFile['dataset-1']['threads']['raw'][
+                                        eventTimeSeries
+                                    ]
+                                }
+                                selectedFunctionsThreads={filterFunctionThread1}
                             />
                         </Grid>
                         <Grid item sm={true}>
+                            <AutocompleteFunctionsThreads
+                                id="autocomplete-time-series-dataset-2"
+                                data={
+                                    dataFile['dataset-2'][
+                                        'search_function_threads'
+                                    ][eventTimeSeries]
+                                }
+                                onChangeFilter={(filter) =>
+                                    setFilterFunctionThread2(filter)
+                                }
+                            />
+
                             <CpuPlot
                                 title="Experiment 2"
                                 cpuLabels={dataFile['cpu_labels']}
@@ -222,6 +259,17 @@ export default function Plots({ dataFile }) {
                                         eventTimeSeries
                                     ]
                                 }
+                                functions={
+                                    dataFile['dataset-2']['functions']['raw'][
+                                        eventTimeSeries
+                                    ]
+                                }
+                                threads={
+                                    dataFile['dataset-2']['threads']['raw'][
+                                        eventTimeSeries
+                                    ]
+                                }
+                                selectedFunctionsThreads={filterFunctionThread2}
                             />
                         </Grid>
                     </Grid>

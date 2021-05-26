@@ -19,10 +19,55 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+function filterFunctionThread(
+    functions,
+    threads,
+    selectedFunctionsThreads,
+    dataPlot,
+    cpuLabels,
+) {
+    const dataPlotClone = JSON.parse(JSON.stringify(dataPlot));
+    for (let row = 0; row < dataPlotClone.length; row++) {
+        for (let col = 0; col < dataPlotClone[0].length; col++) {
+            dataPlotClone[row][col] = 0;
+        }
+    }
+
+    for (let row = 0; row < dataPlotClone.length; row++) {
+        for (let col = 0; col < dataPlotClone[0].length; col++) {
+            const cpuNumber = cpuLabels[row][col];
+            for (const i in selectedFunctionsThreads) {
+                const filter = selectedFunctionsThreads[i];
+                if (filter.type === 'function') {
+                    if (
+                        cpuNumber in functions &&
+                        filter.value in functions[cpuNumber]
+                    ) {
+                        dataPlotClone[row][col] +=
+                            functions[cpuNumber][filter.value];
+                    }
+                } else if (filter.type === 'thread') {
+                    if (
+                        cpuNumber in threads &&
+                        filter.value in threads[cpuNumber]
+                    ) {
+                        dataPlotClone[row][col] +=
+                            threads[cpuNumber][filter.value];
+                    }
+                }
+            }
+        }
+    }
+    return dataPlotClone;
+}
+
 export default function CpuPlot({
     data,
     cpuLabels,
     title,
+    functions = null,
+    threads = null,
+    selectedFunctionsThreads = null,
     fontSize = '1em',
     margin = 10,
     d3ColorScale = 'interpolateYlOrRd',
@@ -55,6 +100,15 @@ export default function CpuPlot({
     let dataPlot = null;
     if (timeSeries) {
         dataPlot = captures[sliderValue];
+        if (selectedFunctionsThreads.length > 0) {
+            dataPlot = filterFunctionThread(
+                functions[sliderValue],
+                threads[sliderValue],
+                selectedFunctionsThreads,
+                dataPlot,
+                cpuLabels,
+            );
+        }
     } else {
         dataPlot = data;
     }

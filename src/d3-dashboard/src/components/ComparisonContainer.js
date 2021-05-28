@@ -21,11 +21,13 @@ export default function ComparisonContainer({
     setComparisonEvent,
     setComparisonVisualization,
     setComparisonBaseExperiment,
+    setMetricComparisonVisualization,
 }) {
     const classes = useStyles();
-    const [event, setEvent] = useState(events[0]);
+    const [event, setEvent] = useState(setComparisonEvent ? events[0] : null);
     const [baseExperiment, setBaseExperiment] = useState('comparison-1-2');
     const [visualization, setVisualization] = useState('parallel-coordinates');
+    const [metricVisualization, setMetricVisualization] = useState('area');
 
     return (
         <div>
@@ -36,25 +38,49 @@ export default function ComparisonContainer({
                     alignItems="center"
                     justify="center"
                 >
-                    <Grid item>
-                        <FormControl className={classes.formControl}>
-                            <InputLabel id="select-event">Event</InputLabel>
-                            <Select
-                                labelId="select-event"
-                                value={event}
-                                onChange={(e) => {
-                                    setEvent(e.target.value);
-                                    setComparisonEvent(e.target.value);
-                                }}
-                            >
-                                {events.map((x, i) => (
-                                    <MenuItem key={i} value={x}>
-                                        {x}
-                                    </MenuItem>
-                                ))}
-                            </Select>
-                        </FormControl>
-                    </Grid>
+                    {setComparisonEvent && (
+                        <Grid item>
+                            <FormControl className={classes.formControl}>
+                                <InputLabel id="select-event">Event</InputLabel>
+                                <Select
+                                    labelId="select-event"
+                                    value={event}
+                                    onChange={(e) => {
+                                        setEvent(e.target.value);
+                                        setComparisonEvent(e.target.value);
+                                    }}
+                                >
+                                    {events.map((x, i) => (
+                                        <MenuItem key={i} value={x}>
+                                            {x}
+                                        </MenuItem>
+                                    ))}
+                                </Select>
+                            </FormControl>
+                        </Grid>
+                    )}
+                    {setMetricComparisonVisualization && (
+                        <Grid item>
+                            <FormControl className={classes.formControl}>
+                                <InputLabel id="select-metric-visualization">
+                                    Visualization
+                                </InputLabel>
+                                <Select
+                                    labelId="select-metric-visualization"
+                                    value={metricVisualization}
+                                    onChange={(e) => {
+                                        setMetricVisualization(e.target.value);
+                                        setMetricComparisonVisualization(
+                                            e.target.value,
+                                        );
+                                    }}
+                                >
+                                    <MenuItem value="area">Time chart</MenuItem>
+                                    <MenuItem value="cpus">CPUs</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </Grid>
+                    )}
                     {setComparisonVisualization && (
                         <Grid item>
                             <FormControl className={classes.formControl}>

@@ -26,14 +26,18 @@ def get_event_data(df, cpu_setup, event):
     return (times, captures)
 
 
-def transform_cpu_data(df, cpu_setup):
+def transform_cpu_data(df, cpu_setup, func_metric=None, value_column="counter"):
     cpu = copy.deepcopy(cpu_setup)
     cpus = df["cpu"].unique().tolist()
     cpus_per_row = len(cpu[0])
     for c in cpus:
         x = math.ceil((c + 1) / cpus_per_row) - 1
         y = c % cpus_per_row
-        cpu[x][y] = float(df[df["cpu"] == c]["counter"].values[0])
+        cpu[x][y] = float(
+            func_metric(df[df["cpu"] == c])
+            if func_metric
+            else df[df["cpu"] == c][value_column].values[0]
+        )
     return cpu
 
 

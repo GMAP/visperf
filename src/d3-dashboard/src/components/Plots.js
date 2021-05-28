@@ -3,7 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { TrendingDown, TrendingUp } from '@material-ui/icons';
-import { CpuPlot, ParallelCoordinatePlot } from '../plots';
+import { CpuPlot, ParallelCoordinatePlot, AreaPlot } from '../plots';
 import { ComparisonContainer, AutocompleteFunctionsThreads } from './';
 import { flatten2dArray, transposeArrays } from '../utils';
 
@@ -274,6 +274,28 @@ export default function Plots({ dataFile }) {
                         </Grid>
                     </Grid>
                 </ComparisonContainer>
+            </Plot>
+            <Plot
+                title="Comparison between events"
+                description="This section generates some metrics based on the comparison between events."
+            >
+                <Grid container spacing={8}>
+                    <Grid item sm={true}>
+                        <AreaPlot
+                            title="Experiment 1"
+                            xLabel="Execution time (s)"
+                            yLabel="IPC"
+                            data={dataFile['dataset-1']['ipc-performance']}
+                            margin={{
+                                top: 50,
+                                left: 100,
+                                rigth: 50,
+                                bottom: 70,
+                            }}
+                        />
+                    </Grid>
+                    <Grid item sm={true}></Grid>
+                </Grid>
             </Plot>
         </div>
     );

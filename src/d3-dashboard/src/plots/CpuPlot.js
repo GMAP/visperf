@@ -99,7 +99,12 @@ export default function CpuPlot({
 
     let dataPlot = null;
     if (timeSeries) {
-        dataPlot = captures[sliderValue];
+        if (sliderValue > sliderConfig.max) {
+            setSliderValue(sliderConfig.max);
+            dataPlot = captures[sliderConfig.max];
+        } else {
+            dataPlot = captures[sliderValue];
+        }
         if (selectedFunctionsThreads.length > 0) {
             dataPlot = filterFunctionThread(
                 functions[sliderValue],

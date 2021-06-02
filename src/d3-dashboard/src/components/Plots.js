@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
 import { TrendingDown, TrendingUp } from '@material-ui/icons';
 import { CpuPlot, ParallelCoordinatePlot, AreaPlot } from '../plots';
@@ -21,6 +25,9 @@ const useStylesPlot = makeStyles((theme) => ({
 }));
 
 const useStylesPlots = makeStyles((theme) => ({
+    formControl: {
+        minWidth: 150,
+    },
     labelValueContainer: {
         marginTop: theme.spacing(3),
         display: 'flex',
@@ -43,6 +50,16 @@ const useStylesPlots = makeStyles((theme) => ({
     },
     titleComparisonEventExperiment: {
         textAlign: 'center',
+    },
+    selectEventsToCompare: {
+        position: 'fixed',
+        padding: theme.spacing(2),
+        width: 400,
+        left: '50%',
+        transform: 'translateX(-50%)',
+        top: 70,
+        backgroundColor: '#FFF',
+        zIndex: 10,
     },
 }));
 
@@ -129,350 +146,412 @@ function loadMetricComparisonPlot(metricVisualization, data, xLabel, yLabel) {
     }
 }
 
-export default function Plots({ dataFile }) {
-    const classes = useStylesPlots();
-    const [event, setComparisonEvent] = useState(dataFile['events'][0]);
-    const [eventTimeSeries, setComparisonEventTimeSeries] = useState(
-        dataFile['events'][0],
-    );
-    const [baseExperiment, setComparisonBaseExperiment] = useState(
-        'comparison-1-2',
-    );
-    const [visualization, setComparisonVisualization] = useState(
-        'parallel-coordinates',
-    );
-    const [filterFunctionThread1, setFilterFunctionThread1] = useState([]);
-    const [filterFunctionThread2, setFilterFunctionThread2] = useState([]);
-    const [
-        metricComparisonVisualization,
-        setMetricComparisonVisualization,
-    ] = useState('area');
+function FirstSectionPlots({ dataFile, classes }) {
+    const [event, setEvent] = useState(dataFile['events_captured'][0]);
+    const [baseExperiment, setBaseExperiment] = useState('comparison-1-2');
+    const [visualization, setVisualization] = useState('parallel-coordinates');
+
     const valueResumed = dataFile[baseExperiment][event]['mean_value'];
 
     return (
-        <div>
-            <Plot
-                title="Comparison between experiments"
-                description="This plot allows you to compare the captured events during experiment execution."
+        <Plot
+            title="Comparison between experiments"
+            description="This plot allows you to compare the captured events during experiment execution."
+        >
+            <ComparisonContainer
+                events={dataFile['events_captured']}
+                setComparisonEvent={(e) => setEvent(e)}
+                setComparisonBaseExperiment={(e) => setBaseExperiment(e)}
+                setComparisonVisualization={(e) => setVisualization(e)}
             >
-                <ComparisonContainer
-                    events={dataFile['events']}
-                    setComparisonEvent={(e) => setComparisonEvent(e)}
-                    setComparisonBaseExperiment={(e) =>
-                        setComparisonBaseExperiment(e)
-                    }
-                    setComparisonVisualization={(e) =>
-                        setComparisonVisualization(e)
-                    }
-                >
-                    {visualization === 'cpus' ? (
-                        <Grid container spacing={4}>
-                            <Grid item>
-                                <CpuPlot
-                                    margin={5}
-                                    squareSize={45}
-                                    fontSize=".9em"
-                                    timeSeries={false}
-                                    title="Experiment 1"
-                                    cpuLabels={dataFile['cpu_labels']}
-                                    data={
-                                        dataFile['dataset-1']['aggregated'][
-                                            event
-                                        ]['mean_relative']
-                                    }
-                                />
-                            </Grid>
-                            <Grid item>
-                                <CpuPlot
-                                    margin={5}
-                                    squareSize={45}
-                                    timeSeries={false}
-                                    fontSize=".9em"
-                                    title="Experiment 2"
-                                    cpuLabels={dataFile['cpu_labels']}
-                                    data={
-                                        dataFile['dataset-2']['aggregated'][
-                                            event
-                                        ]['mean_relative']
-                                    }
-                                />
-                            </Grid>
-                            <Grid item sm={true}>
-                                <CpuPlot
-                                    margin={5}
-                                    d3ColorScale="interpolateRdBu"
-                                    legendPoints={[0, 50, 100]}
-                                    legendPositions={[0.02, 0.5, 0.98]}
-                                    legendLabels={['∞', '0', '-∞']}
-                                    legendInvert={false}
-                                    timeSeries={false}
-                                    title="Difference"
-                                    cpuLabels={dataFile['cpu_labels']}
-                                    data={
-                                        dataFile[baseExperiment][event][
-                                            'mean_relative'
-                                        ]
-                                    }
-                                />
-                            </Grid>
-                        </Grid>
-                    ) : (
-                        <Grid container>
-                            <Grid item sm={true}>
-                                {loadParallelCoordinatesPlot(dataFile, event)}
-                            </Grid>
-                        </Grid>
-                    )}
-                    <Grid item sm={12} className={classes.labelValueContainer}>
-                        <Grid container>
-                            <Grid item className={classes.labelValue}>
-                                <h1>
-                                    {valueResumed.toFixed(2)}%
-                                    &nbsp;&nbsp;&nbsp;
-                                    {valueResumed > 0 ? (
-                                        <TrendingUp />
-                                    ) : valueResumed < 0 ? (
-                                        <TrendingDown />
-                                    ) : null}
-                                </h1>
-                            </Grid>
-                            <Grid item sm={12}>
-                                How the event counter changed between
-                                experiments.
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </ComparisonContainer>
-            </Plot>
-            <Plot
-                title="Compare time series of experiments"
-                description="This plot compares the events captured during the execution of the experiments. The slider allows you to see each of the captures made."
-            >
-                <ComparisonContainer
-                    events={dataFile['events']}
-                    setComparisonEvent={(e) => setComparisonEventTimeSeries(e)}
-                >
-                    <Grid container spacing={8}>
-                        <Grid item sm={true}>
-                            <AutocompleteFunctionsThreads
-                                id="autocomplete-time-series-dataset-1"
-                                data={
-                                    dataFile['dataset-1'][
-                                        'search_function_threads'
-                                    ][eventTimeSeries]
-                                }
-                                onChangeFilter={(filter) =>
-                                    setFilterFunctionThread1(filter)
-                                }
-                            />
-
+                {visualization === 'cpus' ? (
+                    <Grid container spacing={4}>
+                        <Grid item>
                             <CpuPlot
+                                margin={5}
+                                squareSize={45}
+                                fontSize=".9em"
+                                timeSeries={false}
                                 title="Experiment 1"
                                 cpuLabels={dataFile['cpu_labels']}
                                 data={
-                                    dataFile['dataset-1']['raw'][
-                                        eventTimeSeries
+                                    dataFile['dataset-1']['aggregated'][event][
+                                        'mean_relative'
                                     ]
                                 }
-                                functions={
-                                    dataFile['dataset-1']['functions']['raw'][
-                                        eventTimeSeries
-                                    ]
-                                }
-                                threads={
-                                    dataFile['dataset-1']['threads']['raw'][
-                                        eventTimeSeries
-                                    ]
-                                }
-                                selectedFunctionsThreads={filterFunctionThread1}
                             />
                         </Grid>
-                        <Grid item sm={true}>
-                            <AutocompleteFunctionsThreads
-                                id="autocomplete-time-series-dataset-2"
-                                data={
-                                    dataFile['dataset-2'][
-                                        'search_function_threads'
-                                    ][eventTimeSeries]
-                                }
-                                onChangeFilter={(filter) =>
-                                    setFilterFunctionThread2(filter)
-                                }
-                            />
-
+                        <Grid item>
                             <CpuPlot
+                                margin={5}
+                                squareSize={45}
+                                timeSeries={false}
+                                fontSize=".9em"
                                 title="Experiment 2"
                                 cpuLabels={dataFile['cpu_labels']}
                                 data={
-                                    dataFile['dataset-2']['raw'][
-                                        eventTimeSeries
+                                    dataFile['dataset-2']['aggregated'][event][
+                                        'mean_relative'
                                     ]
                                 }
-                                functions={
-                                    dataFile['dataset-2']['functions']['raw'][
-                                        eventTimeSeries
+                            />
+                        </Grid>
+                        <Grid item sm={true}>
+                            <CpuPlot
+                                margin={5}
+                                d3ColorScale="interpolateRdBu"
+                                legendPoints={[0, 50, 100]}
+                                legendPositions={[0.02, 0.5, 0.98]}
+                                legendLabels={['∞', '0', '-∞']}
+                                legendInvert={false}
+                                timeSeries={false}
+                                title="Difference"
+                                cpuLabels={dataFile['cpu_labels']}
+                                data={
+                                    dataFile[baseExperiment][event][
+                                        'mean_relative'
                                     ]
                                 }
-                                threads={
-                                    dataFile['dataset-2']['threads']['raw'][
-                                        eventTimeSeries
-                                    ]
-                                }
-                                selectedFunctionsThreads={filterFunctionThread2}
                             />
                         </Grid>
                     </Grid>
-                </ComparisonContainer>
-            </Plot>
-            <Plot
-                title="Comparison between events"
-                description="This section generates some metrics based on the comparison between events."
+                ) : (
+                    <Grid container>
+                        <Grid item sm={true}>
+                            {loadParallelCoordinatesPlot(dataFile, event)}
+                        </Grid>
+                    </Grid>
+                )}
+                <Grid item sm={12} className={classes.labelValueContainer}>
+                    <Grid container>
+                        <Grid item className={classes.labelValue}>
+                            <h1>
+                                {valueResumed.toFixed(2)}% &nbsp;&nbsp;&nbsp;
+                                {valueResumed > 0 ? (
+                                    <TrendingUp />
+                                ) : valueResumed < 0 ? (
+                                    <TrendingDown />
+                                ) : null}
+                            </h1>
+                        </Grid>
+                        <Grid item sm={12}>
+                            How the event counter changed between experiments.
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </ComparisonContainer>
+        </Plot>
+    );
+}
+
+function SecondSectionPlots({ dataFile, experiment1, experiment2 }) {
+    const [event, setEvent] = useState(dataFile['events_captured'][0]);
+    const [filterFunctionThread1, setFilterFunctionThread1] = useState([]);
+    const [filterFunctionThread2, setFilterFunctionThread2] = useState([]);
+
+    return (
+        <Plot
+            title="Compare time series of experiments"
+            description="This plot compares the events captured during the execution of the experiments. The slider allows you to see each of the captures made."
+        >
+            <ComparisonContainer
+                events={dataFile['events_captured']}
+                setComparisonEvent={(e) => setEvent(e)}
             >
-                <ComparisonContainer
-                    setMetricComparisonVisualization={(e) =>
-                        setMetricComparisonVisualization(e)
-                    }
+                <Grid container spacing={8}>
+                    <Grid item sm={true}>
+                        <AutocompleteFunctionsThreads
+                            id="autocomplete-time-series-experiment-1"
+                            data={
+                                dataFile['experiments'][experiment1.experiment][
+                                    experiment1.run
+                                ]['search_function_threads'][event]
+                            }
+                            onChangeFilter={(filter) =>
+                                setFilterFunctionThread1(filter)
+                            }
+                        />
+
+                        <CpuPlot
+                            title="Experiment 1"
+                            cpuLabels={dataFile['cpu_labels']}
+                            data={
+                                dataFile['experiments'][experiment1.experiment][
+                                    experiment1.run
+                                ]['time_series'][event]
+                            }
+                            functions={
+                                dataFile['experiments'][experiment1.experiment][
+                                    experiment1.run
+                                ]['functions']['time_series'][event]
+                            }
+                            threads={
+                                dataFile['experiments'][experiment1.experiment][
+                                    experiment1.run
+                                ]['threads']['time_series'][event]
+                            }
+                            selectedFunctionsThreads={filterFunctionThread1}
+                        />
+                    </Grid>
+                    <Grid item sm={true}>
+                        <AutocompleteFunctionsThreads
+                            id="autocomplete-time-series-experiment-2"
+                            data={
+                                dataFile['experiments'][experiment2.experiment][
+                                    experiment2.run
+                                ]['search_function_threads'][event]
+                            }
+                            onChangeFilter={(filter) =>
+                                setFilterFunctionThread2(filter)
+                            }
+                        />
+
+                        <CpuPlot
+                            title="Experiment 2"
+                            cpuLabels={dataFile['cpu_labels']}
+                            data={
+                                dataFile['experiments'][experiment2.experiment][
+                                    experiment2.run
+                                ]['time_series'][event]
+                            }
+                            functions={
+                                dataFile['experiments'][experiment2.experiment][
+                                    experiment2.run
+                                ]['functions']['time_series'][event]
+                            }
+                            threads={
+                                dataFile['experiments'][experiment2.experiment][
+                                    experiment2.run
+                                ]['threads']['time_series'][event]
+                            }
+                            selectedFunctionsThreads={filterFunctionThread2}
+                        />
+                    </Grid>
+                </Grid>
+            </ComparisonContainer>
+        </Plot>
+    );
+}
+
+function ThirdSectionPlots({ dataFile, classes }) {
+    const [metricComparisonVisualization, setMetricComparisonVisualization] =
+        useState('area');
+
+    return (
+        <Plot
+            title="Comparison between events"
+            description="This section generates some metrics based on the comparison between events."
+        >
+            <ComparisonContainer
+                setMetricComparisonVisualization={(e) =>
+                    setMetricComparisonVisualization(e)
+                }
+            >
+                <Grid container spacing={8}>
+                    <Grid
+                        item
+                        sm={12}
+                        className={classes.containerTitleComparisonEvents}
+                    >
+                        <h2 className={classes.titleComparisonEvents}>
+                            Instructions Per Cycle (IPC)
+                        </h2>
+                    </Grid>
+                    <Grid
+                        item
+                        sm={6}
+                        className={
+                            classes.containerTitleComparisonEventExperiment
+                        }
+                    >
+                        <h4 className={classes.titleComparisonEventExperiment}>
+                            Experiment 1
+                        </h4>
+                    </Grid>
+                    <Grid
+                        item
+                        sm={6}
+                        className={
+                            classes.containerTitleComparisonEventExperiment
+                        }
+                    >
+                        <h4 className={classes.titleComparisonEventExperiment}>
+                            Experiment 2
+                        </h4>
+                    </Grid>
+                    <Grid item sm={true}>
+                        {loadMetricComparisonPlot(
+                            metricComparisonVisualization,
+                            dataFile['dataset-1']['ipc-performance'],
+                            'Execution time (s)',
+                            'IPC',
+                        )}
+                    </Grid>
+                    <Grid item sm={true}>
+                        {loadMetricComparisonPlot(
+                            metricComparisonVisualization,
+                            dataFile['dataset-2']['ipc-performance'],
+                            'Execution time (s)',
+                            'IPC',
+                        )}
+                    </Grid>
+                </Grid>
+                <Grid container spacing={8}>
+                    <Grid
+                        item
+                        sm={12}
+                        className={classes.containerTitleComparisonEvents}
+                    >
+                        <h2 className={classes.titleComparisonEvents}>
+                            L1 Cache misses
+                        </h2>
+                    </Grid>
+                    <Grid item sm={true}>
+                        {loadMetricComparisonPlot(
+                            metricComparisonVisualization,
+                            dataFile['dataset-1']['l1-cache-performance'],
+                            'Execution time (s)',
+                            'L1 misses / Instructions',
+                        )}
+                    </Grid>
+                    <Grid item sm={true}>
+                        {loadMetricComparisonPlot(
+                            metricComparisonVisualization,
+                            dataFile['dataset-2']['l1-cache-performance'],
+                            'Execution time (s)',
+                            'L1 misses / Instructions',
+                        )}
+                    </Grid>
+                </Grid>
+                <Grid container spacing={8}>
+                    <Grid
+                        item
+                        sm={12}
+                        className={classes.containerTitleComparisonEvents}
+                    >
+                        <h2 className={classes.titleComparisonEvents}>
+                            LLC Cache misses
+                        </h2>
+                    </Grid>
+                    <Grid item sm={true}>
+                        {loadMetricComparisonPlot(
+                            metricComparisonVisualization,
+                            dataFile['dataset-1']['llc-cache-performance'],
+                            'Execution time (s)',
+                            'LLC misses / Instructions',
+                        )}
+                    </Grid>
+                    <Grid item sm={true}>
+                        {loadMetricComparisonPlot(
+                            metricComparisonVisualization,
+                            dataFile['dataset-2']['llc-cache-performance'],
+                            'Execution time (s)',
+                            'LLC misses / Instructions',
+                        )}
+                    </Grid>
+                </Grid>
+                <Grid container spacing={8}>
+                    <Grid
+                        item
+                        sm={12}
+                        className={classes.containerTitleComparisonEvents}
+                    >
+                        <h2 className={classes.titleComparisonEvents}>
+                            Bus cycles
+                        </h2>
+                    </Grid>
+                    <Grid item sm={true}>
+                        {loadMetricComparisonPlot(
+                            metricComparisonVisualization,
+                            dataFile['dataset-1']['bus-performance'],
+                            'Execution time (s)',
+                            'Bus cycles rate',
+                        )}
+                    </Grid>
+                    <Grid item sm={true}>
+                        {loadMetricComparisonPlot(
+                            metricComparisonVisualization,
+                            dataFile['dataset-2']['bus-performance'],
+                            'Execution time (s)',
+                            'Bus cycles rate',
+                        )}
+                    </Grid>
+                </Grid>
+            </ComparisonContainer>
+        </Plot>
+    );
+}
+
+export default function Plots({ dataFile }) {
+    const classes = useStylesPlots();
+    const [experiment1, setExperiment1] = useState(
+        dataFile['experiments_to_compare'][0].value,
+    );
+    const [experiment2, setExperiment2] = useState(
+        dataFile['experiments_to_compare'][1].value,
+    );
+
+    return (
+        <div>
+            <Paper elevation={4} className={classes.selectEventsToCompare}>
+                <Grid
+                    container
+                    alignItems="center"
+                    justify="center"
+                    spacing={3}
                 >
-                    <Grid container spacing={8}>
-                        <Grid
-                            item
-                            sm={12}
-                            className={classes.containerTitleComparisonEvents}
-                        >
-                            <h2 className={classes.titleComparisonEvents}>
-                                Instructions Per Cycle (IPC)
-                            </h2>
-                        </Grid>
-                        <Grid
-                            item
-                            sm={6}
-                            className={
-                                classes.containerTitleComparisonEventExperiment
-                            }
-                        >
-                            <h4
-                                className={
-                                    classes.titleComparisonEventExperiment
-                                }
-                            >
+                    <Grid item>
+                        <FormControl className={classes.formControl}>
+                            <InputLabel id="select-experiment-1">
                                 Experiment 1
-                            </h4>
-                        </Grid>
-                        <Grid
-                            item
-                            sm={6}
-                            className={
-                                classes.containerTitleComparisonEventExperiment
-                            }
-                        >
-                            <h4
-                                className={
-                                    classes.titleComparisonEventExperiment
-                                }
+                            </InputLabel>
+                            <Select
+                                labelId="select-experiment-1"
+                                value={experiment1}
+                                onChange={(e) => {
+                                    setExperiment1(e.target.value);
+                                }}
                             >
+                                {dataFile['experiments_to_compare'].map(
+                                    (x, i) => (
+                                        <MenuItem key={i} value={x.value}>
+                                            {x.text}
+                                        </MenuItem>
+                                    ),
+                                )}
+                            </Select>
+                        </FormControl>
+                    </Grid>
+                    <Grid item>
+                        <FormControl className={classes.formControl}>
+                            <InputLabel id="select-experiment-2">
                                 Experiment 2
-                            </h4>
-                        </Grid>
-                        <Grid item sm={true}>
-                            {loadMetricComparisonPlot(
-                                metricComparisonVisualization,
-                                dataFile['dataset-1']['ipc-performance'],
-                                'Execution time (s)',
-                                'IPC',
-                            )}
-                        </Grid>
-                        <Grid item sm={true}>
-                            {loadMetricComparisonPlot(
-                                metricComparisonVisualization,
-                                dataFile['dataset-2']['ipc-performance'],
-                                'Execution time (s)',
-                                'IPC',
-                            )}
-                        </Grid>
+                            </InputLabel>
+                            <Select
+                                labelId="select-experiment-2"
+                                value={experiment2}
+                                onChange={(e) => {
+                                    setExperiment2(e.target.value);
+                                }}
+                            >
+                                {dataFile['experiments_to_compare'].map(
+                                    (x, i) => (
+                                        <MenuItem key={i} value={x.value}>
+                                            {x.text}
+                                        </MenuItem>
+                                    ),
+                                )}
+                            </Select>
+                        </FormControl>
                     </Grid>
-                    <Grid container spacing={8}>
-                        <Grid
-                            item
-                            sm={12}
-                            className={classes.containerTitleComparisonEvents}
-                        >
-                            <h2 className={classes.titleComparisonEvents}>
-                                L1 Cache misses
-                            </h2>
-                        </Grid>
-                        <Grid item sm={true}>
-                            {loadMetricComparisonPlot(
-                                metricComparisonVisualization,
-                                dataFile['dataset-1']['l1-cache-performance'],
-                                'Execution time (s)',
-                                'L1 misses / Instructions',
-                            )}
-                        </Grid>
-                        <Grid item sm={true}>
-                            {loadMetricComparisonPlot(
-                                metricComparisonVisualization,
-                                dataFile['dataset-2']['l1-cache-performance'],
-                                'Execution time (s)',
-                                'L1 misses / Instructions',
-                            )}
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={8}>
-                        <Grid
-                            item
-                            sm={12}
-                            className={classes.containerTitleComparisonEvents}
-                        >
-                            <h2 className={classes.titleComparisonEvents}>
-                                LLC Cache misses
-                            </h2>
-                        </Grid>
-                        <Grid item sm={true}>
-                            {loadMetricComparisonPlot(
-                                metricComparisonVisualization,
-                                dataFile['dataset-1']['llc-cache-performance'],
-                                'Execution time (s)',
-                                'LLC misses / Instructions',
-                            )}
-                        </Grid>
-                        <Grid item sm={true}>
-                            {loadMetricComparisonPlot(
-                                metricComparisonVisualization,
-                                dataFile['dataset-2']['llc-cache-performance'],
-                                'Execution time (s)',
-                                'LLC misses / Instructions',
-                            )}
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={8}>
-                        <Grid
-                            item
-                            sm={12}
-                            className={classes.containerTitleComparisonEvents}
-                        >
-                            <h2 className={classes.titleComparisonEvents}>
-                                Bus cycles
-                            </h2>
-                        </Grid>
-                        <Grid item sm={true}>
-                            {loadMetricComparisonPlot(
-                                metricComparisonVisualization,
-                                dataFile['dataset-1']['bus-performance'],
-                                'Execution time (s)',
-                                'Bus cycles rate',
-                            )}
-                        </Grid>
-                        <Grid item sm={true}>
-                            {loadMetricComparisonPlot(
-                                metricComparisonVisualization,
-                                dataFile['dataset-2']['bus-performance'],
-                                'Execution time (s)',
-                                'Bus cycles rate',
-                            )}
-                        </Grid>
-                    </Grid>
-                </ComparisonContainer>
-            </Plot>
+                </Grid>
+            </Paper>
+            <SecondSectionPlots
+                dataFile={dataFile}
+                classes={classes}
+                experiment1={experiment1}
+                experiment2={experiment2}
+            />
         </div>
     );
 }

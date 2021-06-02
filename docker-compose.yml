@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+  machine:
+    image: viscpu-image:latest
+    container_name: viscpu-dev
+    stdin_open: true
+    tty: true
+    ports:
+      - "3000:3000"
+      - "8880:8880"
+    volumes:
+      - .:/home
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    working_dir: /home
+    environment:
+      - DISPLAY=$DISPLAY

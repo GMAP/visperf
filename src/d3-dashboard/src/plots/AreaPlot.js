@@ -41,6 +41,9 @@ export default function AreaPlot({
 
         if (svg.current) {
             svg.current.selectAll('path').remove();
+            svg.current.selectAll('text').remove();
+            svg.current.selectAll('.y-axis').remove();
+            svg.current.selectAll('.x-axis').remove();
         } else {
             svg.current = d3
                 .select(plotRef.current)
@@ -53,9 +56,10 @@ export default function AreaPlot({
 
         svg.current
             .append('g')
+            .attr('class', 'x-axis')
             .attr('transform', `translate(0, ${height})`)
             .call(d3.axisBottom(x).ticks((x.domain()[1] - x.domain()[0]) / 2));
-        svg.current.append('g').call(d3.axisLeft(y));
+        svg.current.append('g').attr('class', 'y-axis').call(d3.axisLeft(y));
 
         svg.current
             .append('path')

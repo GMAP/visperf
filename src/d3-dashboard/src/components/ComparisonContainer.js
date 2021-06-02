@@ -20,12 +20,10 @@ export default function ComparisonContainer({
     events,
     setComparisonEvent,
     setComparisonVisualization,
-    setComparisonBaseExperiment,
     setMetricComparisonVisualization,
 }) {
     const classes = useStyles();
     const [event, setEvent] = useState(setComparisonEvent ? events[0] : null);
-    const [baseExperiment, setBaseExperiment] = useState('comparison-1-2');
     const [visualization, setVisualization] = useState('parallel-coordinates');
     const [metricVisualization, setMetricVisualization] = useState('area');
 
@@ -101,32 +99,6 @@ export default function ComparisonContainer({
                                         Parallel Coordinates
                                     </MenuItem>
                                     <MenuItem value="cpus">CPUs</MenuItem>
-                                </Select>
-                            </FormControl>
-                        </Grid>
-                    )}
-                    {setComparisonBaseExperiment && (
-                        <Grid item>
-                            <FormControl className={classes.formControl}>
-                                <InputLabel id="select-base-experiment">
-                                    Base experiment
-                                </InputLabel>
-                                <Select
-                                    labelId="select-base-experiment"
-                                    value={baseExperiment}
-                                    onChange={(e) => {
-                                        setBaseExperiment(e.target.value);
-                                        setComparisonBaseExperiment(
-                                            e.target.value,
-                                        );
-                                    }}
-                                >
-                                    <MenuItem value="comparison-1-2">
-                                        Experiment 1
-                                    </MenuItem>
-                                    <MenuItem value="comparison-2-1">
-                                        Experiment 2
-                                    </MenuItem>
                                 </Select>
                             </FormControl>
                         </Grid>

@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { TrendingDown, TrendingUp } from '@material-ui/icons';
 import { CpuPlot, ParallelCoordinatePlot, AreaPlot } from '../plots';
 import { ComparisonContainer, AutocompleteFunctionsThreads } from './';
-import { flatten2dArray, transposeArrays } from '../utils';
+import { flatten2dArray, transposeArrays, createComparison } from '../utils';
 
 const useStylesPlot = makeStyles((theme) => ({
     container: {
@@ -51,7 +51,7 @@ const useStylesPlots = makeStyles((theme) => ({
     titleComparisonEventExperiment: {
         textAlign: 'center',
     },
-    selectEventsToCompare: {
+    selectEventsToCompareContainer: {
         position: 'fixed',
         padding: theme.spacing(2),
         width: 400,
@@ -60,6 +60,12 @@ const useStylesPlots = makeStyles((theme) => ({
         top: 70,
         backgroundColor: '#FFF',
         zIndex: 10,
+    },
+    selectEventsToCompare: {
+        textAlign: 'center',
+        margin: 'unset',
+        padding: 'unset',
+        marginBottom: -12,
     },
 }));
 
@@ -75,16 +81,25 @@ function Plot({ children, title, description }) {
     );
 }
 
-function loadParallelCoordinatesPlot(dataFile, event) {
+function loadParallelCoordinatesPlot(
+    dataFile,
+    event,
+    experiment1Selected,
+    experiment2Selected,
+    comparison,
+) {
     const experiment1 = flatten2dArray(
-        dataFile['dataset-1']['aggregated'][event]['mean_relative'],
+        dataFile['experiments'][experiment1Selected.experiment][
+            experiment1Selected.run
+        ]['cpu'][event]['mean_relative'],
     );
     const experiment2 = flatten2dArray(
-        dataFile['dataset-2']['aggregated'][event]['mean_relative'],
+        dataFile['experiments'][experiment2Selected.experiment][
+            experiment2Selected.run
+        ]['cpu'][event]['mean_relative'],
     );
-    const intersection = flatten2dArray(
-        dataFile['comparison-2-1'][event]['mean_relative'],
-    );
+    const intersection = flatten2dArray(comparison['mean_relative']);
+
     return (
         <ParallelCoordinatePlot
             margin={{ top: 10, left: 40, bottom: 40, right: 50 }}
@@ -146,12 +161,20 @@ function loadMetricComparisonPlot(metricVisualization, data, xLabel, yLabel) {
     }
 }
 
-function FirstSectionPlots({ dataFile, classes }) {
+function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
     const [event, setEvent] = useState(dataFile['events_captured'][0]);
-    const [baseExperiment, setBaseExperiment] = useState('comparison-1-2');
     const [visualization, setVisualization] = useState('parallel-coordinates');
 
-    const valueResumed = dataFile[baseExperiment][event]['mean_value'];
+    const comparison = createComparison(
+        dataFile['experiments'][experiment1.experiment][experiment1.run]['cpu'][
+            event
+        ]['mean'],
+        dataFile['experiments'][experiment2.experiment][experiment2.run]['cpu'][
+            event
+        ]['mean'],
+    );
+
+    const valueResumed = comparison['mean_value'];
 
     return (
         <Plot
@@ -161,7 +184,6 @@ function FirstSectionPlots({ dataFile, classes }) {
             <ComparisonContainer
                 events={dataFile['events_captured']}
                 setComparisonEvent={(e) => setEvent(e)}
-                setComparisonBaseExperiment={(e) => setBaseExperiment(e)}
                 setComparisonVisualization={(e) => setVisualization(e)}
             >
                 {visualization === 'cpus' ? (
@@ -175,7 +197,9 @@ function FirstSectionPlots({ dataFile, classes }) {
                                 title="Experiment 1"
                                 cpuLabels={dataFile['cpu_labels']}
                                 data={
-                                    dataFile['dataset-1']['aggregated'][event][
+                                    dataFile['experiments'][
+                                        experiment1.experiment
+                                    ][experiment1.run]['cpu'][event][
                                         'mean_relative'
                                     ]
                                 }
@@ -190,7 +214,9 @@ function FirstSectionPlots({ dataFile, classes }) {
                                 title="Experiment 2"
                                 cpuLabels={dataFile['cpu_labels']}
                                 data={
-                                    dataFile['dataset-2']['aggregated'][event][
+                                    dataFile['experiments'][
+                                        experiment2.experiment
+                                    ][experiment2.run]['cpu'][event][
                                         'mean_relative'
                                     ]
                                 }
@@ -207,18 +233,20 @@ function FirstSectionPlots({ dataFile, classes }) {
                                 timeSeries={false}
                                 title="Difference"
                                 cpuLabels={dataFile['cpu_labels']}
-                                data={
-                                    dataFile[baseExperiment][event][
-                                        'mean_relative'
-                                    ]
-                                }
+                                data={comparison['mean_relative']}
                             />
                         </Grid>
                     </Grid>
                 ) : (
                     <Grid container>
                         <Grid item sm={true}>
-                            {loadParallelCoordinatesPlot(dataFile, event)}
+                            {loadParallelCoordinatesPlot(
+                                dataFile,
+                                event,
+                                experiment1,
+                                experiment2,
+                                comparison,
+                            )}
                         </Grid>
                     </Grid>
                 )}
@@ -493,13 +521,21 @@ export default function Plots({ dataFile }) {
 
     return (
         <div>
-            <Paper elevation={4} className={classes.selectEventsToCompare}>
+            <Paper
+                elevation={4}
+                className={classes.selectEventsToCompareContainer}
+            >
                 <Grid
                     container
                     alignItems="center"
                     justify="center"
                     spacing={3}
                 >
+                    <Grid item xs={12}>
+                        <h3 className={classes.selectEventsToCompare}>
+                            Select experiments:
+                        </h3>
+                    </Grid>
                     <Grid item>
                         <FormControl className={classes.formControl}>
                             <InputLabel id="select-experiment-1">
@@ -546,6 +582,12 @@ export default function Plots({ dataFile }) {
                     </Grid>
                 </Grid>
             </Paper>
+            <FirstSectionPlots
+                dataFile={dataFile}
+                classes={classes}
+                experiment1={experiment1}
+                experiment2={experiment2}
+            />
             <SecondSectionPlots
                 dataFile={dataFile}
                 classes={classes}

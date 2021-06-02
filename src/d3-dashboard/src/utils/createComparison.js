@@ -23,6 +23,18 @@ export default function createComparison(experiment1, experiment2) {
                       100,
                       '*',
                   ),
-        mean_value: mean1 <= 0 ? 0 : (mean1 / mean2 - 1) * 100,
+        mean_relative_reverse:
+            sum1 <= 0
+                ? experiment1
+                : operation2d(
+                      operation2d(
+                          operation2d(experiment2, sum2, '/'),
+                          operation2d(experiment1, sum1, '/'),
+                          '-',
+                      ),
+                      100,
+                      '*',
+                  ),
+        mean_value: mean1 <= 0 ? 0 : (mean2 / mean1 - 1) * 100,
     };
 }

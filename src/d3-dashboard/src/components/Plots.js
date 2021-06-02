@@ -52,7 +52,8 @@ const useStylesPlots = makeStyles((theme) => ({
         textAlign: 'center',
     },
     selectEventsToCompareContainer: {
-        position: 'fixed',
+        marginTop: theme.spacing(2),
+        position: 'sticky',
         padding: theme.spacing(2),
         width: 400,
         left: '50%',
@@ -98,7 +99,7 @@ function loadParallelCoordinatesPlot(
             experiment2Selected.run
         ]['cpu'][event]['mean_relative'],
     );
-    const intersection = flatten2dArray(comparison['mean_relative']);
+    const intersection = flatten2dArray(comparison['mean_relative_reverse']);
 
     return (
         <ParallelCoordinatePlot

@@ -87,7 +87,102 @@ def process_run(run_path, data):
             run["functions"]["time_series"][event][time] = functions
             run["threads"]["time_series"][event][time] = threads
 
+    df_cpu = (
+        df[
+            (
+                df["event"].isin(
+                    [
+                        "L1-dcache-load-misses",
+                        "LLC-load-misses",
+                        "instructions",
+                        "cpu-cycles",
+                        "bus-cycles",
+                    ]
+                )
+            )
+        ]
+        .groupby(["cpu", "event"])
+        .agg({"counter": "sum"})
+        .reset_index()
+    )
+    run["ipc_performance"] = {
+        "cpu": perf_record.transform_cpu_data(
+            df_cpu,
+            data["cpu_setup"],
+            func_metric=lambda df: get_counter_value(df, "instructions", 0)
+            / get_counter_value(df, "cpu-cycles", 1),
+        ),
+        "time_series": {},
+    }
+    run["l1_cache_performance"] = {
+        "cpu": perf_record.transform_cpu_data(
+            df_cpu,
+            data["cpu_setup"],
+            func_metric=lambda df: get_counter_value(df, "L1-dcache-load-misses", 0)
+            / get_counter_value(df, "instructions", 1),
+        ),
+        "time_series": {},
+    }
+    run["llc_cache_performance"] = {
+        "cpu": perf_record.transform_cpu_data(
+            df_cpu,
+            data["cpu_setup"],
+            func_metric=lambda df: get_counter_value(df, "LLC-load-misses", 0)
+            / get_counter_value(df, "instructions", 1),
+        ),
+        "time_series": {},
+    }
+    run["bus_performance"] = {
+        "cpu": perf_record.transform_cpu_data(
+            df_cpu,
+            data["cpu_setup"],
+            func_metric=lambda df: get_counter_value(df, "bus-cycles", 0)
+            / get_counter_value(df, "cpu-cycles", 1),
+        ),
+        "time_series": {},
+    }
+    for time in df["time_second"].unique().tolist():
+        df_filtered = (
+            df[
+                (df["time_second"] == time)
+                & (
+                    df["event"].isin(
+                        [
+                            "L1-dcache-load-misses",
+                            "LLC-load-misses",
+                            "instructions",
+                            "cpu-cycles",
+                            "bus-cycles",
+                        ]
+                    )
+                )
+            ]
+            .groupby(["event"])
+            .agg({"counter": "sum"})
+            .reset_index()
+        )
+
+        run["ipc_performance"]["time_series"][time] = get_counter_value(
+            df_filtered, "instructions"
+        ) / get_counter_value(df_filtered, "cpu-cycles")
+        run["l1_cache_performance"]["time_series"][time] = get_counter_value(
+            df_filtered, "L1-dcache-load-misses"
+        ) / get_counter_value(df_filtered, "instructions")
+        run["llc_cache_performance"]["time_series"][time] = get_counter_value(
+            df_filtered, "LLC-load-misses"
+        ) / get_counter_value(df_filtered, "instructions")
+        run["bus_performance"]["time_series"][time] = get_counter_value(
+            df_filtered, "bus-cycles"
+        ) / get_counter_value(df_filtered, "cpu-cycles")
+
     return run
+
+
+def get_counter_value(df, event, default=0):
+    df_filtered = df[df["event"] == event]
+    if df_filtered.empty:
+        return default
+    return float(df_filtered["counter"])
 
 
 def process_experiment(experiment, data):

@@ -20,7 +20,7 @@ export default function ComparisonContainer({
     events,
     setComparisonEvent,
     setComparisonVisualization,
-    setMetricComparisonVisualization,
+    setComparisonMetricVisualization,
 }) {
     const classes = useStyles();
     const [event, setEvent] = useState(setComparisonEvent ? events[0] : null);
@@ -57,7 +57,7 @@ export default function ComparisonContainer({
                             </FormControl>
                         </Grid>
                     )}
-                    {setMetricComparisonVisualization && (
+                    {setComparisonMetricVisualization && (
                         <Grid item>
                             <FormControl className={classes.formControl}>
                                 <InputLabel id="select-metric-visualization">
@@ -68,7 +68,7 @@ export default function ComparisonContainer({
                                     value={metricVisualization}
                                     onChange={(e) => {
                                         setMetricVisualization(e.target.value);
-                                        setMetricComparisonVisualization(
+                                        setComparisonMetricVisualization(
                                             e.target.value,
                                         );
                                     }}

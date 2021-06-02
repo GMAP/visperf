@@ -135,7 +135,7 @@ function loadMetricComparisonPlot(metricVisualization, data, xLabel, yLabel) {
             <AreaPlot
                 xLabel={xLabel}
                 yLabel={yLabel}
-                data={data['raw']}
+                data={data['time_series']}
                 margin={{
                     top: 5,
                     left: 80,
@@ -361,9 +361,8 @@ function SecondSectionPlots({ dataFile, experiment1, experiment2 }) {
     );
 }
 
-function ThirdSectionPlots({ dataFile, classes }) {
-    const [metricComparisonVisualization, setMetricComparisonVisualization] =
-        useState('area');
+function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
+    const [metricVisualization, setMetricVisualization] = useState('area');
 
     return (
         <Plot
@@ -371,8 +370,8 @@ function ThirdSectionPlots({ dataFile, classes }) {
             description="This section generates some metrics based on the comparison between events."
         >
             <ComparisonContainer
-                setMetricComparisonVisualization={(e) =>
-                    setMetricComparisonVisualization(e)
+                setComparisonMetricVisualization={(e) =>
+                    setMetricVisualization(e)
                 }
             >
                 <Grid container spacing={8}>
@@ -409,16 +408,20 @@ function ThirdSectionPlots({ dataFile, classes }) {
                     </Grid>
                     <Grid item sm={true}>
                         {loadMetricComparisonPlot(
-                            metricComparisonVisualization,
-                            dataFile['dataset-1']['ipc-performance'],
+                            metricVisualization,
+                            dataFile['experiments'][experiment1.experiment][
+                                experiment1.run
+                            ]['ipc_performance'],
                             'Execution time (s)',
                             'IPC',
                         )}
                     </Grid>
                     <Grid item sm={true}>
                         {loadMetricComparisonPlot(
-                            metricComparisonVisualization,
-                            dataFile['dataset-2']['ipc-performance'],
+                            metricVisualization,
+                            dataFile['experiments'][experiment2.experiment][
+                                experiment2.run
+                            ]['ipc_performance'],
                             'Execution time (s)',
                             'IPC',
                         )}
@@ -436,16 +439,20 @@ function ThirdSectionPlots({ dataFile, classes }) {
                     </Grid>
                     <Grid item sm={true}>
                         {loadMetricComparisonPlot(
-                            metricComparisonVisualization,
-                            dataFile['dataset-1']['l1-cache-performance'],
+                            metricVisualization,
+                            dataFile['experiments'][experiment1.experiment][
+                                experiment1.run
+                            ]['l1_cache_performance'],
                             'Execution time (s)',
                             'L1 misses / Instructions',
                         )}
                     </Grid>
                     <Grid item sm={true}>
                         {loadMetricComparisonPlot(
-                            metricComparisonVisualization,
-                            dataFile['dataset-2']['l1-cache-performance'],
+                            metricVisualization,
+                            dataFile['experiments'][experiment2.experiment][
+                                experiment2.run
+                            ]['l1_cache_performance'],
                             'Execution time (s)',
                             'L1 misses / Instructions',
                         )}
@@ -463,16 +470,20 @@ function ThirdSectionPlots({ dataFile, classes }) {
                     </Grid>
                     <Grid item sm={true}>
                         {loadMetricComparisonPlot(
-                            metricComparisonVisualization,
-                            dataFile['dataset-1']['llc-cache-performance'],
+                            metricVisualization,
+                            dataFile['experiments'][experiment1.experiment][
+                                experiment1.run
+                            ]['llc_cache_performance'],
                             'Execution time (s)',
                             'LLC misses / Instructions',
                         )}
                     </Grid>
                     <Grid item sm={true}>
                         {loadMetricComparisonPlot(
-                            metricComparisonVisualization,
-                            dataFile['dataset-2']['llc-cache-performance'],
+                            metricVisualization,
+                            dataFile['experiments'][experiment2.experiment][
+                                experiment2.run
+                            ]['llc_cache_performance'],
                             'Execution time (s)',
                             'LLC misses / Instructions',
                         )}
@@ -490,16 +501,20 @@ function ThirdSectionPlots({ dataFile, classes }) {
                     </Grid>
                     <Grid item sm={true}>
                         {loadMetricComparisonPlot(
-                            metricComparisonVisualization,
-                            dataFile['dataset-1']['bus-performance'],
+                            metricVisualization,
+                            dataFile['experiments'][experiment1.experiment][
+                                experiment1.run
+                            ]['bus_performance'],
                             'Execution time (s)',
                             'Bus cycles rate',
                         )}
                     </Grid>
                     <Grid item sm={true}>
                         {loadMetricComparisonPlot(
-                            metricComparisonVisualization,
-                            dataFile['dataset-2']['bus-performance'],
+                            metricVisualization,
+                            dataFile['experiments'][experiment2.experiment][
+                                experiment2.run
+                            ]['bus_performance'],
                             'Execution time (s)',
                             'Bus cycles rate',
                         )}
@@ -589,6 +604,12 @@ export default function Plots({ dataFile }) {
                 experiment2={experiment2}
             />
             <SecondSectionPlots
+                dataFile={dataFile}
+                classes={classes}
+                experiment1={experiment1}
+                experiment2={experiment2}
+            />
+            <ThirdSectionPlots
                 dataFile={dataFile}
                 classes={classes}
                 experiment1={experiment1}

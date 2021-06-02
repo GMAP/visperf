@@ -2,8 +2,8 @@ version: "3.3"
 
 services:
   machine:
-    image: local/viscpu-programming:latest
-    container_name: viscpu-programming
+    image: viscpu-image:latest
+    container_name: viscpu-dev
     stdin_open: true
     tty: true
     ports:

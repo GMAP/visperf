@@ -1,2 +1,2 @@
 build:
-	docker build -t viscpu-image .
+	docker build -t local/viscpu-programming .

@@ -6,4 +6,4 @@ stop:
 	docker-compose down --remove-orphans
 
 exec: start
-	docker exec -it viscpu-programming /bin/bash
+	docker exec -it visperf-programming /bin/bash

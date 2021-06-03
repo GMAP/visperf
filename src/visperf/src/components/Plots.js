@@ -275,7 +275,7 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 margin={5}
                                 d3ColorScale="interpolateRdBu"
                                 legendPoints={[0, 50, 100]}
-                                legendPositions={[0.02, 0.5, 0.98]}
+                                legendPositions={[0.03, 0.5, 0.99]}
                                 legendLabels={['∞', '0', '-∞']}
                                 legendInvert={false}
                                 timeSeries={false}

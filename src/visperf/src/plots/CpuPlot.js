@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Slider from '@material-ui/core/Slider';
-import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import * as d3 from 'd3';
-import { LegendColorScale } from './';
+import _uniqueId from 'lodash/uniqueId';
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -74,10 +73,11 @@ export default function CpuPlot({
     timeSeries = true,
     squareSize = 80,
     legendPoints = [0, 100],
-    legendPositions = [0.02, 0.98],
+    legendPositions = [0.03, 0.99],
     legendLabels = ['∞', '0'],
     legendInvert = true,
 }) {
+    const [gradientId] = useState(_uniqueId('gradient-legend'));
     const classes = useStyles();
     const plotRef = useRef();
     let svg = useRef(null);
@@ -121,6 +121,15 @@ export default function CpuPlot({
     const height = squareSize * dataPlot.length;
     const minValue = Math.min(...[].concat(...dataPlot));
     const maxValue = Math.max(...[].concat(...dataPlot));
+    const legendWidth = 20;
+    const lengendMargin = { left: 5, right: 22 };
+    const legendColorScale = d3
+        .scaleSequential(d3[d3ColorScale])
+        .domain(
+            legendInvert
+                ? [legendPoints[legendPoints.length - 1], legendPoints[0]]
+                : [legendPoints[0], legendPoints[legendPoints.length - 1]],
+        );
 
     useEffect(() => {
         const colorScale = d3
@@ -158,10 +167,18 @@ export default function CpuPlot({
             svg.current = d3
                 .select(plotRef.current)
                 .append('svg')
-                .attr('width', width + margin * 2)
+                .attr(
+                    'width',
+                    width +
+                        margin * 2 +
+                        (legendWidth +
+                            lengendMargin.left +
+                            lengendMargin.right),
+                )
                 .attr('height', height + margin * 2)
                 .append('g')
                 .attr('transform', 'translate(' + margin + ',' + margin + ')');
+
             const row = svg.current
                 .selectAll('.row')
                 .data(dataPlot)
@@ -208,34 +225,57 @@ export default function CpuPlot({
                 .attr('x', (_, i) => x(i) + squareSize / 2)
                 .attr('y', (d) => y(d.row) + squareSize / 2)
                 .text((d, i) => cpuLabels[d.row][i]);
+
+            const linearGradient = svg.current
+                .append('defs')
+                .append('linearGradient')
+                .attr('id', gradientId)
+                .attr('gradientTransform', `rotate(90)`);
+
+            legendPoints.forEach((x) => {
+                linearGradient
+                    .append('stop')
+                    .attr('offset', `${x}%`)
+                    .attr('stop-color', legendColorScale(x));
+            });
+
+            svg.current
+                .append('rect')
+                .attr('x', width + margin + lengendMargin.left)
+                .attr('y', 0)
+                .attr('rx', 3)
+                .attr('width', legendWidth)
+                .attr('height', height)
+                .style('stroke', 'black')
+                .style('stroke-width', 1)
+                .style('fill', `url(#${gradientId})`);
+
+            for (let i = 0; i < legendPoints.length; i++) {
+                svg.current
+                    .append('text')
+                    .attr('class', 'label')
+                    .style('text-anchor', 'middle')
+                    .attr('font-weight', 400)
+                    .attr('font-size', 12)
+                    .attr(
+                        'x',
+                        () =>
+                            width +
+                            margin +
+                            legendWidth +
+                            lengendMargin.left +
+                            10,
+                    )
+                    .attr('y', () => legendPositions[i] * height)
+                    .text(() => legendLabels[i]);
+            }
         }
     }, [sliderValue, dataPlot]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <div>
             {title && <h3 className={classes.title}>{title}</h3>}
-            <Grid container justify="center">
-                <Grid item>
-                    <div className={classes.plotContainer} ref={plotRef}></div>
-                </Grid>
-                <Grid item>
-                    <LegendColorScale
-                        legendPoints={legendPoints}
-                        legendPositions={legendPositions}
-                        legendLabels={legendLabels}
-                        invert={legendInvert}
-                        margin={{
-                            top: margin,
-                            left: 5,
-                            bottom: margin,
-                            right: 22,
-                        }}
-                        d3ColorScale={d3ColorScale}
-                        width={20}
-                        height={height}
-                    />
-                </Grid>
-            </Grid>
+            <div className={classes.plotContainer} ref={plotRef}></div>
             {timeSeries && (
                 <div>
                     <Slider

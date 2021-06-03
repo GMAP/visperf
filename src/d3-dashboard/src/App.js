@@ -64,7 +64,7 @@ export default function App() {
                 <CssBaseline />
                 <AppBar elevation={4}>
                     <Toolbar className={classes.toolbar}>
-                        <img className={classes.logo} src={logo} />
+                        <img className={classes.logo} alt="" src={logo} />
                         <Typography variant="h4">VisCPU</Typography>
                     </Toolbar>
                 </AppBar>

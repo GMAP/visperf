@@ -432,28 +432,40 @@ function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                             Instructions Per Cycle (IPC)
                         </h2>
                     </Grid>
-                    <Grid
-                        item
-                        sm={6}
-                        className={
-                            classes.containerTitleComparisonEventExperiment
-                        }
-                    >
-                        <h4 className={classes.titleComparisonEventExperiment}>
-                            Experiment 1
-                        </h4>
-                    </Grid>
-                    <Grid
-                        item
-                        sm={6}
-                        className={
-                            classes.containerTitleComparisonEventExperiment
-                        }
-                    >
-                        <h4 className={classes.titleComparisonEventExperiment}>
-                            Experiment 2
-                        </h4>
-                    </Grid>
+                    {metricVisualization !== 'parallel-coordinates' && [
+                        <Grid
+                            key={0}
+                            item
+                            sm={6}
+                            className={
+                                classes.containerTitleComparisonEventExperiment
+                            }
+                        >
+                            <h4
+                                className={
+                                    classes.titleComparisonEventExperiment
+                                }
+                            >
+                                Experiment 1
+                            </h4>
+                        </Grid>,
+                        <Grid
+                            key={1}
+                            item
+                            sm={6}
+                            className={
+                                classes.containerTitleComparisonEventExperiment
+                            }
+                        >
+                            <h4
+                                className={
+                                    classes.titleComparisonEventExperiment
+                                }
+                            >
+                                Experiment 2
+                            </h4>
+                        </Grid>,
+                    ]}
                     {metricVisualization === 'parallel-coordinates' ? (
                         <Grid item sm={true}>
                             {loadParallelCoordinatesMetricComparisonPlot(

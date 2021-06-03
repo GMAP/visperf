@@ -40,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 42,
         marginRight: theme.spacing(2),
     },
+    footerContainer: {
+        textAlign: 'center',
+    },
 }));
 
 export default function App() {
@@ -86,7 +89,7 @@ export default function App() {
                                 <Plots dataFile={jsonDataFile} />
                             </div>
                         )}
-                        <div>
+                        <div className={classes.footerContainer}>
                             <h5>
                                 Developed by{' '}
                                 <a

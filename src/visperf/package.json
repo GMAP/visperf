@@ -1,8 +1,8 @@
 {
-    "name": "d3-dashboard",
+    "name": "visperf",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://gmap.pucrs.br/claudioscheer/viscpu",
+    "homepage": "https://gmap.pucrs.br/claudioscheer/visperf",
     "dependencies": {
         "@material-ui/core": "^4.11.4",
         "@material-ui/icons": "^4.11.2",

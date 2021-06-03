@@ -68,7 +68,7 @@ export default function App() {
                 <AppBar elevation={4}>
                     <Toolbar className={classes.toolbar}>
                         <img className={classes.logo} alt="" src={logo} />
-                        <Typography variant="h4">VisCPU</Typography>
+                        <Typography variant="h4">VisPerf</Typography>
                     </Toolbar>
                 </AppBar>
                 <Toolbar />
@@ -101,7 +101,7 @@ export default function App() {
                                 </a>
                                 , in 2021. You can find the source code{' '}
                                 <a
-                                    href="https://github.com/claudioscheer/viscpu"
+                                    href="https://github.com/claudioscheer/visperf"
                                     target="_blank"
                                     rel="noreferrer"
                                 >

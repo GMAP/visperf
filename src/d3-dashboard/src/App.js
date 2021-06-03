@@ -96,15 +96,7 @@ export default function App() {
                                 >
                                     Claudio Scheer
                                 </a>
-                                , in May/2021, while member of{' '}
-                                <a
-                                    href="https://gmap.pucrs.br"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    GMAP
-                                </a>
-                                . You can find the source code{' '}
+                                , in 2021. You can find the source code{' '}
                                 <a
                                     href="https://github.com/claudioscheer/viscpu"
                                     target="_blank"

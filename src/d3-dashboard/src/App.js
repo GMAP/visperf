@@ -80,6 +80,46 @@ export default function App() {
                                 <Plots dataFile={jsonDataFile} />
                             </div>
                         )}
+                        <div>
+                            <h5>
+                                Developed by{' '}
+                                <a
+                                    href="https://claudioscheer.github.io"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    Claudio Scheer
+                                </a>
+                                , in May/2021, while member of{' '}
+                                <a
+                                    href="https://gmap.pucrs.br"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    GMAP
+                                </a>
+                                . You can find the source code{' '}
+                                <a
+                                    href="https://github.com/claudioscheer/viscpu"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    here
+                                </a>
+                                .
+                            </h5>
+                            <h5>
+                                This work was advised by professor{' '}
+                                <a
+                                    href="https://www.dalvangriebler.com"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    Dalvan Griebler
+                                </a>
+                                .
+                            </h5>
+                        </div>
                     </Box>
                 </Container>
             </ThemeProvider>

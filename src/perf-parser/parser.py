@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import copy
 import json
-from viscpu import perf_record
+import perf_record_helper as perf_record
 
 
 parser = argparse.ArgumentParser(description="Parse perf data.")

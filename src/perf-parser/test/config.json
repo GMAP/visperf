@@ -1,0 +1,60 @@
+{
+  "cpu_setup": [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+  ],
+  "events_captured": [
+    "branch-instructions",
+    "branch-misses",
+    "bus-cycles",
+    "cache-misses",
+    "cache-references",
+    "cpu-cycles",
+    "instructions",
+    "L1-dcache-load-misses",
+    "L1-dcache-loads",
+    "L1-dcache-stores",
+    "L1-icache-load-misses",
+    "LLC-load-misses",
+    "LLC-loads",
+    "LLC-stores",
+    "mem-stores"
+  ],
+  "experiments": {
+    "all-cores": {
+      "title": "All cores",
+      "runs": [
+        {
+          "title": "Run 1",
+          "path": "/home/src/perf-parser/test/exp-1-run-1.txt"
+        },
+        {
+          "title": "Run 2",
+          "path": "/home/src/perf-parser/test/exp-1-run-2.txt"
+        },
+        {
+          "title": "Run 3",
+          "path": "/home/src/perf-parser/test/exp-1-run-3.txt"
+        }
+      ]
+    },
+    "cores-1-4-9": {
+      "title": "Cores 1, 4, 9",
+      "runs": [
+        {
+          "title": "Run 1",
+          "path": "/home/src/perf-parser/test/exp-2-run-1.txt"
+        },
+        {
+          "title": "Run 2",
+          "path": "/home/src/perf-parser/test/exp-2-run-2.txt"
+        },
+        {
+          "title": "Run 3",
+          "path": "/home/src/perf-parser/test/exp-2-run-3.txt"
+        }
+      ]
+    }
+  }
+}

@@ -82,6 +82,53 @@ function Plot({ children, title, description }) {
     );
 }
 
+function loadParallelCoordinatesMetricComparisonPlot(
+    dataFile,
+    metric,
+    experiment1Selected,
+    experiment2Selected,
+) {
+    const experiment1 =
+        dataFile['experiments'][experiment1Selected.experiment][
+            experiment1Selected.run
+        ][metric]['cpu'];
+    const experiment2 =
+        dataFile['experiments'][experiment2Selected.experiment][
+            experiment2Selected.run
+        ][metric]['cpu'];
+
+    const comparison = createComparison(experiment1, experiment2);
+    const intersection = flatten2dArray(comparison['mean_reverse']);
+
+    return (
+        <ParallelCoordinatePlot
+            margin={{ top: 10, left: 40, bottom: 40, right: 50 }}
+            width={700}
+            height={50 * dataFile['cpu_labels'].length}
+            dimensions={[
+                {
+                    name: 'CPU',
+                    labels: flatten2dArray(dataFile['cpu_labels']),
+                    reverseScale: true,
+                },
+                {
+                    name: 'Experiment 1',
+                    hideLabels: false,
+                },
+                { name: 'Experiment 2', hideLabels: false },
+                { name: 'Difference', hideLabels: false },
+            ]}
+            timeSeries={false}
+            data={transposeArrays([
+                flatten2dArray(dataFile['cpu_labels']).map((_, i) => i),
+                flatten2dArray(experiment1),
+                flatten2dArray(experiment2),
+                intersection,
+            ])}
+        />
+    );
+}
+
 function loadParallelCoordinatesPlot(
     dataFile,
     event,
@@ -407,26 +454,39 @@ function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                             Experiment 2
                         </h4>
                     </Grid>
-                    <Grid item sm={true}>
-                        {loadMetricComparisonPlot(
-                            metricVisualization,
-                            dataFile['experiments'][experiment1.experiment][
-                                experiment1.run
-                            ]['ipc_performance'],
-                            'Execution time (s)',
-                            'IPC',
-                        )}
-                    </Grid>
-                    <Grid item sm={true}>
-                        {loadMetricComparisonPlot(
-                            metricVisualization,
-                            dataFile['experiments'][experiment2.experiment][
-                                experiment2.run
-                            ]['ipc_performance'],
-                            'Execution time (s)',
-                            'IPC',
-                        )}
-                    </Grid>
+                    {metricVisualization === 'parallel-coordinates' ? (
+                        <Grid item sm={true}>
+                            {loadParallelCoordinatesMetricComparisonPlot(
+                                dataFile,
+                                'ipc_performance',
+                                experiment1,
+                                experiment2,
+                            )}
+                        </Grid>
+                    ) : (
+                        [
+                            <Grid key={0} item sm={true}>
+                                {loadMetricComparisonPlot(
+                                    metricVisualization,
+                                    dataFile['experiments'][
+                                        experiment1.experiment
+                                    ][experiment1.run]['ipc_performance'],
+                                    'Execution time (s)',
+                                    'IPC',
+                                )}
+                            </Grid>,
+                            <Grid key={1} item sm={true}>
+                                {loadMetricComparisonPlot(
+                                    metricVisualization,
+                                    dataFile['experiments'][
+                                        experiment2.experiment
+                                    ][experiment2.run]['ipc_performance'],
+                                    'Execution time (s)',
+                                    'IPC',
+                                )}
+                            </Grid>,
+                        ]
+                    )}
                 </Grid>
                 <Grid container spacing={8}>
                     <Grid
@@ -438,26 +498,39 @@ function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                             L1 Cache misses
                         </h2>
                     </Grid>
-                    <Grid item sm={true}>
-                        {loadMetricComparisonPlot(
-                            metricVisualization,
-                            dataFile['experiments'][experiment1.experiment][
-                                experiment1.run
-                            ]['l1_cache_performance'],
-                            'Execution time (s)',
-                            'L1 misses / Instructions',
-                        )}
-                    </Grid>
-                    <Grid item sm={true}>
-                        {loadMetricComparisonPlot(
-                            metricVisualization,
-                            dataFile['experiments'][experiment2.experiment][
-                                experiment2.run
-                            ]['l1_cache_performance'],
-                            'Execution time (s)',
-                            'L1 misses / Instructions',
-                        )}
-                    </Grid>
+                    {metricVisualization === 'parallel-coordinates' ? (
+                        <Grid item sm={true}>
+                            {loadParallelCoordinatesMetricComparisonPlot(
+                                dataFile,
+                                'l1_cache_performance',
+                                experiment1,
+                                experiment2,
+                            )}
+                        </Grid>
+                    ) : (
+                        [
+                            <Grid key={0} item sm={true}>
+                                {loadMetricComparisonPlot(
+                                    metricVisualization,
+                                    dataFile['experiments'][
+                                        experiment1.experiment
+                                    ][experiment1.run]['l1_cache_performance'],
+                                    'Execution time (s)',
+                                    'L1 misses / Instructions',
+                                )}
+                            </Grid>,
+                            <Grid key={1} item sm={true}>
+                                {loadMetricComparisonPlot(
+                                    metricVisualization,
+                                    dataFile['experiments'][
+                                        experiment2.experiment
+                                    ][experiment2.run]['l1_cache_performance'],
+                                    'Execution time (s)',
+                                    'L1 misses / Instructions',
+                                )}
+                            </Grid>,
+                        ]
+                    )}
                 </Grid>
                 <Grid container spacing={8}>
                     <Grid
@@ -469,26 +542,39 @@ function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                             LLC Cache misses
                         </h2>
                     </Grid>
-                    <Grid item sm={true}>
-                        {loadMetricComparisonPlot(
-                            metricVisualization,
-                            dataFile['experiments'][experiment1.experiment][
-                                experiment1.run
-                            ]['llc_cache_performance'],
-                            'Execution time (s)',
-                            'LLC misses / Instructions',
-                        )}
-                    </Grid>
-                    <Grid item sm={true}>
-                        {loadMetricComparisonPlot(
-                            metricVisualization,
-                            dataFile['experiments'][experiment2.experiment][
-                                experiment2.run
-                            ]['llc_cache_performance'],
-                            'Execution time (s)',
-                            'LLC misses / Instructions',
-                        )}
-                    </Grid>
+                    {metricVisualization === 'parallel-coordinates' ? (
+                        <Grid item sm={true}>
+                            {loadParallelCoordinatesMetricComparisonPlot(
+                                dataFile,
+                                'llc_cache_performance',
+                                experiment1,
+                                experiment2,
+                            )}
+                        </Grid>
+                    ) : (
+                        [
+                            <Grid key={0} item sm={true}>
+                                {loadMetricComparisonPlot(
+                                    metricVisualization,
+                                    dataFile['experiments'][
+                                        experiment1.experiment
+                                    ][experiment1.run]['llc_cache_performance'],
+                                    'Execution time (s)',
+                                    'LLC misses / Instructions',
+                                )}
+                            </Grid>,
+                            <Grid key={1} item sm={true}>
+                                {loadMetricComparisonPlot(
+                                    metricVisualization,
+                                    dataFile['experiments'][
+                                        experiment2.experiment
+                                    ][experiment2.run]['llc_cache_performance'],
+                                    'Execution time (s)',
+                                    'LLC misses / Instructions',
+                                )}
+                            </Grid>,
+                        ]
+                    )}
                 </Grid>
                 <Grid container spacing={8}>
                     <Grid
@@ -500,26 +586,39 @@ function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                             Bus cycles
                         </h2>
                     </Grid>
-                    <Grid item sm={true}>
-                        {loadMetricComparisonPlot(
-                            metricVisualization,
-                            dataFile['experiments'][experiment1.experiment][
-                                experiment1.run
-                            ]['bus_performance'],
-                            'Execution time (s)',
-                            'Bus cycles rate',
-                        )}
-                    </Grid>
-                    <Grid item sm={true}>
-                        {loadMetricComparisonPlot(
-                            metricVisualization,
-                            dataFile['experiments'][experiment2.experiment][
-                                experiment2.run
-                            ]['bus_performance'],
-                            'Execution time (s)',
-                            'Bus cycles rate',
-                        )}
-                    </Grid>
+                    {metricVisualization === 'parallel-coordinates' ? (
+                        <Grid item sm={true}>
+                            {loadParallelCoordinatesMetricComparisonPlot(
+                                dataFile,
+                                'bus_performance',
+                                experiment1,
+                                experiment2,
+                            )}
+                        </Grid>
+                    ) : (
+                        [
+                            <Grid key={0} item sm={true}>
+                                {loadMetricComparisonPlot(
+                                    metricVisualization,
+                                    dataFile['experiments'][
+                                        experiment1.experiment
+                                    ][experiment1.run]['bus_performance'],
+                                    'Execution time (s)',
+                                    'Bus cycles rate',
+                                )}
+                            </Grid>,
+                            <Grid key={1} item sm={true}>
+                                {loadMetricComparisonPlot(
+                                    metricVisualization,
+                                    dataFile['experiments'][
+                                        experiment2.experiment
+                                    ][experiment2.run]['bus_performance'],
+                                    'Execution time (s)',
+                                    'Bus cycles rate',
+                                )}
+                            </Grid>,
+                        ]
+                    )}
                 </Grid>
             </ComparisonContainer>
         </Plot>

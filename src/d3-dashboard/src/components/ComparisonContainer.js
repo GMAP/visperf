@@ -73,7 +73,10 @@ export default function ComparisonContainer({
                                         );
                                     }}
                                 >
-                                    <MenuItem value="area">Time chart</MenuItem>
+                                    <MenuItem value="area">Time Chart</MenuItem>
+                                    <MenuItem value="parallel-coordinates">
+                                        Parallel Coordinates
+                                    </MenuItem>
                                     <MenuItem value="cpus">CPUs</MenuItem>
                                 </Select>
                             </FormControl>

@@ -11,6 +11,7 @@ export default function createComparison(experiment1, experiment2) {
 
     return {
         mean: operation2d(experiment1, experiment2, '-'),
+        mean_reverse: operation2d(experiment2, experiment1, '-'),
         mean_relative:
             sum2 <= 0
                 ? experiment2

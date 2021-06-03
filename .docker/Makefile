@@ -1,2 +1,2 @@
 build:
-	docker build -t local/viscpu-programming .
+	docker build -t local/visperf-programming .

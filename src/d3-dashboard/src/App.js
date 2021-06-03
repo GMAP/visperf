@@ -12,6 +12,7 @@ import orange from '@material-ui/core/colors/orange';
 import deepOrange from '@material-ui/core/colors/deepOrange';
 import { UploadData, Plots } from './components';
 import { readJsonFile } from './utils';
+import logo from './icon-white.png';
 
 const theme = createMuiTheme({
     palette: {
@@ -34,6 +35,10 @@ const useStyles = makeStyles((theme) => ({
     },
     toolbar: {
         margin: 'auto',
+    },
+    logo: {
+        maxWidth: 42,
+        marginRight: theme.spacing(2),
     },
 }));
 
@@ -59,6 +64,7 @@ export default function App() {
                 <CssBaseline />
                 <AppBar elevation={4}>
                     <Toolbar className={classes.toolbar}>
+                        <img className={classes.logo} src={logo} />
                         <Typography variant="h4">VisCPU</Typography>
                     </Toolbar>
                 </AppBar>

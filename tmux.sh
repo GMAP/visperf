@@ -22,11 +22,6 @@ if [ "$session_exists" = "" ]; then
     tmux split-window -h -p 50
     tmux send-keys -t 2 "cd src/d3-dashboard" C-m
     tmux select-pane -t 0
-
-    tmux new-window -t $session:2 -n "jupyter"
-    tmux send-keys -t "jupyter" "jupyter-notebook --ip 0.0.0.0 --port 8880 --allow-root" C-m
-    tmux split-window -v -p 25
-    tmux select-pane -t 0
 fi
 
 tmux select-window -t $session:0

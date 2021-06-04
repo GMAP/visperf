@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import * as d3 from 'd3';
+import { DownloadSvg } from '../components';
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -150,6 +151,7 @@ export default function ParallelCoordinatePlot({
         <div>
             {title && <h3 className={classes.title}>{title}</h3>}
             <div className={classes.plotContainer} ref={plotRef}></div>
+            <DownloadSvg svgNode={plotRef} />
         </div>
     );
 }

@@ -187,7 +187,7 @@ function loadMetricComparisonPlot(metricVisualization, data, xLabel, yLabel) {
                 margin={{
                     top: 5,
                     left: 80,
-                    rigth: 5,
+                    rigth: 15,
                     bottom: 60,
                 }}
             />

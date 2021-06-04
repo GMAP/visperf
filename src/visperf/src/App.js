@@ -101,7 +101,7 @@ export default function App() {
                                 </a>
                                 , in 2021. You can find the source code{' '}
                                 <a
-                                    href="https://github.com/claudioscheer/visperf"
+                                    href="https://github.com/GMAP/visperf"
                                     target="_blank"
                                     rel="noreferrer"
                                 >

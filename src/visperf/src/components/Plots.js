@@ -58,9 +58,9 @@ const useStylesPlots = makeStyles((theme) => ({
         width: 400,
         left: '50%',
         transform: 'translateX(-50%)',
-        top: 70,
+        top: theme.spacing(2),
         backgroundColor: '#FFF',
-        zIndex: 10,
+        zIndex: 1101,
     },
     selectEventsToCompare: {
         textAlign: 'center',

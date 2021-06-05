@@ -5,12 +5,16 @@ import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
+import Tooltip from '@material-ui/core/Tooltip';
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import orange from '@material-ui/core/colors/orange';
 import deepOrange from '@material-ui/core/colors/deepOrange';
-import { UploadData, Plots } from './components';
+import HelpIcon from '@material-ui/icons/Help';
+import CloseIcon from '@material-ui/icons/Close';
+import IconButton from '@material-ui/core/IconButton';
+import { UploadData, Plots, Help } from './components';
 import { readJsonFile } from './utils';
 import logo from './icon-white.png';
 
@@ -33,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         marginTop: theme.spacing(2),
     },
-    toolbar: {
-        margin: 'auto',
+    toolbarTitle: {
+        flexGrow: 1,
     },
     logo: {
         maxWidth: 42,
@@ -47,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function App() {
     const classes = useStyles();
+    const [showHelp, setShowHelp] = useState(false);
     const [dataFile, setDataFile] = useState(null);
     const [readingFile, setReadingFile] = useState(false);
     const [jsonDataFile, setJsonDataFile] = useState(null);
@@ -66,9 +71,35 @@ export default function App() {
             <ThemeProvider theme={theme}>
                 <CssBaseline />
                 <AppBar elevation={4}>
-                    <Toolbar className={classes.toolbar}>
+                    <Toolbar>
                         <img className={classes.logo} alt="" src={logo} />
-                        <Typography variant="h4">VisPerf</Typography>
+                        <Typography
+                            className={classes.toolbarTitle}
+                            variant="h4"
+                        >
+                            VisPerf
+                        </Typography>
+                        <div>
+                            {showHelp ? (
+                                <Tooltip title="Close help">
+                                    <IconButton
+                                        color="inherit"
+                                        onClick={() => setShowHelp(false)}
+                                    >
+                                        <CloseIcon />
+                                    </IconButton>
+                                </Tooltip>
+                            ) : (
+                                <Tooltip title="Show help">
+                                    <IconButton
+                                        color="inherit"
+                                        onClick={() => setShowHelp(true)}
+                                    >
+                                        <HelpIcon />
+                                    </IconButton>
+                                </Tooltip>
+                            )}
+                        </div>
                     </Toolbar>
                 </AppBar>
                 <Toolbar />
@@ -123,6 +154,7 @@ export default function App() {
                         </div>
                     </Box>
                 </Container>
+                {showHelp && <Help />}
             </ThemeProvider>
         </React.Fragment>
     );

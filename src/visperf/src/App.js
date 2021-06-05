@@ -80,7 +80,7 @@ export default function App() {
                         />
                         {dataFile && readingFile && (
                             <div className={classes.readingFile}>
-                                <p>Loading plots...</p>
+                                <p>Loading experiments...</p>
                                 <LinearProgress />
                             </div>
                         )}

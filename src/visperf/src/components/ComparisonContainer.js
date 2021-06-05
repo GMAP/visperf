@@ -86,7 +86,7 @@ export default function ComparisonContainer({
                         <Grid item>
                             <FormControl className={classes.formControl}>
                                 <InputLabel id="select-visualization">
-                                    Comparison Plot
+                                    Plot
                                 </InputLabel>
                                 <Select
                                     labelId="select-visualization"

@@ -24,7 +24,7 @@ export default function UploadData(props) {
 
     return (
         <Paper elevation={1} className={classes.container}>
-            <h2>Upload the data file:</h2>
+            <h2>Upload the file with parsed experiments:</h2>
             <input
                 accept=".json,application/json"
                 className={classes.uploadInput}

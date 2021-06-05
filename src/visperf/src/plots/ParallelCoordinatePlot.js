@@ -21,7 +21,7 @@ export default function ParallelCoordinatePlot({
     data,
     title,
     dimensions,
-    lineColor = '#69b3a2',
+    lineColor = '#bf360c',
     margin = { top: 10, left: 10, bottom: 10, right: 10 },
     width = 400,
     height = 400,
@@ -55,7 +55,8 @@ export default function ParallelCoordinatePlot({
                 .selectAll('.path')
                 .transition()
                 .duration(100)
-                .style('opacity', '0.2');
+                .style('stroke', '#000')
+                .style('opacity', '0.1');
             d3.select(d.target)
                 .transition()
                 .duration(100)
@@ -113,7 +114,7 @@ export default function ParallelCoordinatePlot({
                 .attr('d', draw)
                 .style('fill', 'none')
                 .style('stroke', lineColor)
-                .style('stroke-width', 5)
+                .style('stroke-width', 4)
                 .on('mouseover', highlight)
                 .on('mouseleave', doNotHighlight);
 
@@ -138,10 +139,10 @@ export default function ParallelCoordinatePlot({
                     );
                 })
                 .append('text')
-                .attr('font-weight', 700)
-                .attr('font-size', '1.2em')
+                .attr('font-weight', 600)
+                .attr('font-size', '1.1em')
                 .style('text-anchor', 'middle')
-                .attr('y', height + 30)
+                .attr('y', -20)
                 .text((d) => d.name)
                 .style('fill', 'black');
         }

@@ -70,18 +70,6 @@ const useStylesPlots = makeStyles((theme) => ({
     },
 }));
 
-function Plot({ children, title, description }) {
-    const classes = useStylesPlot();
-
-    return (
-        <Paper elevation={1} className={classes.container}>
-            <h1>{title}</h1>
-            <p className={classes.description}>{description}</p>
-            {children}
-        </Paper>
-    );
-}
-
 function loadParallelCoordinatesMetricComparisonPlot(
     dataFile,
     metric,
@@ -102,7 +90,7 @@ function loadParallelCoordinatesMetricComparisonPlot(
 
     return (
         <ParallelCoordinatePlot
-            margin={{ top: 10, left: 40, bottom: 40, right: 50 }}
+            margin={{ top: 40, left: 50, bottom: 10, right: 50 }}
             width={700}
             height={50 * dataFile['cpu_labels'].length}
             dimensions={[
@@ -150,7 +138,7 @@ function loadParallelCoordinatesPlot(
 
     return (
         <ParallelCoordinatePlot
-            margin={{ top: 10, left: 40, bottom: 40, right: 50 }}
+            margin={{ top: 40, left: 50, bottom: 10, right: 50 }}
             width={700}
             height={50 * dataFile['cpu_labels'].length}
             dimensions={[
@@ -226,8 +214,8 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
 
     return (
         <Plot
-            title="Comparison between experiments"
-            description="This plot allows you to compare the captured events during experiment execution."
+            title="Comparing experiments"
+            description="This section allows you to compare events captured in experiments selected."
         >
             <ComparisonContainer
                 events={dataFile['events_captured']}
@@ -239,7 +227,7 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                         <Grid item>
                             <CpuPlot
                                 margin={5}
-                                squareSize={45}
+                                squareSize={55}
                                 fontSize=".9em"
                                 timeSeries={false}
                                 title="Experiment 1"
@@ -256,7 +244,7 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                         <Grid item>
                             <CpuPlot
                                 margin={5}
-                                squareSize={45}
+                                squareSize={55}
                                 timeSeries={false}
                                 fontSize=".9em"
                                 title="Experiment 2"
@@ -311,7 +299,8 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                             </h1>
                         </Grid>
                         <Grid item sm={12}>
-                            How the event counter changed between experiments.
+                            Indication of how the event counter changed between
+                            experiments.
                         </Grid>
                     </Grid>
                 </Grid>
@@ -327,8 +316,8 @@ function SecondSectionPlots({ dataFile, experiment1, experiment2 }) {
 
     return (
         <Plot
-            title="Compare time series of experiments"
-            description="This plot compares the events captured during the execution of the experiments. The slider allows you to see each of the captures made."
+            title="Comparing experiments over execution time"
+            description="This section allows you to compare the events captured over the period the experiments were run. Also, you can select regions of interest; you can search for specific functions or thread ids."
         >
             <ComparisonContainer
                 events={dataFile['events_captured']}
@@ -414,8 +403,8 @@ function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
 
     return (
         <Plot
-            title="Comparison between events"
-            description="This section generates some metrics based on the comparison between events."
+            title="Performance evaluation metrics"
+            description="This section shows some metrics that will help you to compare how the experiments performed."
         >
             <ComparisonContainer
                 setComparisonMetricVisualization={(e) =>
@@ -634,6 +623,18 @@ function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                 </Grid>
             </ComparisonContainer>
         </Plot>
+    );
+}
+
+function Plot({ children, title, description }) {
+    const classes = useStylesPlot();
+
+    return (
+        <Paper elevation={1} className={classes.container}>
+            <h1>{title}</h1>
+            <p className={classes.description}>{description}</p>
+            {children}
+        </Paper>
     );
 }
 

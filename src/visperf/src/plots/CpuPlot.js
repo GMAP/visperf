@@ -243,10 +243,10 @@ export default function CpuPlot({
             svg.current
                 .append('rect')
                 .attr('x', width + margin + lengendMargin.left)
-                .attr('y', 0)
+                .attr('y', 15)
                 .attr('rx', 3)
                 .attr('width', legendWidth)
-                .attr('height', height)
+                .attr('height', height - 30)
                 .style('stroke', 'black')
                 .style('stroke-width', 1)
                 .style('fill', `url(#${gradientId})`);
@@ -267,9 +267,35 @@ export default function CpuPlot({
                             lengendMargin.left +
                             10,
                     )
-                    .attr('y', () => legendPositions[i] * height)
+                    .attr('y', () => legendPositions[i] * (height - 30) + 15)
                     .text(() => legendLabels[i]);
             }
+
+            svg.current
+                .append('text')
+                .attr('class', 'label')
+                .style('text-anchor', 'middle')
+                .attr('font-weight', 400)
+                .attr('font-size', 10)
+                .attr(
+                    'x',
+                    () => width + margin + legendWidth / 2 + lengendMargin.left,
+                )
+                .attr('y', () => 12)
+                .text(() => 'max');
+
+            svg.current
+                .append('text')
+                .attr('class', 'label')
+                .style('text-anchor', 'middle')
+                .attr('font-weight', 400)
+                .attr('font-size', 10)
+                .attr(
+                    'x',
+                    () => width + margin + legendWidth / 2 + lengendMargin.left,
+                )
+                .attr('y', () => height - 6)
+                .text(() => 'min');
         }
     }, [sliderValue, dataPlot]); // eslint-disable-line react-hooks/exhaustive-deps
 

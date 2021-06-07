@@ -3,6 +3,7 @@ import Slider from '@material-ui/core/Slider';
 import { makeStyles } from '@material-ui/core/styles';
 import * as d3 from 'd3';
 import _uniqueId from 'lodash/uniqueId';
+import millify from 'millify';
 import { DownloadSvg } from '../components';
 
 const useStyles = makeStyles((theme) => ({
@@ -74,8 +75,8 @@ export default function CpuPlot({
     timeSeries = true,
     squareSize = 80,
     legendPoints = [0, 100],
-    legendPositions = [0.03, 0.99],
-    legendLabels = ['∞', '0'],
+    legendPositions = [0.05, 0.97],
+    legendLabels = ['max', '0'],
     legendInvert = true,
 }) {
     const [gradientId] = useState(_uniqueId('gradient-legend'));
@@ -123,7 +124,7 @@ export default function CpuPlot({
     const minValue = Math.min(...[].concat(...dataPlot));
     const maxValue = Math.max(...[].concat(...dataPlot));
     const legendWidth = 20;
-    const lengendMargin = { left: 5, right: 22 };
+    const lengendMargin = { left: 5, right: 45 };
     const legendColorScale = d3
         .scaleSequential(d3[d3ColorScale])
         .domain(
@@ -146,6 +147,7 @@ export default function CpuPlot({
             .domain([0, dataPlot.length]);
 
         if (svg.current) {
+            svg.current.selectAll('.label-legend').remove();
             const row = svg.current.selectAll('.row').data(dataPlot);
             row.selectAll('.cell')
                 .data((d, i) =>
@@ -251,26 +253,6 @@ export default function CpuPlot({
                 .style('stroke-width', 1)
                 .style('fill', `url(#${gradientId})`);
 
-            for (let i = 0; i < legendPoints.length; i++) {
-                svg.current
-                    .append('text')
-                    .attr('class', 'label')
-                    .style('text-anchor', 'middle')
-                    .attr('font-weight', 400)
-                    .attr('font-size', 12)
-                    .attr(
-                        'x',
-                        () =>
-                            width +
-                            margin +
-                            legendWidth +
-                            lengendMargin.left +
-                            10,
-                    )
-                    .attr('y', () => legendPositions[i] * (height - 30) + 15)
-                    .text(() => legendLabels[i]);
-            }
-
             svg.current
                 .append('text')
                 .attr('class', 'label')
@@ -294,8 +276,31 @@ export default function CpuPlot({
                     'x',
                     () => width + margin + legendWidth / 2 + lengendMargin.left,
                 )
-                .attr('y', () => height - 6)
+                .attr('y', () => height - 5)
                 .text(() => 'min');
+        }
+
+        for (let i = 0; i < legendPoints.length; i++) {
+            svg.current
+                .append('text')
+                .attr('class', 'label-legend')
+                .style('text-anchor', 'middle')
+                .attr('font-weight', 400)
+                .attr('font-size', 10)
+                .attr(
+                    'x',
+                    () =>
+                        width + margin + legendWidth + lengendMargin.left + 25,
+                )
+                .attr('y', () => legendPositions[i] * (height - 30) + 15)
+                .text(() => {
+                    if (legendLabels[i] === 'max') {
+                        return millify(maxValue);
+                    } else if (legendLabels[i] === 'min') {
+                        return millify(minValue);
+                    }
+                    return legendLabels[i];
+                });
         }
     }, [sliderValue, dataPlot]); // eslint-disable-line react-hooks/exhaustive-deps
 

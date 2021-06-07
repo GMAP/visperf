@@ -183,7 +183,7 @@ function loadMetricComparisonPlot(metricVisualization, data, xLabel, yLabel) {
     } else if (metricVisualization === 'cpus') {
         return (
             <CpuPlot
-                legendLabels={['∞', '-∞']}
+                legendLabels={['max', 'min']}
                 margin={5}
                 squareSize={70}
                 fontSize=".9em"
@@ -263,9 +263,9 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 margin={5}
                                 d3ColorScale="interpolateRdBu"
                                 legendPoints={[0, 50, 100]}
-                                legendPositions={[0.03, 0.5, 0.99]}
-                                legendLabels={['∞', '0', '-∞']}
-                                legendInvert={false}
+                                legendPositions={[0.05, 0.5, 0.97]}
+                                legendLabels={['max', '0', 'min']}
+                                legendInvert={true}
                                 timeSeries={false}
                                 title="Difference"
                                 cpuLabels={dataFile['cpu_labels']}

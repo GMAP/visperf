@@ -235,8 +235,11 @@ export default function CpuPlot({
             const linearGradient = svg.current
                 .append('defs')
                 .append('linearGradient')
-                .attr('id', gradientId)
-                .attr('gradientTransform', `rotate(90)`);
+                .attr('x1', 0)
+                .attr('x2', 0)
+                .attr('y1', 0)
+                .attr('y2', 1)
+                .attr('id', gradientId);
 
             legendPoints.forEach((x) => {
                 linearGradient
@@ -254,7 +257,7 @@ export default function CpuPlot({
                 .attr('height', height - 30)
                 .style('stroke', 'black')
                 .style('stroke-width', 1)
-                .style('fill', `url(#${gradientId})`);
+                .attr('fill', `url(#${gradientId})`);
 
             svg.current
                 .append('text')

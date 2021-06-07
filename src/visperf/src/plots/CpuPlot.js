@@ -79,7 +79,7 @@ export default function CpuPlot({
         { p: 0, anchor: 'start' },
         { p: 1, anchor: 'end' },
     ],
-    legendLabels = ['max', '0'],
+    legendLabels = ['max', 'min'],
     legendInvert = true,
 }) {
     const [gradientId] = useState(_uniqueId('gradient-legend'));

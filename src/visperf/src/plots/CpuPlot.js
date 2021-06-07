@@ -75,7 +75,10 @@ export default function CpuPlot({
     timeSeries = true,
     squareSize = 80,
     legendPoints = [0, 100],
-    legendPositions = [0.05, 0.97],
+    legendPositions = [
+        { p: 0, anchor: 'start' },
+        { p: 1, anchor: 'end' },
+    ],
     legendLabels = ['max', '0'],
     legendInvert = true,
 }) {
@@ -124,7 +127,7 @@ export default function CpuPlot({
     const minValue = Math.min(...[].concat(...dataPlot));
     const maxValue = Math.max(...[].concat(...dataPlot));
     const legendWidth = 20;
-    const lengendMargin = { left: 5, right: 45 };
+    const lengendMargin = { left: 5, right: 20 };
     const legendColorScale = d3
         .scaleSequential(d3[d3ColorScale])
         .domain(
@@ -284,20 +287,20 @@ export default function CpuPlot({
             svg.current
                 .append('text')
                 .attr('class', 'label-legend')
-                .style('text-anchor', 'middle')
+                .style('text-anchor', legendPositions[i].anchor)
                 .attr('font-weight', 400)
                 .attr('font-size', 10)
                 .attr(
-                    'x',
-                    () =>
-                        width + margin + legendWidth + lengendMargin.left + 25,
+                    'transform',
+                    `translate(${
+                        width + margin + legendWidth + lengendMargin.left + 5
+                    },${legendPositions[i].p * (height - 30) + 15})rotate(90)`,
                 )
-                .attr('y', () => legendPositions[i] * (height - 30) + 15)
                 .text(() => {
                     if (legendLabels[i] === 'max') {
-                        return millify(maxValue);
+                        return millify(maxValue, { precision: 2 });
                     } else if (legendLabels[i] === 'min') {
-                        return millify(minValue);
+                        return millify(minValue, { precision: 2 });
                     }
                     return legendLabels[i];
                 });

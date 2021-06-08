@@ -154,4 +154,12 @@ clean:
 				rm -f *.aux *.log *.bbl *.blg *.brf *.cb *.ind *.idx *.ilg	\
 				*.inx *.toc *.out $(DVIFILES) $(PSFILES) paper.pdf *~
 
+start:
+	xhost +local:root
+	docker-compose up -d --build
+	docker exec -it visperf-latex /bin/bash
+
+stop:
+	docker-compose down --remove-orphans
+
 .PHONY : all pdf ps dvi clean $(MAINTEXFILE)

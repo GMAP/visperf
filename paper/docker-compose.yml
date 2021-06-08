@@ -2,16 +2,14 @@ version: "3.3"
 
 services:
   machine:
-    image: viscpu-image:latest
-    container_name: viscpu-dev
+    image: claudioscheer/latex-development
+    container_name: visperf-latex
     stdin_open: true
     tty: true
-    ports:
-      - "3000:3000"
-      - "8880:8880"
     volumes:
       - .:/home
       - /tmp/.X11-unix:/tmp/.X11-unix
     working_dir: /home
     environment:
-      - DISPLAY=$DISPLAY
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1

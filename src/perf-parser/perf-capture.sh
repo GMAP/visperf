@@ -39,7 +39,7 @@ if ! [ -x "$(command -v sudo)" ]; then
 fi
 mkdir -p $OUTPUT_DIR
 
-PERF_EVENTS=cpu-cycles,instructions,cache-misses,cache-references,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-loads,LLC-load-misses,LLC-stores,mem-loads,mem-stores,branch-misses,branch-instructions,bus-cycles
+PERF_EVENTS=$(cat events.txt | tr "\n" "," | sed "s/,$//")
 PERF_CAPTURE_FREQUENCY=997
 PERF_MAX_STACK=3
 PERF_DELAY_CAPTURE=100

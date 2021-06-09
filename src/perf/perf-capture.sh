@@ -17,7 +17,8 @@ function usage() {
 }
 
 # Parse params.
-while [[ "$#" > 0 ]]; do case $1 in
+while [[ "$#" > 0 ]]
+do case $1 in
     -n|--name) EXPERIMENT_NAME="$2"; shift;shift;;
     -r|--runs) RUNS="$2";shift;shift;;
     -o|--output) OUTPUT_DIR="$2";shift;shift;;

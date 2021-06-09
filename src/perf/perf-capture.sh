@@ -1,4 +1,5 @@
 #!/bin/bash
+
 CLEAR='\033[0m'
 RED='\033[0;31m'
 
@@ -17,8 +18,7 @@ function usage() {
 }
 
 # Parse params.
-while [[ "$#" > 0 ]]
-do case $1 in
+while [[ "$#" > 0 ]]; do case $1 in
     -n|--name) EXPERIMENT_NAME="$2"; shift;shift;;
     -r|--runs) RUNS="$2";shift;shift;;
     -o|--output) OUTPUT_DIR="$2";shift;shift;;
@@ -67,9 +67,9 @@ JSON="\"$EXPERIMENT_NAME\": {\"title\": \"$EXPERIMENT_NAME\","
 
 JSON_RUNS='"runs": ['
 # Run experiment.
-for ((i = 0; i < $RUNS; i++)); do
-    perf_capture $i > /dev/null
-    JSON_RUNS+="{\"title\": \"Run $i\", \"path\": \"$(realpath $OUTPUT_DIR/$i.txt)\"},"
+for ((run = 0; run < $RUNS; run++)); do
+    perf_capture $run > /dev/null
+    JSON_RUNS+="{\"title\": \"Run $run\", \"path\": \"$(realpath $OUTPUT_DIR/$run.txt)\"},"
 done
 # Remove last ",".
 JSON_RUNS=${JSON_RUNS::-1}

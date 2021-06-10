@@ -52,7 +52,7 @@ function perf_capture() {
         --running-time --all-user --timestamp \
         --output $OUTPUT_DIR/$run.data \
         --event ${PERF_EVENTS} -- \
-        /bin/bash -c '$COMMAND'
+        /bin/bash -c "$COMMAND"
     perf_data_to_txt $run
 }
 

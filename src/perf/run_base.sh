@@ -5,16 +5,23 @@ CPUS=$(nproc)
 CPUS_PER_ROW=4
 PERF_EVENTS=$(cat events.txt | tr "\n" "," | sed "s/,$//")
 
+JSON_CPUS="\"cpus\": $CPUS"
+
 JSON_CPU_SETUP="\"cpu_setup\": ["
 for ((i = 0; i < $(echo "$(($CPUS / $CPUS_PER_ROW))"); i++)); do
-    JSON_CPU_SETUP+="[0, 0, 0, 0],"
+    JSON_CPU_SETUP+="["
+    for ((i = 0; i < $CPUS_PER_ROW; i++)); do
+        JSON_CPU_SETUP+="0,"
+    done
+    JSON_CPU_SETUP=${JSON_CPU_SETUP::-1}
+    JSON_CPU_SETUP+="],"
 done
 if [ $(echo "$(($CPUS % $CPUS_PER_ROW))") -gt 0 ]; then
     JSON_CPU_SETUP+="["
-    for ((i = 0; i < $(echo "$(($CPUS % $CPUS_PER_ROW))"); i++)); do
-        JSON_CPU_SETUP+="0, "
+    for ((i = 0; i < $CPUS_PER_ROW; i++)); do
+        JSON_CPU_SETUP+="0,"
     done
-    JSON_CPU_SETUP=${JSON_CPU_SETUP::-2}
+    JSON_CPU_SETUP=${JSON_CPU_SETUP::-1}
     JSON_CPU_SETUP+="]"
 else
     # Remove last ",".
@@ -54,10 +61,10 @@ for output in "${EXPERIMENTS_OUTPUT[@]}"; do
 done
 JSON_EXPERIMENTS_OUTPUT=${JSON_EXPERIMENTS_OUTPUT::-1}
 JSON_EXPERIMENTS_OUTPUT+="}"
-echo "{$JSON_CPU_SETUP,$JSON_EVENTS_CAPTURED,$JSON_EXPERIMENTS_OUTPUT}" | jq . > $OUTPUT_CONFIG_LOCATION
+echo "{$JSON_CPUS,$JSON_CPU_SETUP,$JSON_EVENTS_CAPTURED,$JSON_EXPERIMENTS_OUTPUT}" | jq . > $OUTPUT_CONFIG_LOCATION
 ##### END - TOUCH ONLY IF YOU KNOW WHAT YOU ARE DOING #####
 
 
 
-# Uncomment this line to parse the config file generated.
-# python3 parser/parser.py --input $OUTPUT_CONFIG_LOCATION --output $OUTPUT_EXPERIMENTS_PARSED_LOCATION
+# Comment this line to not parse the config file generated.
+python3 parser/parser.py --input $OUTPUT_CONFIG_LOCATION --output $OUTPUT_EXPERIMENTS_PARSED_LOCATION

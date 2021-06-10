@@ -205,6 +205,7 @@ def get_experiments_to_compare(experiments):
 if __name__ == "__main__":
     input_file = read_json_file(args["input"])
     output = {
+        "cpus": input_file["cpus"],
         "cpu_setup": input_file["cpu_setup"],
         "cpu_labels": perf_record.cpu_labels(
             input_file["cpu_setup"], len(input_file["cpu_setup"][0])

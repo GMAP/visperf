@@ -64,6 +64,7 @@ function filterFunctionThread(
 
 export default function CpuPlot({
     data,
+    numberCpus,
     cpuLabels,
     title,
     functions = null,
@@ -136,6 +137,11 @@ export default function CpuPlot({
                 : [legendPoints[0], legendPoints[legendPoints.length - 1]],
         );
 
+    const hideItem = (x, y) => {
+        const cpuNumber = +cpuLabels[x][y].replace('CPU', '');
+        return cpuNumber >= numberCpus ? 'hidden' : 'visible';
+    };
+
     useEffect(() => {
         const colorScale = d3
             .scaleSequential(d3[d3ColorScale])
@@ -163,6 +169,7 @@ export default function CpuPlot({
                 .duration(300)
                 .attr('x', (_, i) => x(i))
                 .attr('y', (d, _) => y(d.row))
+                .style('visibility', (d, i) => hideItem(d.row, i))
                 .style('fill', (d) => {
                     if (d.value === 0) {
                         return '#eee';
@@ -208,6 +215,7 @@ export default function CpuPlot({
                 .attr('rx', 3)
                 .style('stroke', 'black')
                 .style('stroke-width', 2)
+                .style('visibility', (d, i) => hideItem(d.row, i))
                 .style('fill', (d) => {
                     if (d.value === 0) {
                         return '#eee';
@@ -226,6 +234,7 @@ export default function CpuPlot({
                 .append('text')
                 .attr('class', 'label')
                 .style('text-anchor', 'middle')
+                .style('visibility', (d, i) => hideItem(d.row, i))
                 .attr('font-weight', 400)
                 .attr('font-size', fontSize)
                 .attr('x', (_, i) => x(i) + squareSize / 2)

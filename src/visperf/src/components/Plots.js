@@ -26,7 +26,7 @@ const useStylesPlot = makeStyles((theme) => ({
 
 const useStylesPlots = makeStyles((theme) => ({
     formControl: {
-        minWidth: 150,
+        width: 250,
     },
     labelValueContainer: {
         marginTop: theme.spacing(3),
@@ -55,7 +55,7 @@ const useStylesPlots = makeStyles((theme) => ({
         marginTop: theme.spacing(2),
         position: 'sticky',
         padding: theme.spacing(2),
-        width: 400,
+        width: 560,
         left: '50%',
         transform: 'translateX(-50%)',
         top: theme.spacing(2),
@@ -165,7 +165,13 @@ function loadParallelCoordinatesPlot(
     );
 }
 
-function loadMetricComparisonPlot(metricVisualization, data, xLabel, yLabel) {
+function loadMetricComparisonPlot(
+    metricVisualization,
+    data,
+    xLabel,
+    yLabel,
+    cpus,
+) {
     if (metricVisualization === 'area') {
         return (
             <AreaPlot
@@ -191,6 +197,7 @@ function loadMetricComparisonPlot(metricVisualization, data, xLabel, yLabel) {
                 cpuLabels={data['cpu'].map((x) =>
                     x.map((y) => Math.round((y + Number.EPSILON) * 100) / 100),
                 )}
+                numberCpus={cpus}
                 data={data['cpu']}
             />
         );
@@ -224,7 +231,7 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
             >
                 {visualization === 'cpus' ? (
                     <Grid container spacing={4}>
-                        <Grid item>
+                        <Grid item xs={6}>
                             <CpuPlot
                                 margin={5}
                                 squareSize={55}
@@ -232,6 +239,7 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 timeSeries={false}
                                 title="Experiment 1"
                                 cpuLabels={dataFile['cpu_labels']}
+                                numberCpus={dataFile['cpus']}
                                 data={
                                     dataFile['experiments'][
                                         experiment1.experiment
@@ -241,7 +249,7 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 }
                             />
                         </Grid>
-                        <Grid item>
+                        <Grid item xs={6}>
                             <CpuPlot
                                 margin={5}
                                 squareSize={55}
@@ -249,6 +257,7 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 fontSize=".9em"
                                 title="Experiment 2"
                                 cpuLabels={dataFile['cpu_labels']}
+                                numberCpus={dataFile['cpus']}
                                 data={
                                     dataFile['experiments'][
                                         experiment2.experiment
@@ -258,7 +267,7 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 }
                             />
                         </Grid>
-                        <Grid item sm={true}>
+                        <Grid item xs={12}>
                             <CpuPlot
                                 margin={5}
                                 d3ColorScale="interpolateRdBu"
@@ -273,6 +282,7 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 timeSeries={false}
                                 title="Difference"
                                 cpuLabels={dataFile['cpu_labels']}
+                                numberCpus={dataFile['cpus']}
                                 data={comparison['mean_relative']}
                             />
                         </Grid>
@@ -344,6 +354,7 @@ function SecondSectionPlots({ dataFile, experiment1, experiment2 }) {
                         <CpuPlot
                             title="Experiment 1"
                             cpuLabels={dataFile['cpu_labels']}
+                            numberCpus={dataFile['cpus']}
                             data={
                                 dataFile['experiments'][experiment1.experiment][
                                     experiment1.run
@@ -378,6 +389,7 @@ function SecondSectionPlots({ dataFile, experiment1, experiment2 }) {
                         <CpuPlot
                             title="Experiment 2"
                             cpuLabels={dataFile['cpu_labels']}
+                            numberCpus={dataFile['cpus']}
                             data={
                                 dataFile['experiments'][experiment2.experiment][
                                     experiment2.run
@@ -478,6 +490,7 @@ function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                     ][experiment1.run]['ipc_performance'],
                                     'Execution time (s)',
                                     'IPC',
+                                    dataFile['cpus'],
                                 )}
                             </Grid>,
                             <Grid key={1} item sm={true}>
@@ -488,6 +501,7 @@ function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                     ][experiment2.run]['ipc_performance'],
                                     'Execution time (s)',
                                     'IPC',
+                                    dataFile['cpus'],
                                 )}
                             </Grid>,
                         ]

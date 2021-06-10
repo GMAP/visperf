@@ -43,7 +43,7 @@ export default function AreaPlot({
                 .selectAll('.x-axis')
                 .transition()
                 .duration(300)
-                .call(d3.axisBottom(x).ticks((xDomain[1] - xDomain[0]) / 2));
+                .call(d3.axisBottom(x));
             svg.current
                 .selectAll('.y-axis')
                 .transition()
@@ -76,9 +76,7 @@ export default function AreaPlot({
                 .append('g')
                 .attr('class', 'x-axis')
                 .attr('transform', `translate(0, ${height})`)
-                .call(
-                    d3.axisBottom(x).ticks((x.domain()[1] - x.domain()[0]) / 2),
-                );
+                .call(d3.axisBottom(x));
             svg.current
                 .append('g')
                 .attr('class', 'y-axis')

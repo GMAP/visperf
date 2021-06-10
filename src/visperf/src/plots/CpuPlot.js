@@ -66,6 +66,7 @@ export default function CpuPlot({
     data,
     numberCpus,
     cpuLabels,
+    cpuIDs,
     title,
     functions = null,
     threads = null,
@@ -138,7 +139,7 @@ export default function CpuPlot({
         );
 
     const hideItem = (x, y) => {
-        const cpuNumber = +cpuLabels[x][y].replace('CPU', '');
+        const cpuNumber = cpuIDs[x][y];
         return cpuNumber >= numberCpus ? 'hidden' : 'visible';
     };
 

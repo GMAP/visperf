@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ParallelCoordinatePlot({
     data,
+    numberCpus,
     title,
     dimensions,
     lineColor = '#bf360c',
@@ -29,6 +30,8 @@ export default function ParallelCoordinatePlot({
     const classes = useStyles();
     const plotRef = useRef();
     let svg = useRef(null);
+
+    data = data.filter((_, i) => i < numberCpus);
 
     dimensions.forEach((d, i) => {
         d['scale'] = d3
@@ -127,15 +130,18 @@ export default function ParallelCoordinatePlot({
                 .attr('transform', (d) => 'translate(' + x(d.name) + ')')
                 .each(function (d) {
                     d3.select(this).call(
-                        d3.axisLeft(d.scale).tickFormat((i) => {
-                            if (d.hideLabels) {
-                                return;
-                            }
-                            if (d.labels) {
-                                return d.labels[i];
-                            }
-                            return i;
-                        }),
+                        d3
+                            .axisLeft(d.scale)
+                            .ticks(d.ticks)
+                            .tickFormat((i) => {
+                                if (d.hideLabels) {
+                                    return;
+                                }
+                                if (d.labels) {
+                                    return d.labels[i];
+                                }
+                                return i;
+                            }),
                     );
                 })
                 .append('text')

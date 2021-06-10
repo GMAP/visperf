@@ -90,6 +90,7 @@ function loadParallelCoordinatesMetricComparisonPlot(
 
     return (
         <ParallelCoordinatePlot
+            numberCpus={dataFile['cpus']}
             margin={{ top: 40, left: 50, bottom: 10, right: 50 }}
             width={700}
             height={50 * dataFile['cpu_labels'].length}
@@ -98,6 +99,7 @@ function loadParallelCoordinatesMetricComparisonPlot(
                     name: 'CPU',
                     labels: flatten2dArray(dataFile['cpu_labels']),
                     reverseScale: true,
+                    ticks: dataFile['cpus'] / 2,
                 },
                 {
                     name: 'Experiment 1',
@@ -138,6 +140,7 @@ function loadParallelCoordinatesPlot(
 
     return (
         <ParallelCoordinatePlot
+            numberCpus={dataFile['cpus']}
             margin={{ top: 40, left: 50, bottom: 10, right: 50 }}
             width={700}
             height={50 * dataFile['cpu_labels'].length}
@@ -146,6 +149,7 @@ function loadParallelCoordinatesPlot(
                     name: 'CPU',
                     labels: flatten2dArray(dataFile['cpu_labels']),
                     reverseScale: true,
+                    ticks: dataFile['cpus'] / 2,
                 },
                 {
                     name: 'Experiment 1 (%)',
@@ -171,6 +175,7 @@ function loadMetricComparisonPlot(
     xLabel,
     yLabel,
     cpus,
+    cpuIDs,
 ) {
     if (metricVisualization === 'area') {
         return (
@@ -194,6 +199,7 @@ function loadMetricComparisonPlot(
                 squareSize={70}
                 fontSize=".9em"
                 timeSeries={false}
+                cpuIDs={cpuIDs}
                 cpuLabels={data['cpu'].map((x) =>
                     x.map((y) => Math.round((y + Number.EPSILON) * 100) / 100),
                 )}
@@ -240,6 +246,9 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 title="Experiment 1"
                                 cpuLabels={dataFile['cpu_labels']}
                                 numberCpus={dataFile['cpus']}
+                                cpuIDs={dataFile['cpu_labels'].map((x) =>
+                                    x.map((y) => +y.replace('CPU', '')),
+                                )}
                                 data={
                                     dataFile['experiments'][
                                         experiment1.experiment
@@ -257,6 +266,9 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 fontSize=".9em"
                                 title="Experiment 2"
                                 cpuLabels={dataFile['cpu_labels']}
+                                cpuIDs={dataFile['cpu_labels'].map((x) =>
+                                    x.map((y) => +y.replace('CPU', '')),
+                                )}
                                 numberCpus={dataFile['cpus']}
                                 data={
                                     dataFile['experiments'][
@@ -269,6 +281,9 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                         </Grid>
                         <Grid item xs={12}>
                             <CpuPlot
+                                cpuIDs={dataFile['cpu_labels'].map((x) =>
+                                    x.map((y) => +y.replace('CPU', '')),
+                                )}
                                 margin={5}
                                 d3ColorScale="interpolateRdBu"
                                 legendPoints={[0, 50, 100]}
@@ -338,7 +353,7 @@ function SecondSectionPlots({ dataFile, experiment1, experiment2 }) {
                 setComparisonEvent={(e) => setEvent(e)}
             >
                 <Grid container spacing={8}>
-                    <Grid item sm={true}>
+                    <Grid item xs={6}>
                         <AutocompleteFunctionsThreads
                             id="autocomplete-time-series-experiment-1"
                             data={
@@ -352,6 +367,10 @@ function SecondSectionPlots({ dataFile, experiment1, experiment2 }) {
                         />
 
                         <CpuPlot
+                            cpuIDs={dataFile['cpu_labels'].map((x) =>
+                                x.map((y) => +y.replace('CPU', '')),
+                            )}
+                            squareSize={60}
                             title="Experiment 1"
                             cpuLabels={dataFile['cpu_labels']}
                             numberCpus={dataFile['cpus']}
@@ -373,7 +392,7 @@ function SecondSectionPlots({ dataFile, experiment1, experiment2 }) {
                             selectedFunctionsThreads={filterFunctionThread1}
                         />
                     </Grid>
-                    <Grid item sm={true}>
+                    <Grid item xs={6}>
                         <AutocompleteFunctionsThreads
                             id="autocomplete-time-series-experiment-2"
                             data={
@@ -387,9 +406,13 @@ function SecondSectionPlots({ dataFile, experiment1, experiment2 }) {
                         />
 
                         <CpuPlot
+                            squareSize={60}
                             title="Experiment 2"
                             cpuLabels={dataFile['cpu_labels']}
                             numberCpus={dataFile['cpus']}
+                            cpuIDs={dataFile['cpu_labels'].map((x) =>
+                                x.map((y) => +y.replace('CPU', '')),
+                            )}
                             data={
                                 dataFile['experiments'][experiment2.experiment][
                                     experiment2.run
@@ -491,6 +514,9 @@ function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                     'Execution time (s)',
                                     'IPC',
                                     dataFile['cpus'],
+                                    dataFile['cpu_labels'].map((x) =>
+                                        x.map((y) => +y.replace('CPU', '')),
+                                    ),
                                 )}
                             </Grid>,
                             <Grid key={1} item sm={true}>
@@ -502,6 +528,9 @@ function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                     'Execution time (s)',
                                     'IPC',
                                     dataFile['cpus'],
+                                    dataFile['cpu_labels'].map((x) =>
+                                        x.map((y) => +y.replace('CPU', '')),
+                                    ),
                                 )}
                             </Grid>,
                         ]

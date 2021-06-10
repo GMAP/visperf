@@ -19,7 +19,6 @@ done
 if [ $(echo "$(($CPUS % $CPUS_PER_ROW))") -gt 0 ]; then
     JSON_CPU_SETUP+="["
     for ((i = 0; i < $CPUS_PER_ROW; i++)); do
-        echo "sdfg"
         JSON_CPU_SETUP+="0,"
     done
     JSON_CPU_SETUP=${JSON_CPU_SETUP::-1}

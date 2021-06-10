@@ -2,7 +2,7 @@
 
 ##### BEGIN - TOUCH ONLY IF YOU KNOW WHAT YOU ARE DOING #####
 CPUS=$(nproc)
-CPUS_PER_ROW=4
+CPUS_PER_ROW=5
 PERF_EVENTS=$(cat events.txt | tr "\n" "," | sed "s/,$//")
 
 JSON_CPUS="\"cpus\": $CPUS"
@@ -10,7 +10,7 @@ JSON_CPUS="\"cpus\": $CPUS"
 JSON_CPU_SETUP="\"cpu_setup\": ["
 for ((i = 0; i < $(echo "$(($CPUS / $CPUS_PER_ROW))"); i++)); do
     JSON_CPU_SETUP+="["
-    for ((i = 0; i < $CPUS_PER_ROW; i++)); do
+    for ((j = 0; j < $CPUS_PER_ROW; j++)); do
         JSON_CPU_SETUP+="0,"
     done
     JSON_CPU_SETUP=${JSON_CPU_SETUP::-1}
@@ -19,6 +19,7 @@ done
 if [ $(echo "$(($CPUS % $CPUS_PER_ROW))") -gt 0 ]; then
     JSON_CPU_SETUP+="["
     for ((i = 0; i < $CPUS_PER_ROW; i++)); do
+        echo "sdfg"
         JSON_CPU_SETUP+="0,"
     done
     JSON_CPU_SETUP=${JSON_CPU_SETUP::-1}
@@ -43,10 +44,10 @@ OUTPUT_EXPERIMENTS_PARSED_LOCATION=./experiments.json
 # Put here all the output directories of your experiments.
 EXPERIMENTS_OUTPUT=()
 
-./perf_capture.sh --name "All cores" --runs 5 --output ./data/all-cores --command "sleep 5"
+#./perf_capture.sh --name "All cores" --runs 5 --output ./data/all-cores --command "sleep 5"
 EXPERIMENTS_OUTPUT+=(./data/all-cores)
 
-./perf_capture.sh --name "Cores 1, 2, 3, 4" --runs 5 --output ./data/cores-1234 --command "sleep 5"
+#./perf_capture.sh --name "Cores 1, 2, 3, 4" --runs 5 --output ./data/cores-1234 --command "sleep 5"
 EXPERIMENTS_OUTPUT+=(./data/cores-1234)
 
 

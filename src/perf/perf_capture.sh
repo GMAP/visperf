@@ -47,7 +47,7 @@ PERF_DELAY_CAPTURE=100
 
 function perf_capture() {
     run=$1
-	$SUDO perf record --delay $PERF_DELAY_CAPTURE --sample-cpu -g \
+    $SUDO perf record --delay $PERF_DELAY_CAPTURE --sample-cpu -g \
         --call-graph dwarf --freq $PERF_CAPTURE_FREQUENCY --period \
         --running-time --all-user --timestamp \
         --output $OUTPUT_DIR/$run.data \
@@ -68,7 +68,7 @@ JSON="\"$EXPERIMENT_NAME\": {\"title\": \"$EXPERIMENT_NAME\","
 JSON_RUNS='"runs": ['
 # Run experiment.
 for ((run = 1; run <= $RUNS; run++)); do
-    perf_capture $run > /dev/null
+    perf_capture $run
     JSON_RUNS+="{\"title\": \"Run $run\", \"path\": \"$(realpath $OUTPUT_DIR/$run.txt)\"},"
 done
 # Remove last ",".

@@ -67,7 +67,7 @@ JSON="\"$EXPERIMENT_NAME\": {\"title\": \"$EXPERIMENT_NAME\","
 
 JSON_RUNS='"runs": ['
 # Run experiment.
-for ((run = 0; run < $RUNS; run++)); do
+for ((run = 1; run <= $RUNS; run++)); do
     perf_capture $run > /dev/null
     JSON_RUNS+="{\"title\": \"Run $run\", \"path\": \"$(realpath $OUTPUT_DIR/$run.txt)\"},"
 done

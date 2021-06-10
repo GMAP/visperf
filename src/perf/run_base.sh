@@ -34,7 +34,13 @@ OUTPUT_CONFIG_LOCATION=./config.json
 OUTPUT_EXPERIMENTS_PARSED_LOCATION=./experiments.json
 
 # Put here all the output directories of your experiments.
-EXPERIMENTS_OUTPUT=(./data ./data)
+EXPERIMENTS_OUTPUT=()
+
+./perf_capture.sh --name "All cores" --runs 5 --output ./data/all-cores --command "sleep 5"
+EXPERIMENTS_OUTPUT+=(./data/all-cores)
+
+./perf_capture.sh --name "Cores 1, 2, 3, 4" --runs 5 --output ./data/cores-1234 --command "sleep 5"
+EXPERIMENTS_OUTPUT+=(./data/cores-1234)
 
 
 
@@ -54,4 +60,4 @@ echo "{$JSON_CPU_SETUP,$JSON_EVENTS_CAPTURED,$JSON_EXPERIMENTS_OUTPUT}" | jq . >
 
 
 # Uncomment this line to parse the config file generated.
-python3 parser/parser.py --input $OUTPUT_CONFIG_LOCATION --output $OUTPUT_EXPERIMENTS_PARSED_LOCATION
+# python3 parser/parser.py --input $OUTPUT_CONFIG_LOCATION --output $OUTPUT_EXPERIMENTS_PARSED_LOCATION

@@ -43,11 +43,12 @@ OUTPUT_EXPERIMENTS_PARSED_LOCATION=./experiments.json
 # Put here all the output directories of your experiments.
 EXPERIMENTS_OUTPUT=()
 
-#./perf_capture.sh --name "All cores" --runs 5 --output ./data/all-cores --command "sleep 5"
-EXPERIMENTS_OUTPUT+=(./data/all-cores)
+# Example of how to capture perf events from experiments.
+#./perf_capture.sh --name "Experiment 1" --runs 5 --output ./data/experiment-1 --command "sleep 5"
+#EXPERIMENTS_OUTPUT+=(./data/experiment-1)
 
-#./perf_capture.sh --name "Cores 1, 2, 3, 4" --runs 5 --output ./data/cores-1234 --command "sleep 5"
-EXPERIMENTS_OUTPUT+=(./data/cores-1234)
+#./perf_capture.sh --name "Experiment 2" --runs 5 --output ./data/experiment-2 --command "sleep 5"
+#EXPERIMENTS_OUTPUT+=(./data/experiment-2)
 
 
 

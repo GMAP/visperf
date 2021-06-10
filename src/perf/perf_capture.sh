@@ -12,6 +12,8 @@ function usage() {
     echo "  -r, --runs               Number of times experiment will run."
     echo "  -o, --output             Directory where perf logs will be saved."
     echo "  -c, --command            Command that triggers the experiment."
+    echo "  --pre-command            Run before starting the experiment."
+    echo "  --pos-command            Run after running the experiment."
     echo ""
     echo "Example: $0 --name \"Experiment XX\" --runs 5 --output ./output/experiment-xx/ -c \"sleep 10\""
     exit 1
@@ -23,6 +25,8 @@ while [[ "$#" > 0 ]]; do case $1 in
     -r|--runs) RUNS="$2";shift;shift;;
     -o|--output) OUTPUT_DIR="$2";shift;shift;;
     -c|--command) COMMAND="$2";shift;shift;;
+    --pre-command) PRE_COMMAND="$2";shift;shift;;
+    --pos-command) POS_COMMAND="$2";shift;shift;;
     *) usage "Unknown parameter passed: $1"; shift; shift;;
 esac; done
 
@@ -38,6 +42,7 @@ if ! [ -x "$(command -v sudo)" ]; then
     SUDO=""
     echo "Running perf without 'sudo'." >&2
 fi
+OUTPUT_DIR=$(realpath $OUTPUT_DIR)
 mkdir -p $OUTPUT_DIR
 
 PERF_EVENTS=$(cat events.txt | tr "\n" "," | sed "s/,$//")
@@ -47,12 +52,14 @@ PERF_DELAY_CAPTURE=100
 
 function perf_capture() {
     run=$1
+    $PRE_COMMAND
 	$SUDO perf record --delay $PERF_DELAY_CAPTURE --sample-cpu -g \
         --call-graph dwarf --freq $PERF_CAPTURE_FREQUENCY --period \
         --running-time --all-user --timestamp \
         --output $OUTPUT_DIR/$run.data \
         --event ${PERF_EVENTS} -- \
         $COMMAND
+    $POS_COMMAND
     perf_data_to_txt $run
 }
 
@@ -69,7 +76,7 @@ JSON_RUNS='"runs": ['
 # Run experiment.
 for ((run = 1; run <= $RUNS; run++)); do
     perf_capture $run > /dev/null
-    JSON_RUNS+="{\"title\": \"Run $run\", \"path\": \"$(realpath $OUTPUT_DIR/$run.txt)\"},"
+    JSON_RUNS+="{\"title\": \"Run $run\", \"path\": \"$OUTPUT_DIR/$run.txt\"},"
 done
 # Remove last ",".
 JSON_RUNS=${JSON_RUNS::-1}

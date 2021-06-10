@@ -164,16 +164,16 @@ def process_run(run_path, data):
 
         run["ipc_performance"]["time_series"][time] = get_counter_value(
             df_filtered, "instructions"
-        ) / get_counter_value(df_filtered, "cpu-cycles")
+        ) / get_counter_value(df_filtered, "cpu-cycles", 1)
         run["l1_cache_performance"]["time_series"][time] = get_counter_value(
             df_filtered, "L1-dcache-load-misses"
-        ) / get_counter_value(df_filtered, "instructions")
+        ) / get_counter_value(df_filtered, "instructions", 1)
         run["llc_cache_performance"]["time_series"][time] = get_counter_value(
             df_filtered, "LLC-load-misses"
-        ) / get_counter_value(df_filtered, "instructions")
+        ) / get_counter_value(df_filtered, "instructions", 1)
         run["bus_performance"]["time_series"][time] = get_counter_value(
             df_filtered, "bus-cycles"
-        ) / get_counter_value(df_filtered, "cpu-cycles")
+        ) / get_counter_value(df_filtered, "cpu-cycles", 1)
 
     return run
 

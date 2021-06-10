@@ -117,7 +117,7 @@ def get_search_functions_threads(df, event):
 def agg_stack(stack):
     functions = {}
     for s in stack:
-        for f in s.split("|"):
+        for f in str(s).split("|"):
             if f == "[unknown]":
                 continue
             if f not in functions:

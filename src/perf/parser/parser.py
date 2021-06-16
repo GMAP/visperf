@@ -4,6 +4,7 @@ import numpy as np
 import copy
 import json
 import perf_record_helper as perf_record
+import concurrent.futures
 
 
 parser = argparse.ArgumentParser(description="Parse perf data.")
@@ -217,7 +218,13 @@ if __name__ == "__main__":
         "experiments": {},
     }
 
-    for k, v in input_file["experiments"].items():
-        output["experiments"][k] = process_experiment(v, output)
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        futures = [
+            (k, executor.submit(process_experiment, v, output))
+            for k, v in input_file["experiments"].items()
+        ]
+
+        for (k, future) in futures:
+            output["experiments"][k] = future.result()
 
     write_json_file(args["output"], output)

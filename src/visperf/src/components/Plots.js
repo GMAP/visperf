@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
 import { makeStyles } from '@material-ui/core/styles';
 import { TrendingDown, TrendingUp } from '@material-ui/icons';
 import { CpuPlot, ParallelCoordinatePlot, AreaPlot } from '../plots';
@@ -25,8 +23,13 @@ const useStylesPlot = makeStyles((theme) => ({
 }));
 
 const useStylesPlots = makeStyles((theme) => ({
-    formControl: {
+    autocompleteExperiment: {
         width: 250,
+    },
+    autocompleteExperimentInput: {
+        '& input': {
+            fontSize: 13,
+        },
     },
     labelValueContainer: {
         marginTop: theme.spacing(3),
@@ -556,10 +559,10 @@ function Plot({ children, title, description }) {
 export default function Plots({ dataFile }) {
     const classes = useStylesPlots();
     const [experiment1, setExperiment1] = useState(
-        dataFile['experiments_to_compare'][0].value,
+        dataFile['experiments_to_compare'][0],
     );
     const [experiment2, setExperiment2] = useState(
-        dataFile['experiments_to_compare'][1].value,
+        dataFile['experiments_to_compare'][1],
     );
 
     return (
@@ -574,74 +577,104 @@ export default function Plots({ dataFile }) {
                     justify="center"
                     spacing={3}
                 >
-                    <Grid item xs={12}>
+                    <Grid item xs={12} style={{ paddingBottom: 0 }}>
                         <h3 className={classes.selectEventsToCompare}>
                             Select experiments:
                         </h3>
                     </Grid>
                     <Grid item>
-                        <FormControl className={classes.formControl}>
-                            <InputLabel id="select-experiment-1">
-                                Experiment 1
-                            </InputLabel>
-                            <Select
-                                labelId="select-experiment-1"
-                                value={experiment1}
-                                onChange={(e) => {
-                                    setExperiment1(e.target.value);
-                                }}
-                            >
-                                {dataFile['experiments_to_compare'].map(
-                                    (x, i) => (
-                                        <MenuItem key={i} value={x.value}>
-                                            {x.text}
-                                        </MenuItem>
-                                    ),
-                                )}
-                            </Select>
-                        </FormControl>
+                        <Autocomplete
+                            className={classes.autocompleteExperiment}
+                            options={dataFile['experiments_to_compare']}
+                            disableClearable
+                            getOptionLabel={(option) => option.text}
+                            id="autocomplete-experiment-1"
+                            value={experiment1}
+                            onChange={(_, newValue) => {
+                                setExperiment1(newValue);
+                            }}
+                            renderOption={(option, { selected }) => {
+                                return (
+                                    <p
+                                        style={{
+                                            fontSize: 12,
+                                            marginTop: 0,
+                                            marginBottom: 0,
+                                        }}
+                                        key={option.value}
+                                    >
+                                        {option.text}
+                                    </p>
+                                );
+                            }}
+                            renderInput={(params) => (
+                                <TextField
+                                    {...params}
+                                    className={
+                                        classes.autocompleteExperimentInput
+                                    }
+                                    label="Experiment 1"
+                                    margin="normal"
+                                />
+                            )}
+                        />
                     </Grid>
                     <Grid item>
-                        <FormControl className={classes.formControl}>
-                            <InputLabel id="select-experiment-2">
-                                Experiment 2
-                            </InputLabel>
-                            <Select
-                                labelId="select-experiment-2"
-                                value={experiment2}
-                                onChange={(e) => {
-                                    setExperiment2(e.target.value);
-                                }}
-                            >
-                                {dataFile['experiments_to_compare'].map(
-                                    (x, i) => (
-                                        <MenuItem key={i} value={x.value}>
-                                            {x.text}
-                                        </MenuItem>
-                                    ),
-                                )}
-                            </Select>
-                        </FormControl>
+                        <Autocomplete
+                            className={classes.autocompleteExperiment}
+                            options={dataFile['experiments_to_compare']}
+                            getOptionLabel={(option) => option.text}
+                            id="autocomplete-experiment-2"
+                            value={experiment2}
+                            disableClearable
+                            onChange={(_, newValue) => {
+                                setExperiment2(newValue);
+                            }}
+                            renderOption={(option, { selected }) => {
+                                return (
+                                    <p
+                                        style={{
+                                            fontSize: 12,
+                                            marginTop: 0,
+                                            marginBottom: 0,
+                                        }}
+                                        key={option.value}
+                                    >
+                                        {option.text}
+                                    </p>
+                                );
+                            }}
+                            renderInput={(params) => (
+                                <TextField
+                                    {...params}
+                                    className={
+                                        classes.autocompleteExperimentInput
+                                    }
+                                    label="Experiment 2"
+                                    margin="normal"
+                                />
+                            )}
+                        />
                     </Grid>
                 </Grid>
             </Paper>
             <FirstSectionPlots
                 dataFile={dataFile}
                 classes={classes}
-                experiment1={experiment1}
-                experiment2={experiment2}
+                experiment1={experiment1.value}
+                experiment2={experiment2.value}
             />
             <SecondSectionPlots
                 dataFile={dataFile}
                 classes={classes}
-                experiment1={experiment1}
-                experiment2={experiment2}
+                experiment1={experiment1.value}
+                experiment2={experiment2.value}
             />
             <ThirdSectionPlots
                 dataFile={dataFile}
                 classes={classes}
-                experiment1={experiment1}
-                experiment2={experiment2}
+                experiment1={experiment1.value}
+                experiment2={experiment2.value}
             />
         </div>
     );

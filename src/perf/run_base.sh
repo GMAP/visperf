@@ -64,10 +64,10 @@ cd $CURRENT_DIR
 # Put here all the output directories of your experiments.
 EXPERIMENTS_OUTPUT=()
 
-#./perf_capture.sh --name "Experiment 1" --runs 3 --output $(realpath ./data/experiment-1) --command "sleep 5"
+#./perf_capture.sh --name "Experiment 1" --runs 3 --output ./data/experiment-1 --command "sleep 5"
 #EXPERIMENTS_OUTPUT+=(./data/experiment-1)
 
-#./perf_capture.sh --name "Experiment 2" --runs 3 --output $(realpath ./data/experiment-2) --command "sleep 5"
+#./perf_capture.sh --name "Experiment 2" --runs 3 --output ./data/experiment-2 --command "sleep 5"
 #EXPERIMENTS_OUTPUT+=(./data/experiment-2)
 
 ################################

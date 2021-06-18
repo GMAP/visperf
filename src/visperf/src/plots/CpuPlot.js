@@ -106,9 +106,9 @@ export default function CpuPlot({
 
     let dataPlot = null;
     if (timeSeries) {
-        if (sliderValue > sliderConfig.max) {
-            setSliderValue(sliderConfig.max);
-            dataPlot = captures[sliderConfig.max];
+        if (!(sliderValue in captures)) {
+            setSliderValue(sliderConfig.min);
+            dataPlot = captures[sliderConfig.min];
         } else {
             dataPlot = captures[sliderValue];
         }

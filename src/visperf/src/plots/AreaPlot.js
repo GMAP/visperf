@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import * as d3 from 'd3';
+import millify from 'millify';
 import { DownloadSvg } from '../components';
 
 const useStyles = makeStyles((theme) => ({
@@ -48,7 +49,11 @@ export default function AreaPlot({
                 .selectAll('.y-axis')
                 .transition()
                 .duration(300)
-                .call(d3.axisLeft(y));
+                .call(
+                    d3
+                        .axisLeft(y)
+                        .tickFormat((i) => millify(i, { precision: 1 })),
+                );
 
             svg.current
                 .selectAll('.area-path')
@@ -80,7 +85,11 @@ export default function AreaPlot({
             svg.current
                 .append('g')
                 .attr('class', 'y-axis')
-                .call(d3.axisLeft(y));
+                .call(
+                    d3
+                        .axisLeft(y)
+                        .tickFormat((i) => millify(i, { precision: 1 })),
+                );
 
             svg.current
                 .append('path')

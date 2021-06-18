@@ -11,9 +11,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         position: 'fixed',
         top: 80,
-        bottom: theme.spacing(4),
-        right: theme.spacing(4),
-        width: 400,
+        bottom: theme.spacing(3),
+        right: theme.spacing(2),
+        width: 300,
         overflowY: 'scroll',
     },
     toolbar: {
@@ -91,6 +91,10 @@ export default function Help() {
                     <p>
                         <b>mem-loads</b>: number of loads made from the main
                         memory;
+                    </p>
+                    <p>
+                        <b>IPC</b>: number of instructions executed each CPU
+                        cycle;
                     </p>
                 </Box>
             </Container>

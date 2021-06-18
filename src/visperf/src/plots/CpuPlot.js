@@ -337,7 +337,8 @@ export default function CpuPlot({
                         onChange={(_, value) => setSliderValue(value)}
                     />
                     <p className={classes.sliderLabel}>
-                        Application execution at <b>{sliderValue} sec.</b>
+                        Application execution time at <b>{sliderValue}</b> of{' '}
+                        <b>{sliderConfig.max} sec.</b>
                     </p>
                 </div>
             )}

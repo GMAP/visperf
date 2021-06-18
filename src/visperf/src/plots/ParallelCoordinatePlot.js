@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import * as d3 from 'd3';
+import millify from 'millify';
 import { DownloadSvg } from '../components';
 
 const useStyles = makeStyles((theme) => ({
@@ -94,7 +95,7 @@ export default function ParallelCoordinatePlot({
                             if (d.labels) {
                                 return d.labels[i];
                             }
-                            return i;
+                            return millify(i, { precision: 2 });
                         }),
                     );
                 })
@@ -140,7 +141,7 @@ export default function ParallelCoordinatePlot({
                                 if (d.labels) {
                                     return d.labels[i];
                                 }
-                                return i;
+                                return millify(i, { precision: 2 });
                             }),
                     );
                 })

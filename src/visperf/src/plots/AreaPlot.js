@@ -52,7 +52,7 @@ export default function AreaPlot({
                 .call(
                     d3
                         .axisLeft(y)
-                        .tickFormat((i) => millify(i, { precision: 1 })),
+                        .tickFormat((i) => millify(i, { precision: 2 })),
                 );
 
             svg.current
@@ -88,7 +88,7 @@ export default function AreaPlot({
                 .call(
                     d3
                         .axisLeft(y)
-                        .tickFormat((i) => millify(i, { precision: 1 })),
+                        .tickFormat((i) => millify(i, { precision: 2 })),
                 );
 
             svg.current

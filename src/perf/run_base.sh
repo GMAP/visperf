@@ -1,10 +1,11 @@
 #!/bin/bash
 
+CPUS_PER_ROW=6
+
 #############################################################
 ##### BEGIN - TOUCH ONLY IF YOU KNOW WHAT YOU ARE DOING #####
 #############################################################
 CPUS=$(nproc)
-CPUS_PER_ROW=5
 PERF_EVENTS=$(cat events.txt | tr "\n" "," | sed "s/,$//")
 
 JSON_CPUS="\"cpus\": $CPUS"

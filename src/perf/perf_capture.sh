@@ -69,7 +69,11 @@ function perf_data_to_txt() {
         $OUTPUT_DIR/$run.data > $OUTPUT_DIR/$run.txt
     $SUDO chown $(whoami):$(whoami) $OUTPUT_DIR/$run.txt $OUTPUT_DIR/$run.data
     $SUDO rm -rf $OUTPUT_DIR/$run.data
-    python parser/perf_script2csv.py --input $OUTPUT_DIR/$run.txt --thread-ids $OUTPUT_DIR/tids-$run.txt
+    if [ -z "$FILTER_THREADS" ]; then
+        python parser/perf_script2csv.py --input $OUTPUT_DIR/$run.txt
+    else
+        python parser/perf_script2csv.py --input $OUTPUT_DIR/$run.txt --thread-ids $OUTPUT_DIR/tids-$run.txt
+    fi
     #$SUDO rm -rf $OUTPUT_DIR/$run.txt
 }
 

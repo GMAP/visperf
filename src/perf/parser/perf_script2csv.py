@@ -15,12 +15,14 @@ parser.add_argument(
     "--thread-ids",
     type=str,
     help="TXT file with thread ids to filter perf captures.",
-    required=True,
+    required=False,
 )
 args = vars(parser.parse_args())
 
 
 def read_thread_ids(tid_file):
+    if not tid_file:
+        return []
     with open(tid_file, "r") as f:
         tids = [x.replace("\n", "") for x in f.readlines()]
         return tids
@@ -29,6 +31,6 @@ def read_thread_ids(tid_file):
 if __name__ == "__main__":
     csv_path = args["input"].replace(".txt", ".csv")
     perf_record.parse_record_dataset(
-        args["input"], csv_path, read_thread_ids(args["thread_ids"])
+        args["input"], csv_path, read_thread_ids(args.get("thread_ids", None))
     )
     print(f"Parsed file {args['input']}.")

@@ -24,7 +24,7 @@ def read_thread_ids(tid_file):
     if not tid_file:
         return []
     with open(tid_file, "r") as f:
-        tids = [x.replace("\n", "") for x in f.readlines()]
+        tids = [int(x) for x in f.readlines()]
         return tids
 
 

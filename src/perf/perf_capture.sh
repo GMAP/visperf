@@ -68,6 +68,9 @@ function perf_data_to_txt() {
 	$SUDO perf script --max-stack $PERF_MAX_STACK --show-info --input \
         $OUTPUT_DIR/$run.data > $OUTPUT_DIR/$run.txt
     $SUDO chown $(whoami):$(whoami) $OUTPUT_DIR/$run.txt $OUTPUT_DIR/$run.data
+    $SUDO rm -rf $OUTPUT_DIR/$run.data
+    python parser/perf_script2csv.py --input $OUTPUT_DIR/$run.txt --thread-ids $OUTPUT_DIR/tids-$run.txt
+    #$SUDO rm -rf $OUTPUT_DIR/$run.txt
 }
 
 JSON="\"$EXPERIMENT_NAME\": {\"title\": \"$EXPERIMENT_NAME\","
@@ -76,7 +79,7 @@ JSON_RUNS='"runs": ['
 # Run experiment.
 for ((run = 1; run <= $RUNS; run++)); do
     perf_capture $run
-    JSON_RUNS+="{\"title\": \"Run $run\", \"path\": \"$(realpath $OUTPUT_DIR/$run.txt)\"},"
+    JSON_RUNS+="{\"title\": \"Run $run\", \"path\": \"$(realpath $OUTPUT_DIR/$run.csv)\"},"
 done
 # Remove last ",".
 JSON_RUNS=${JSON_RUNS::-1}

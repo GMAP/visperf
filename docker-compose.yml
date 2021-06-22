@@ -11,6 +11,7 @@ services:
       - "8880:8880"
     volumes:
       - .:/home
+      - ~/Downloads/logs-os/:/Downloads
       - /tmp/.X11-unix:/tmp/.X11-unix
     working_dir: /home
     environment:

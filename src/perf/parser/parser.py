@@ -22,7 +22,6 @@ parser.add_argument(
     help="JSON file to be used in the web interface.",
     required=True,
 )
-
 args = vars(parser.parse_args())
 
 
@@ -47,10 +46,7 @@ def process_df(df):
     return df
 
 
-def process_run(run_path, data):
-    csv_path = run_path.replace(".txt", ".csv")
-    perf_record.parse_record_dataset(run_path, csv_path)
-
+def process_run(csv_path, data):
     df = pd.read_csv(csv_path)
     df = process_df(df)
 
@@ -225,6 +221,7 @@ if __name__ == "__main__":
         ]
 
         for (k, future) in futures:
+            print(f"Waiting {k}...")
             output["experiments"][k] = future.result()
 
     write_json_file(args["output"], output)

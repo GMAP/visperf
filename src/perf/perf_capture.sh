@@ -12,6 +12,7 @@ function usage() {
     echo "  -r, --runs               Number of times experiment will run."
     echo "  -o, --output             Directory where perf logs will be saved."
     echo "  -c, --command            Command that triggers the experiment."
+    echo "  -t, --filter-threads     Filter perf captures by specific thread ids."
     echo ""
     echo "Example: $0 --name \"Experiment XX\" --runs 5 --output ./output/experiment-xx/ -c \"sleep 10\""
     exit 1
@@ -23,6 +24,7 @@ while [[ "$#" > 0 ]]; do case $1 in
     -r|--runs) RUNS="$2";shift;shift;;
     -o|--output) OUTPUT_DIR="$2";shift;shift;;
     -c|--command) COMMAND="$2";shift;shift;;
+    -t|--filter-threads) FILTER_THREADS="$1";shift;shift;;
     *) usage "Unknown parameter passed: $1"; shift; shift;;
 esac; done
 
@@ -46,18 +48,23 @@ PERF_MAX_STACK=3
 PERF_DELAY_CAPTURE=100
 
 function perf_capture() {
-    run=$1
-    $SUDO perf record --delay $PERF_DELAY_CAPTURE --sample-cpu -g \
+    local run=$1
+    output=$($SUDO perf record --delay $PERF_DELAY_CAPTURE --sample-cpu -g \
         --call-graph dwarf --freq $PERF_CAPTURE_FREQUENCY --period \
         --running-time --all-user --timestamp \
         --output $OUTPUT_DIR/$run.data \
         --event ${PERF_EVENTS} -- \
-        /bin/bash -c "$COMMAND"
+        /bin/bash -c "$COMMAND")
+
+    if ! [ -z "$FILTER_THREADS" ]; then
+        echo $output | sed "s/TID: //" > $OUTPUT_DIR/tids.txt
+    fi
+
     perf_data_to_txt $run
 }
 
 function perf_data_to_txt() {
-    run=$1
+    local run=$1
 	$SUDO perf script --max-stack $PERF_MAX_STACK --show-info --input \
         $OUTPUT_DIR/$run.data > $OUTPUT_DIR/$run.txt
     $SUDO chown $(whoami):$(whoami) $OUTPUT_DIR/$run.txt $OUTPUT_DIR/$run.data

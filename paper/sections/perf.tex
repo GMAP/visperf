@@ -1,8 +1,6 @@
 \section{Perf}
 
-Perf is a profiling tool included in the Linux kernel. It can be user for CPU performance counters, tracepoints, kprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/kprobes.html}}, and uprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/uprobetracer.html}}~\cite{perf_wiki}. Performance counters are hardware registers that count events of the CPU, such as instructions executed and cache-misses. Perf also supports software events, such as page misses. In turn, tracepoints are placed in the source code to collect timestamps and stack traces.
-
-Perf has low overhead, as it is integrated into the kernel. Another main feature is that Perf supports counters in different architectures, which makes Perf a widely used tool.
+Perf is a profiling tool included in the Linux kernel. It can be used to capture CPU performance counters, tracepoints, kprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/kprobes.html}}, and uprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/uprobetracer.html}}~\cite{perf_wiki}. Perf also supports software events, such as page misses. In turn, tracepoints are placed in the source code to collect timestamps and stack traces. Perf has low overhead, as it is integrated into the kernel. Moreover, Perf supports counters in different architectures, which makes Perf a widely used tool.
 
 There are several subcommands available in Perf. Below we list the main subcommands:
 
@@ -15,6 +13,7 @@ There are several subcommands available in Perf. Below we list the main subcomma
 \end{itemize}
 
 Discuss other subcommands.
+Performance counters are hardware registers that count events of the CPU, such as instructions executed and cache-misses.
 
 \subsection{Events}
 

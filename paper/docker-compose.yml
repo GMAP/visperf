@@ -2,8 +2,8 @@ version: "3.3"
 
 services:
   machine:
-    image: claudioscheer/latex-development
-    container_name: visperf-latex
+    image: claudioscheer/latex
+    container_name: visperf-paper
     stdin_open: true
     tty: true
     volumes:

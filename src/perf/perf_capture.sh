@@ -57,7 +57,7 @@ function perf_capture() {
         /bin/bash -c "$COMMAND")
 
     if ! [ -z "$FILTER_THREADS" ]; then
-        echo $output | sed "s/TID: //" > $OUTPUT_DIR/tids.txt
+        echo "$output" | grep "TID: " | sed "s/TID: //" > $OUTPUT_DIR/tids-$run.txt
     fi
 
     perf_data_to_txt $run

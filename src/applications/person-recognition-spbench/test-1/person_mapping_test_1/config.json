@@ -1,0 +1,20 @@
+{
+    "compiler"		:"g++ -std=c++1y",
+    "pkgconfig"		:"pkg-config --cflags --libs opencv",
+    "macros"		:"-DBLOCKING_MODE -DMAPPING_STRING=\\\"0,2,4,6,8,10,1,3,5,7,9,11,12,14,16,18,20,22,13,15,17,19,21,23\\\"",
+    "pre_src_cmd"	:"",
+    "post_src_cmd"	:"",
+    "flags"			:"-O3 -g -fno-omit-frame-pointer",
+    "includes" : {
+		"myINC_1"	:"",
+        "myINC_2"	:"",
+        "myINC_N"	:"",
+        "ff"		:"-I $BENCH_DIR/libs/fastflow/",
+        "opencv"	:"-I $BENCH_DIR/libs/opencv/opencv-2.4.13.6/include/"
+    },
+    "libs" : {
+        "myLIB_1"	:"",
+        "myLIB_2"	:"",
+        "myLIB_N"	:"-lpthread"
+    }
+}

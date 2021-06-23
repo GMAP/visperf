@@ -78,6 +78,8 @@ def process_run(csv_path, data):
         run["functions"]["time_series"][event] = {}
         run["threads"]["time_series"][event] = {}
         for time in df["time_second"].unique().tolist():
+            # TODO: instead of using threads, add the "labels" in the file
+            # tids-x.txt. Threads that are not in this file should be merged.
             functions, threads = perf_record.get_unique_functions_threads(
                 df, event, time
             )

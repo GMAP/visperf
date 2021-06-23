@@ -136,10 +136,8 @@ def parse_stack_line(line):
     return [parse_stack_function(l[1])]
 
 
-def parse_lines(lines, tids):
+def parse_lines(lines):
     l = parse_info_line(lines[0])
-    if len(tids) > 0 and not l[1] in tids:
-        return None
     stack_functions = []
     for i in range(1, len(lines)):
         stack_functions.append(parse_stack_line(lines[i])[0])
@@ -147,7 +145,7 @@ def parse_lines(lines, tids):
     return l
 
 
-def parse_record_dataset(file, csv_output, tids):
+def parse_record_dataset(file, csv_output):
     with open(file, "r") as f:
         with open(csv_output, "w") as csv_file:
             csv_writer = csv.writer(
@@ -157,7 +155,7 @@ def parse_record_dataset(file, csv_output, tids):
             lines = []
             for line in f:
                 if not line.strip():
-                    l = parse_lines(lines, tids)
+                    l = parse_lines(lines)
                     if l:
                         csv_writer.writerow(l)
                     lines = []

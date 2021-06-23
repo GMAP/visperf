@@ -12,7 +12,6 @@ function usage() {
     echo "  -r, --runs               Number of times experiment will run."
     echo "  -o, --output             Directory where perf logs will be saved."
     echo "  -c, --command            Command that triggers the experiment."
-    echo "  -t, --filter-threads     Filter perf captures by specific thread ids."
     echo ""
     echo "Example: $0 --name \"Experiment XX\" --runs 5 --output ./output/experiment-xx/ -c \"sleep 10\""
     exit 1
@@ -24,7 +23,6 @@ while [[ "$#" > 0 ]]; do case $1 in
     -r|--runs) RUNS="$2";shift;shift;;
     -o|--output) OUTPUT_DIR="$2";shift;shift;;
     -c|--command) COMMAND="$2";shift;shift;;
-    -t|--filter-threads) FILTER_THREADS="$1";shift;shift;;
     *) usage "Unknown parameter passed: $1"; shift; shift;;
 esac; done
 
@@ -56,9 +54,7 @@ function perf_capture() {
         --event ${PERF_EVENTS} -- \
         /bin/bash -c "$COMMAND")
 
-    if ! [ -z "$FILTER_THREADS" ]; then
-        echo "$output" | grep "TID: " | sed "s/TID: //" > $OUTPUT_DIR/tids-$run.txt
-    fi
+    echo "$output" | grep "TID: " | sed "s/TID: //" > $OUTPUT_DIR/tids-$run.txt
 
     perf_data_to_txt $run
 }
@@ -69,12 +65,8 @@ function perf_data_to_txt() {
         $OUTPUT_DIR/$run.data > $OUTPUT_DIR/$run.txt
     $SUDO chown $(whoami):$(whoami) $OUTPUT_DIR/$run.txt $OUTPUT_DIR/$run.data
     $SUDO rm -rf $OUTPUT_DIR/$run.data
-    if [ -z "$FILTER_THREADS" ]; then
-        python3 parser/perf_script2csv.py --input $OUTPUT_DIR/$run.txt
-    else
-        python3 parser/perf_script2csv.py --input $OUTPUT_DIR/$run.txt --thread-ids $OUTPUT_DIR/tids-$run.txt
-    fi
-    #$SUDO rm -rf $OUTPUT_DIR/$run.txt
+    python3 parser/perf_script2csv.py --input $OUTPUT_DIR/$run.txt
+    $SUDO rm -rf $OUTPUT_DIR/$run.txt
 }
 
 JSON="\"$EXPERIMENT_NAME\": {\"title\": \"$EXPERIMENT_NAME\","
@@ -83,7 +75,7 @@ JSON_RUNS='"runs": ['
 # Run experiment.
 for ((run = 1; run <= $RUNS; run++)); do
     perf_capture $run
-    JSON_RUNS+="{\"title\": \"Run $run\", \"path\": \"$(realpath $OUTPUT_DIR/$run.csv)\"},"
+    JSON_RUNS+="{\"title\": \"Run $run\", \"path\": \"$(realpath $OUTPUT_DIR/$run.csv)\", \"tids\": \"$(realpath $OUTPUT_DIR/tids-$run.txt)\"},"
 done
 # Remove last ",".
 JSON_RUNS=${JSON_RUNS::-1}

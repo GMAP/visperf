@@ -1,29 +1,19 @@
 \section{Perf}
 
-Perf is a profiling tool included in the Linux kernel. It can be used to capture CPU performance counters, tracepoints, kprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/kprobes.html}}, and uprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/uprobetracer.html}}~\cite{perf_wiki}. Perf also supports software events, such as page misses. In turn, tracepoints are placed in the source code to collect timestamps and stack traces. Perf has low overhead, as it is integrated into the kernel. Moreover, Perf supports counters in different architectures, which makes Perf a widely used tool.
+Perf is a profiling tool included in the Linux kernel. It can be used to capture CPU performance counters, tracepoints, kprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/kprobes.html}}, and uprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/uprobetracer.html}}~\cite{perf_wiki}. Perf also supports software events, such as page misses. In turn, tracepoints are placed in the source code to collect timestamps and stack traces and performance counters are hardware registers that count events of the CPU, such as instructions executed and cache-misses. Perf has low overhead, as it is integrated into the kernel. Moreover, Perf supports counters in different architectures. Therefore, it can be used to profile applications in different Intel architectures or even in AMD CPUs.
 
-There are several subcommands available in Perf. Below we list the main subcommands:
+There are several subcommands available in Perf. Below we describe some of the subcommands:
 
 \begin{itemize}
-	\item \texttt{perf stat}: get event counts;
-	\item \texttt{perf record}: record events for later analysis;
-	\item \texttt{perf report}: report events recorded;
-	\item \texttt{perf top}: see live event count;
-	\item \texttt{perf list}: list available events for current architecture;
+	\item \texttt{perf stat}: gather performance counter statistics from a command;
+    \item \texttt{perf record}: run a command and record its profile for later analysis. By default, profile is saved in a file named \texttt{perf.data};
+    \item \texttt{perf report}: read \texttt{perf.data} and display the profile recorded in this file;
+    \item \texttt{perf script}: read \texttt{perf.data} and display the trace recorded in this file;
+	\item \texttt{perf top}: display performance counter profile in real time;
+	\item \texttt{perf list}: list events available to be captured in the current architecture;
 \end{itemize}
 
-Discuss other subcommands.
-Performance counters are hardware registers that count events of the CPU, such as instructions executed and cache-misses.
-
-\subsection{Events}
-
-\texttt{perf list} shows events from several sources. Hardware events are provided by the processor and its PMUs (Performance Monitoring Unit), which may vary among different companies.
-
-Software event
-
-Hardware cache event
-
-Next, we discuss what each counter used in our experiments captures.
+\texttt{perf list} shows events from several sources, such as hardware and software. Hardware events are provided by the processor and its PMUs (Performance Monitoring Unit), which may vary among different companies. Next, we discuss the counters captured in our experiments~\cite{intel_pmu}.
 
 \begin{itemize}
 	\item \textbf{cpu-cycles}: number of fetch-decode-execute cycles the CPU executed;
@@ -41,4 +31,11 @@ Next, we discuss what each counter used in our experiments captures.
 	\item \textbf{LLC-stores}: number of references store made loading in LLC;
 	\item \textbf{mem-stores}: number of stores made in the main memory;
 	\item \textbf{mem-loads}: number of loads made from the main memory;
+	\item \textbf{branch-misses}: number of mispredicted speculative branches;
+    \item \textbf{branch-instructions}: number of correct speculative branches;
+	\item \textbf{bus-cycles}: number of CPU cycles needed to fetch or write data to the main memory, for example;
 \end{itemize}
+
+For this paper, we profiled the person recognition application. The main goal of this application is to recognize is there is a person in a specific image, using OpenCV. To characterize a stream processing application, it is, we cannot predict when data will stop entering the application, we used a video as input.
+
+Towards exploiting parallelism, we use the FastFlow library and compared two mapping policies. In summary, the mapping policy defines in which core threads launched by the application will be placed. We profiled the person recognition application using the default mapping policy os the Linux operating system and the mapping policy proposed by FastFlow.

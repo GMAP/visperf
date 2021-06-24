@@ -93,6 +93,18 @@ export default function Help() {
                         memory;
                     </p>
                     <p>
+                        <b>branch-misses</b>: number of mispredicted speculative
+                        branches;
+                    </p>
+                    <p>
+                        <b>branch-instructions</b>: number of correct
+                        speculative branches;
+                    </p>
+                    <p>
+                        <b>bus-cycles</b>: number of CPU cycles needed to fetch
+                        or write data to the main memory, for example;
+                    </p>
+                    <p>
                         <b>IPC</b>: number of instructions executed each CPU
                         cycle;
                     </p>

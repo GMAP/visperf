@@ -35,6 +35,18 @@ def read_json_file(file):
         return json.load(f)
 
 
+def read_tids(file):
+    with open(file, mode="r") as f:
+        lines = [x.split(",") for x in f.readlines()]
+    data = {}
+    for x in lines:
+        if x[0] in data:
+            data[x[0]].append(int(x[1]))
+        else:
+            data[x[0]] = [int(x[1])]
+    return data, [int(x[1]) for x in lines]
+
+
 def process_df(df):
     df["time"] = df["time"] - df["time"].min()
     df["time_second"] = df["time"].apply(lambda x: int(x))
@@ -46,9 +58,10 @@ def process_df(df):
     return df
 
 
-def process_run(csv_path, data):
+def process_run(csv_path, tids_path, data):
     df = pd.read_csv(csv_path)
     df = process_df(df)
+    tids_data, tids = read_tids(tids_path)
 
     run = {}
     run["time_series"] = {}
@@ -58,9 +71,11 @@ def process_run(csv_path, data):
     run["threads"] = {"time_series": {}}
 
     for event in data["events_captured"]:
+        # Event time series.
         times, captures = perf_record.get_event_data(df, data["cpu_setup"], event)
         run["time_series"][event] = {"times": times, "captures": captures}
 
+        # Event data per CPU.
         df_aggr = df[(df["event"] == event)].groupby(["cpu"], as_index=False)["counter"]
         a = perf_record.transform_cpu_data(df_aggr.mean(), data["cpu_setup"])
         a_sum = np.sum(a)
@@ -71,6 +86,9 @@ def process_run(csv_path, data):
             else ((np.array(a) / a_sum) * 100).tolist(),
         }
 
+        # Get all threads and functions to filter.
+        # TODO: pass tids as parameter and create new filters based in the
+        # labeled threads.
         run["search_function_threads"][
             event
         ] = perf_record.get_search_functions_threads(df, event)
@@ -78,14 +96,13 @@ def process_run(csv_path, data):
         run["functions"]["time_series"][event] = {}
         run["threads"]["time_series"][event] = {}
         for time in df["time_second"].unique().tolist():
-            # TODO: instead of using threads, add the "labels" in the file
-            # tids-x.txt. Threads that are not in this file should be merged.
             functions, threads = perf_record.get_unique_functions_threads(
                 df, event, time
             )
             run["functions"]["time_series"][event][time] = functions
             run["threads"]["time_series"][event][time] = threads
 
+    # Calculate general metrics.
     df_cpu = (
         df[
             (
@@ -188,7 +205,7 @@ def process_experiment(experiment, data):
     runs = copy.deepcopy(experiment["runs"])
     experiment["runs"] = {}
     for run in runs:
-        experiment["runs"][run["title"]] = process_run(run["path"], data)
+        experiment["runs"][run["title"]] = process_run(run["path"], run["tids"], data)
     return experiment["runs"]
 
 

@@ -166,5 +166,10 @@ void decompress(){
 
 int main (int argc, char* argv[]){
 	bzip2_main(argc, argv);
+
+    for (vector<string>::iterator it = tids.begin(); it != tids.end(); it++) {
+        cout << *it << endl;
+    }
+
 	return 0;
 }

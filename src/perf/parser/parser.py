@@ -44,10 +44,17 @@ def read_tids(file):
             data[x[0]].append(int(x[1]))
         else:
             data[x[0]] = [int(x[1])]
-    return data, [int(x[1]) for x in lines]
+    return data
 
 
-def process_df(df):
+def replace_tid(tid, tids_data):
+    for k, v in tids_data.items():
+        if tid in v:
+            return k
+    return "Other threads"
+
+
+def process_df(df, tids_data):
     df["time"] = df["time"] - df["time"].min()
     df["time_second"] = df["time"].apply(lambda x: int(x))
     df = (
@@ -55,13 +62,14 @@ def process_df(df):
         .agg({"counter": "sum", "time": "mean", "stack": perf_record.agg_stack})
         .reset_index()
     )
+    df["tid"] = df["tid"].apply(lambda x: replace_tid(x, tids_data))
     return df
 
 
 def process_run(csv_path, tids_path, data):
     df = pd.read_csv(csv_path)
-    df = process_df(df)
-    tids_data, tids = read_tids(tids_path)
+    tids_data = read_tids(tids_path)
+    df = process_df(df, tids_data)
 
     run = {}
     run["time_series"] = {}

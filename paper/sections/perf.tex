@@ -1,6 +1,6 @@
 \section{Perf}
 
-Perf is a profiling tool included in the Linux kernel. It can be used to capture CPU performance counters, tracepoints, kprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/kprobes.html}}, and uprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/uprobetracer.html}}~\cite{perf_wiki}. Perf also supports software events, such as page misses. In turn, tracepoints are placed in the source code to collect timestamps and stack traces and performance counters are hardware registers that count events of the CPU, such as instructions executed and cache-misses. Perf has low overhead, as it is integrated into the kernel. Moreover, Perf supports counters in different architectures. Therefore, it can be used to profile applications in different Intel architectures or even in AMD CPUs.
+Perf is a profiling tool included in the Linux kernel. It can be used to capture CPU performance counters, tracepoints, kprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/kprobes.html}}, and uprobes\footnote{\url{https://www.kernel.org/doc/html/latest/trace/uprobetracer.html}}~\cite{perf_wiki}. Perf also supports software events, such as page faults\footnote{Page faults occur when virtual memory is not mapped to physical memory. One of the reasons for this is when data must be `swapped'.}. In turn, tracepoints are placed in the source code to collect timestamps and stack traces, and performance counters are hardware registers that count events of the CPU, such as instructions executed and cache misses. Perf has low overhead, as it is integrated into the kernel. Moreover, Perf supports counters in different architectures. Therefore, it can be used to profile applications in different Intel architectures or even in AMD CPUs.
 
 There are several subcommands available in Perf. Below we describe some of the subcommands:
 
@@ -13,7 +13,7 @@ There are several subcommands available in Perf. Below we describe some of the s
 	\item \texttt{perf list}: list events available to be captured in the current architecture;
 \end{itemize}
 
-\texttt{perf list} shows events from several sources, such as hardware and software. Hardware events are provided by the processor and its PMUs (Performance Monitoring Unit), which may vary among different companies. Next, we discuss the counters captured in our experiments~\cite{intel_pmu}.
+\texttt{perf list} shows events from several sources, such as hardware and software. Hardware events are provided by the processor and its PMUs (Performance Monitoring Unit), which may vary among different CPU providers. It is important to note that our experiments were executed on a Intel Xeon architecture. Next, we discuss the counters captured in our experiments~\cite{intel_pmu}.
 
 \begin{itemize}
 	\item \textbf{cpu-cycles}: number of fetch-decode-execute cycles the CPU executed;
@@ -36,6 +36,6 @@ There are several subcommands available in Perf. Below we describe some of the s
 	\item \textbf{bus-cycles}: number of CPU cycles needed to fetch or write data to the main memory, for example;
 \end{itemize}
 
-For this paper, we profiled the person recognition application. The main goal of this application is to recognize is there is a person in a specific image, using OpenCV. To characterize a stream processing application, it is, we cannot predict when data will stop entering the application, we used a video as input.
+For this paper, we profiled the person recognition application. The main goal of this application is to recognize whether there is a person in a specific image using OpenCV\footnote{\url{https://opencv.org}}. To characterize a stream processing application, this is, it is impossible to predict when data will stop entering the application, we used a video as input.
 
-Towards exploiting parallelism, we use the FastFlow library and compared two mapping policies. In summary, the mapping policy defines in which core threads launched by the application will be placed. We profiled the person recognition application using the default mapping policy os the Linux operating system and the mapping policy proposed by FastFlow.
+Towards exploiting parallelism, we use the FastFlow\footnote{\url{https://github.com/fastflow/fastflow}} library and compared two mapping policies. In summary, the mapping policy defines in which core threads launched by the application will be placed. Therefore, we profiled the person recognition application using the default mapping policy of the Linux operating system and the mapping policy proposed by FastFlow.

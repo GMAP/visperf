@@ -95,7 +95,8 @@ export default function AreaPlot({
                 .append('path')
                 .data(dataPlot)
                 .attr('class', 'area-path')
-                .attr('fill', '#bf360c81')
+                .attr('fill', '#bf360c')
+                .attr('fill-opacity', 0.5)
                 .attr('stroke', '#bf360c')
                 .attr('stroke-width', 1.5)
                 .attr(

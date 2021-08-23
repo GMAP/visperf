@@ -35,9 +35,10 @@ export default function ParallelCoordinatePlot({
     data = data.filter((_, i) => i < numberCpus);
 
     dimensions.forEach((d, i) => {
+        const minMax = d3.extent(data, (d) => d[i]);
         d['scale'] = d3
             .scaleLinear()
-            .domain(d3.extent(data, (d) => d[i]))
+            .domain([Math.min(0, minMax[0]), minMax[1]])
             .range(d.reverseScale ? [0, height] : [height, 0]);
     });
 
@@ -88,15 +89,18 @@ export default function ParallelCoordinatePlot({
                 .attr('transform', (d) => 'translate(' + x(d.name) + ')')
                 .each(function (d) {
                     d3.select(this).call(
-                        d3.axisLeft(d.scale).tickFormat((i) => {
-                            if (d.hideLabels) {
-                                return;
-                            }
-                            if (d.labels) {
-                                return d.labels[i];
-                            }
-                            return millify(i, { precision: 2 });
-                        }),
+                        d3
+                            .axisLeft(d.scale)
+                            .ticks(d.ticks)
+                            .tickFormat((i) => {
+                                if (d.hideLabels) {
+                                    return;
+                                }
+                                if (d.labels) {
+                                    return d.labels[i];
+                                }
+                                return millify(i, { precision: 2 });
+                            }),
                     );
                 })
                 .attr('y', height + 30);

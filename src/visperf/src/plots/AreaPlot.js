@@ -37,7 +37,7 @@ export default function AreaPlot({
         const y = d3
             .scaleLinear()
             .range([height, 0])
-            .domain([Math.min(...yData), Math.max(...yData)]);
+            .domain([0, Math.max(...yData)]);
 
         if (svg.current) {
             svg.current

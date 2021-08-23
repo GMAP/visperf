@@ -16,6 +16,10 @@ const useStyles = makeStyles((theme) => ({
     spanInfo: {
         paddingLeft: theme.spacing(1),
     },
+    loadDemo: {
+        marginLeft: theme.spacing(1),
+        float: 'right',
+    },
 }));
 
 export default function UploadData(props) {
@@ -42,6 +46,14 @@ export default function UploadData(props) {
                     File {dataFile.name} uploaded.
                 </span>
             )}
+            <Button
+                variant="contained"
+                color="primary"
+                className={classes.loadDemo}
+                onClick={() => props.onLoadDemo()}
+            >
+                Load demo
+            </Button>
         </Paper>
     );
 }

@@ -49,6 +49,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+async function loadDemoData() {
+    const request = await fetch(
+        'https://gmap.pucrs.br/public_data/visperf/demo.json',
+    );
+    return request.json();
+}
+
 export default function App() {
     const classes = useStyles();
     const [showHelp, setShowHelp] = useState(false);
@@ -63,6 +70,13 @@ export default function App() {
         const fileContent = await readJsonFile(file);
         setJsonDataFile(fileContent);
 
+        setReadingFile(false);
+    }
+
+    async function loadDemo() {
+        setReadingFile(true);
+        const jsonData = await loadDemoData();
+        setJsonDataFile(jsonData);
         setReadingFile(false);
     }
 
@@ -108,6 +122,7 @@ export default function App() {
                         <UploadData
                             dataFile={dataFile}
                             setDataFile={(file) => readFile(file)}
+                            onLoadDemo={() => loadDemo()}
                         />
                         {dataFile && readingFile && (
                             <div className={classes.readingFile}>

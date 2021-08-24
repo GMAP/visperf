@@ -41,7 +41,7 @@ export default function UploadData(props) {
                     Upload file
                 </Button>
             </label>
-            {dataFile && (
+            {dataFile && dataFile !== 'demo' && (
                 <span className={classes.spanInfo}>
                     File {dataFile.name} uploaded.
                 </span>

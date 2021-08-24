@@ -50,9 +50,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 async function loadDemoData() {
-    const request = await fetch(
-        'https://gmap.pucrs.br/public_data/visperf/demo.json',
-    );
+    const request = await fetch('/visperf/demo.json');
     return request.json();
 }
 
@@ -74,6 +72,7 @@ export default function App() {
     }
 
     async function loadDemo() {
+        setDataFile('demo');
         setReadingFile(true);
         const jsonData = await loadDemoData();
         setJsonDataFile(jsonData);

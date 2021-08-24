@@ -82,6 +82,7 @@ export default function CpuPlot({
         { p: 1, anchor: 'end' },
     ],
     legendLabels = ['max', 'min'],
+    additionalLegendLabels = ['', ''],
     legendInvert = true,
 }) {
     const [gradientId] = useState(_uniqueId('gradient-legend'));
@@ -138,8 +139,11 @@ export default function CpuPlot({
                 : [legendPoints[0], legendPoints[legendPoints.length - 1]],
         );
 
-    const hideItem = (x, y) => {
+    const hideItem = (x, y, display = false) => {
         const cpuNumber = cpuIDs[x][y];
+        if (display) {
+            return cpuNumber >= numberCpus ? 'none' : 'block';
+        }
         return cpuNumber >= numberCpus ? 'hidden' : 'visible';
     };
 
@@ -171,6 +175,7 @@ export default function CpuPlot({
                 .attr('x', (_, i) => x(i))
                 .attr('y', (d, _) => y(d.row))
                 .style('visibility', (d, i) => hideItem(d.row, i))
+                .style('display', (d, i) => hideItem(d.row, i, true))
                 .style('fill', (d) => {
                     if (d.value === 0) {
                         return '#eee';
@@ -217,6 +222,7 @@ export default function CpuPlot({
                 .style('stroke', 'black')
                 .style('stroke-width', 2)
                 .style('visibility', (d, i) => hideItem(d.row, i))
+                .style('display', (d, i) => hideItem(d.row, i, true))
                 .style('fill', (d) => {
                     if (d.value === 0) {
                         return '#eee';
@@ -236,6 +242,7 @@ export default function CpuPlot({
                 .attr('class', 'label')
                 .style('text-anchor', 'middle')
                 .style('visibility', (d, i) => hideItem(d.row, i))
+                .style('display', (d, i) => hideItem(d.row, i, true))
                 .attr('font-weight', 400)
                 .attr('font-size', fontSize)
                 .attr('x', (_, i) => x(i) + squareSize / 2)
@@ -311,11 +318,17 @@ export default function CpuPlot({
                 )
                 .text(() => {
                     if (legendLabels[i] === 'max') {
-                        return millify(maxValue, { precision: 2 });
+                        return (
+                            millify(maxValue, { precision: 2 }) +
+                            additionalLegendLabels[i]
+                        );
                     } else if (legendLabels[i] === 'min') {
-                        return millify(minValue, { precision: 2 });
+                        return (
+                            millify(minValue, { precision: 2 }) +
+                            additionalLegendLabels[i]
+                        );
                     }
-                    return legendLabels[i];
+                    return legendLabels[i] + additionalLegendLabels[i];
                 });
         }
     }, [sliderValue, dataPlot]); // eslint-disable-line react-hooks/exhaustive-deps

@@ -247,6 +247,7 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 fontSize=".9em"
                                 timeSeries={false}
                                 title="Experiment 1"
+                                additionalLegendLabels={[' %', '']}
                                 cpuLabels={dataFile['cpu_labels']}
                                 numberCpus={dataFile['cpus']}
                                 cpuIDs={dataFile['cpu_labels'].map((x) =>
@@ -268,6 +269,7 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 timeSeries={false}
                                 fontSize=".9em"
                                 title="Experiment 2"
+                                additionalLegendLabels={[' %', '']}
                                 cpuLabels={dataFile['cpu_labels']}
                                 cpuIDs={dataFile['cpu_labels'].map((x) =>
                                     x.map((y) => +y.replace('CPU', '')),
@@ -296,6 +298,7 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                     { p: 1, anchor: 'end' },
                                 ]}
                                 legendLabels={['max', '0', 'min']}
+                                additionalLegendLabels={[' %', '', ' %']}
                                 legendInvert={true}
                                 timeSeries={false}
                                 title="Difference"

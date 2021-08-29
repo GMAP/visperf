@@ -34,7 +34,7 @@ export default function ComparisonContainer({
                     container
                     spacing={6}
                     alignItems="center"
-                    justify="center"
+                    justifyContent="center"
                 >
                     {setComparisonEvent && (
                         <Grid item>

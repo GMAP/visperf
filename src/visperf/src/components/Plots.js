@@ -284,29 +284,6 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 }
                             />
                         </Grid>
-                        <Grid item xs={12}>
-                            <CpuPlot
-                                cpuIDs={dataFile['cpu_labels'].map((x) =>
-                                    x.map((y) => +y.replace('CPU', '')),
-                                )}
-                                margin={5}
-                                d3ColorScale="interpolateRdBu"
-                                legendPoints={[0, 50, 100]}
-                                legendPositions={[
-                                    { p: 0, anchor: 'start' },
-                                    { p: 0.5, anchor: 'middle' },
-                                    { p: 1, anchor: 'end' },
-                                ]}
-                                legendLabels={['max', '0', 'min']}
-                                additionalLegendLabels={[' %', '', ' %']}
-                                legendInvert={true}
-                                timeSeries={false}
-                                title="Difference"
-                                cpuLabels={dataFile['cpu_labels']}
-                                numberCpus={dataFile['cpus']}
-                                data={comparison['mean_relative']}
-                            />
-                        </Grid>
                     </Grid>
                 ) : (
                     <Grid container>
@@ -577,7 +554,7 @@ export default function Plots({ dataFile }) {
                 <Grid
                     container
                     alignItems="center"
-                    justify="center"
+                    justifyContent="center"
                     spacing={3}
                 >
                     <Grid item xs={12} style={{ paddingBottom: 0 }}>

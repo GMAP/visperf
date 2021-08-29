@@ -8,7 +8,7 @@ import Container from '@material-ui/core/Container';
 import Tooltip from '@material-ui/core/Tooltip';
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import orange from '@material-ui/core/colors/orange';
 import deepOrange from '@material-ui/core/colors/deepOrange';
 import HelpIcon from '@material-ui/icons/Help';
@@ -18,7 +18,7 @@ import { UploadData, Plots, Help } from './components';
 import { readJsonFile } from './utils';
 import logo from './icon-white.png';
 
-const theme = createMuiTheme({
+const theme = createTheme({
     palette: {
         primary: {
             main: orange[900],

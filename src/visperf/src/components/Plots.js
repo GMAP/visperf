@@ -179,6 +179,7 @@ function loadMetricComparisonPlot(
     yLabel,
     cpus,
     cpuIDs,
+    cpuLabels,
 ) {
     if (metricVisualization === 'area') {
         return (
@@ -203,9 +204,8 @@ function loadMetricComparisonPlot(
                 fontSize=".9em"
                 timeSeries={false}
                 cpuIDs={cpuIDs}
-                cpuLabels={data['cpu'].map((x) =>
-                    x.map((y) => Math.round((y + Number.EPSILON) * 100) / 100),
-                )}
+                showValues={true}
+                cpuLabels={cpuLabels}
                 numberCpus={cpus}
                 data={data['cpu']}
             />
@@ -247,8 +247,11 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 fontSize=".9em"
                                 timeSeries={false}
                                 title="Experiment 1"
-                                additionalLegendLabels={[' %', '']}
+                                additionalLegendLabels={['%', '']}
                                 cpuLabels={dataFile['cpu_labels']}
+                                showValues={true}
+                                valuesAdditionalText="%"
+                                fontSizeAdditionalValues=".9em"
                                 numberCpus={dataFile['cpus']}
                                 cpuIDs={dataFile['cpu_labels'].map((x) =>
                                     x.map((y) => +y.replace('CPU', '')),
@@ -269,8 +272,11 @@ function FirstSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                 timeSeries={false}
                                 fontSize=".9em"
                                 title="Experiment 2"
-                                additionalLegendLabels={[' %', '']}
+                                additionalLegendLabels={['%', '']}
                                 cpuLabels={dataFile['cpu_labels']}
+                                showValues={true}
+                                valuesAdditionalText="%"
+                                fontSizeAdditionalValues=".9em"
                                 cpuIDs={dataFile['cpu_labels'].map((x) =>
                                     x.map((y) => +y.replace('CPU', '')),
                                 )}
@@ -500,6 +506,7 @@ function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                     dataFile['cpu_labels'].map((x) =>
                                         x.map((y) => +y.replace('CPU', '')),
                                     ),
+                                    dataFile['cpu_labels'],
                                 )}
                             </Grid>,
                             <Grid key={1} item sm={true}>
@@ -514,6 +521,7 @@ function ThirdSectionPlots({ dataFile, classes, experiment1, experiment2 }) {
                                     dataFile['cpu_labels'].map((x) =>
                                         x.map((y) => +y.replace('CPU', '')),
                                     ),
+                                    dataFile['cpu_labels'],
                                 )}
                             </Grid>,
                         ]

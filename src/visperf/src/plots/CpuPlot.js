@@ -84,6 +84,9 @@ export default function CpuPlot({
     legendLabels = ['max', 'min'],
     additionalLegendLabels = ['', ''],
     legendInvert = true,
+    showValues = false,
+    valuesAdditionalText = '',
+    fontSizeAdditionalValues = '.9em',
 }) {
     const [gradientId] = useState(_uniqueId('gradient-legend'));
     const classes = useStyles();
@@ -162,6 +165,8 @@ export default function CpuPlot({
 
         if (svg.current) {
             svg.current.selectAll('.label-legend').remove();
+            svg.current.selectAll('.label').remove();
+
             const row = svg.current.selectAll('.row').data(dataPlot);
             row.selectAll('.cell')
                 .data((d, i) =>
@@ -182,6 +187,50 @@ export default function CpuPlot({
                     }
                     return colorScale(d.value);
                 });
+
+            const items = row
+                .selectAll('.label')
+                .data((d, i) =>
+                    d.map((a) => ({
+                        value: a,
+                        row: i,
+                    })),
+                )
+                .enter()
+                .append('text')
+                .attr('class', 'label')
+                .style('text-anchor', 'middle')
+                .style('visibility', (d, i) => hideItem(d.row, i))
+                .style('display', (d, i) => hideItem(d.row, i, true))
+                .attr('font-weight', 400)
+                .attr('font-size', fontSize)
+                .attr('x', (_, i) => x(i) + squareSize / 2)
+                .attr('y', (d) => y(d.row) + squareSize / 2);
+
+            items
+                .append('svg:tspan')
+                .attr('x', (_, i) => x(i) + squareSize / 2)
+                .attr('y', (d) => y(d.row) + squareSize / 2)
+                .text((d, i) => {
+                    return cpuLabels[d.row][i];
+                });
+
+            if (showValues) {
+                items
+                    .append('svg:tspan')
+                    .attr('x', (_, i) => x(i) + squareSize / 2)
+                    .attr(
+                        'y',
+                        (d) => y(d.row) + squareSize / 2 + squareSize / 3,
+                    )
+                    .attr('font-size', fontSizeAdditionalValues)
+                    .text((d, i) => {
+                        return (
+                            millify(dataPlot[d.row][i], { precision: 2 }) +
+                            valuesAdditionalText
+                        );
+                    });
+            }
         } else {
             svg.current = d3
                 .select(plotRef.current)
@@ -230,7 +279,8 @@ export default function CpuPlot({
                     return colorScale(d.value);
                 });
 
-            row.selectAll('.label')
+            const items = row
+                .selectAll('.label')
                 .data((d, i) =>
                     d.map((a) => ({
                         value: a,
@@ -246,8 +296,32 @@ export default function CpuPlot({
                 .attr('font-weight', 400)
                 .attr('font-size', fontSize)
                 .attr('x', (_, i) => x(i) + squareSize / 2)
+                .attr('y', (d) => y(d.row) + squareSize / 2);
+
+            items
+                .append('svg:tspan')
+                .attr('x', (_, i) => x(i) + squareSize / 2)
                 .attr('y', (d) => y(d.row) + squareSize / 2)
-                .text((d, i) => cpuLabels[d.row][i]);
+                .text((d, i) => {
+                    return cpuLabels[d.row][i];
+                });
+
+            if (showValues) {
+                items
+                    .append('svg:tspan')
+                    .attr('x', (_, i) => x(i) + squareSize / 2)
+                    .attr(
+                        'y',
+                        (d) => y(d.row) + squareSize / 2 + squareSize / 3,
+                    )
+                    .attr('font-size', '.8em')
+                    .text((d, i) => {
+                        return (
+                            millify(dataPlot[d.row][i], { precision: 2 }) +
+                            valuesAdditionalText
+                        );
+                    });
+            }
 
             const linearGradient = svg.current
                 .append('defs')
@@ -278,7 +352,7 @@ export default function CpuPlot({
 
             svg.current
                 .append('text')
-                .attr('class', 'label')
+                .attr('class', 'label-legend-min-max')
                 .style('text-anchor', 'middle')
                 .attr('font-weight', 400)
                 .attr('font-size', 10)
@@ -291,7 +365,7 @@ export default function CpuPlot({
 
             svg.current
                 .append('text')
-                .attr('class', 'label')
+                .attr('class', 'label-legend-min-max')
                 .style('text-anchor', 'middle')
                 .attr('font-weight', 400)
                 .attr('font-size', 10)

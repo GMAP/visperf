@@ -6,7 +6,7 @@ VisPerf is a [tool-chain](src/tool-chain) and an [interactive visualization dash
 
 ## Live Demo
 
-We have a live demo running at [https://gmap.pucrs.br/visperf](https://gmap.pucrs.br/visperf).
+We have a live demo running at [https://gmap.pucrs.br/visperf](https://gmap.pucrs.br/visperf). Just access the website and click on the "LOAD DEMO" button.
 
 ## How to use?
 
@@ -19,3 +19,7 @@ You can read the tool-chain documentation [here](src/tool-chain).
 ### Interactive Visualization Dashboard
 
 You can read the documentation about the interactive dashboard [here](src/tool-chain).
+
+## About Privacy
+
+We do not upload data from your experiments to our server. All processing is done in the browser side.

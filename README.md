@@ -22,4 +22,4 @@ You can read the documentation about the interactive dashboard [here](src/tool-c
 
 ## About Privacy
 
-We do not upload data from your experiments to our server. All processing is done in the browser side.
+We do not upload data from your experiments to our server. All processing required is done in the browser side.

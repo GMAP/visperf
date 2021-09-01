@@ -15,12 +15,12 @@ if [ "$session_exists" = "" ]; then
     tmux select-pane -t 0
 
     tmux new-window -t $session:1 -n "vis"
-    tmux send-keys -t "vis" "cd src/visperf" C-m "vim -c 'Lex'" C-m
+    tmux send-keys -t "vis" "cd src/visperf-dashboard" C-m "vim -c 'Lex'" C-m
     tmux split-window -v -p 25
-    tmux send-keys -t 1 "cd src/visperf" C-m
+    tmux send-keys -t 1 "cd src/visperf-dashboard" C-m
     tmux select-pane -t 1
     tmux split-window -h -p 50
-    tmux send-keys -t 2 "cd src/visperf" C-m
+    tmux send-keys -t 2 "cd src/visperf-dashboard" C-m
     tmux select-pane -t 0
 fi
 

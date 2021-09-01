@@ -7,12 +7,12 @@ function usage() {
     if [ -n "$1" ]; then
         echo -e "${RED}$1${CLEAR}\n";
     fi
-    echo "Usage: $0 [-n experiment-name] [-r runs] [-o output-directory] [-c command]"
+    echo "Usage: $0 [-n experiment-name] [-r runs] [-f frequency] [-o output-directory] [-c command]"
     echo "  -n, --name               Experiment name."
     echo "  -r, --runs               Number of times experiment will run."
+    echo "  -f, --frequency          Number of samples to capture per second. Default: 997 samples/second."
     echo "  -o, --output             Directory where perf logs will be saved."
     echo "  -c, --command            Command that triggers the experiment."
-    echo "  -f, --frequency          Number of samples to capture per second. Default: 997 samples/second."
     echo ""
     echo "Example: $0 --name \"Experiment XX\" --runs 5 --frequency 997 --output ./output/experiment-xx/ -c \"sleep 10\""
     exit 1
@@ -22,9 +22,9 @@ function usage() {
 while [[ "$#" > 0 ]]; do case $1 in
     -n|--name) EXPERIMENT_NAME="$2"; shift;shift;;
     -r|--runs) RUNS="$2";shift;shift;;
+    -f|--frequency) FREQUENCY="$2";shift;shift;;
     -o|--output) OUTPUT_DIR="$2";shift;shift;;
     -c|--command) COMMAND="$2";shift;shift;;
-    -f|--frequency) FREQUENCY="$2";shift;shift;;
     *) usage "Unknown parameter passed: $1"; shift; shift;;
 esac; done
 

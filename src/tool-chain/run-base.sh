@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Number of CPUs to show on each row of the heatmap.
 CPUS_PER_ROW=6
 
 #############################################################
@@ -41,13 +42,15 @@ JSON_EVENTS_CAPTURED+="]"
 ###########################################################
 
 
-OUTPUT_CONFIG_LOCATION=./config.json
-OUTPUT_EXPERIMENTS_PARSED_LOCATION=./experiments.json
-
-
 ####################################
 ##### BEGIN - SETUP EXPERIMENT #####
 ####################################
+
+# Where to save the config file with the experiments executed.
+OUTPUT_CONFIG_LOCATION=./config.json
+# Where to save the JSON file that will be later uploaded on VisPerf visualization dashboard.
+OUTPUT_EXPERIMENTS_PARSED_LOCATION=./experiments.json
+
 CURRENT_DIR=$(pwd)
 
 # Here you can navigate to the folder you want.
@@ -65,11 +68,11 @@ cd $CURRENT_DIR
 # Put here all the output directories of your experiments.
 EXPERIMENTS_OUTPUT=()
 
-#./perf_capture.sh --name "Experiment 1" --runs 3 --output ./data/experiment-1 --command "sleep 5"
-#EXPERIMENTS_OUTPUT+=(./data/experiment-1)
+./perf-capture.sh --name "Experiment 1" --runs 3 --output ./data/experiment-1 --command "sleep 5"
+EXPERIMENTS_OUTPUT+=(./data/experiment-1)
 
-#./perf_capture.sh --name "Experiment 2" --runs 3 --output ./data/experiment-2 --command "sleep 5"
-#EXPERIMENTS_OUTPUT+=(./data/experiment-2)
+./perf-capture.sh --name "Experiment 2" --runs 3 --output ./data/experiment-2 --command "sleep 5"
+EXPERIMENTS_OUTPUT+=(./data/experiment-2)
 
 ################################
 ##### END - RUN EXPERIMENT #####
@@ -94,5 +97,5 @@ echo "{$JSON_CPUS,$JSON_CPU_SETUP,$JSON_EVENTS_CAPTURED,$JSON_EXPERIMENTS_OUTPUT
 ###########################################################
 
 
-# Comment this line to avoid parsing perf output.
+# Comment this line to avoid parsing CSV files and creating the JSON file for the VisPerf visualization dashboard. If you run many experiments, you may want, for example, to select only a few to add to the visualization.
 python3 parser/parser.py --input $OUTPUT_CONFIG_LOCATION --output $OUTPUT_EXPERIMENTS_PARSED_LOCATION

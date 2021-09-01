@@ -1,5 +1,3 @@
-# VisPerf
-
 <p align="center">
     <img src="resources/icon-orange-no-background.png" width="100" align="center" />
 </p>

@@ -12,8 +12,9 @@ function usage() {
     echo "  -r, --runs               Number of times experiment will run."
     echo "  -o, --output             Directory where perf logs will be saved."
     echo "  -c, --command            Command that triggers the experiment."
+    echo "  -f, --frequency          Number of samples to capture per second. Default: 997 samples/second."
     echo ""
-    echo "Example: $0 --name \"Experiment XX\" --runs 5 --output ./output/experiment-xx/ -c \"sleep 10\""
+    echo "Example: $0 --name \"Experiment XX\" --runs 5 --frequency 997 --output ./output/experiment-xx/ -c \"sleep 10\""
     exit 1
 }
 
@@ -23,14 +24,18 @@ while [[ "$#" > 0 ]]; do case $1 in
     -r|--runs) RUNS="$2";shift;shift;;
     -o|--output) OUTPUT_DIR="$2";shift;shift;;
     -c|--command) COMMAND="$2";shift;shift;;
+    -f|--frequency) FREQUENCY="$2";shift;shift;;
     *) usage "Unknown parameter passed: $1"; shift; shift;;
 esac; done
 
-# Verify required params.
+# Check required params.
 if [ -z "$EXPERIMENT_NAME" ]; then usage "Experiment name not set."; fi;
 if [ -z "$RUNS" ]; then usage "Number of time experiment will run not set."; fi;
 if [ -z "$OUTPUT_DIR" ]; then usage "Output directory not set."; fi;
 if [ -z "$COMMAND" ]; then usage "Experiment command not set."; fi;
+if [ -z "$FREQUENCY" ]; then
+    FREQUENCY=997
+fi
 
 # Setup system.
 SUDO="sudo"
@@ -54,6 +59,7 @@ function perf_capture() {
         --event ${PERF_EVENTS} -- \
         /bin/bash -c "$COMMAND")
 
+    echo "$output" > $OUTPUT_DIR/raw-log-$run.txt
     echo "$output" | grep "TID: " | sed "s/TID: //" > $OUTPUT_DIR/tids-$run.txt
 
     perf_data_to_txt $run
@@ -72,7 +78,7 @@ function perf_data_to_txt() {
 JSON="\"$EXPERIMENT_NAME\": {\"title\": \"$EXPERIMENT_NAME\","
 
 JSON_RUNS='"runs": ['
-# Run experiment.
+# Run experiments.
 for ((run = 1; run <= $RUNS; run++)); do
     perf_capture $run
     JSON_RUNS+="{\"title\": \"Run $run\", \"path\": \"$(realpath $OUTPUT_DIR/$run.csv)\", \"tids\": \"$(realpath $OUTPUT_DIR/tids-$run.txt)\"},"

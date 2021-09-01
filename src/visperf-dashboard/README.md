@@ -1,12 +1,22 @@
-## How to use
+## Technologies
 
-TODO
+We used [D3.js](https://d3js.org) to create the visualizations and [React](https://reactjs.org) to manipulate the interfaces/components.
 
-## Development documentation
+## Project Documentation
+
+Next, we document the project structure.
+
+-   [src](src): contains the source code;
+-   [src/index.js](src/index.js): entry point of the dashboard;
+-   [src/components](src/components): commons components;
+-   [src/plots](src/plots): plots used in the visualizations;
+-   [src/utils](src/utils): helper functions;
+
+## Development Documentation
 
 Here is how you can customize this application and build it.
 
-#### Available Scripts
+### Start the visualization dashboard
 
 In the project directory, you can run:
 
@@ -14,21 +24,17 @@ In the project directory, you can run:
 yarn start
 ```
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This command runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits. You will also see any lint errors in the console.
 
-```
-yarn test
-```
-
-Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Build the visualization dashboard
 
 ```
 yarn build
 ```
 
-Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+This command builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes. Your app is ready to be deployed!
 

@@ -8,6 +8,10 @@ VisPerf is a [tool-chain](src/tool-chain) and an [interactive visualization dash
 
 We have a live demo running at [https://gmap.pucrs.br/visperf](https://gmap.pucrs.br/visperf). Just access the website and click on the "LOAD DEMO" button.
 
+## How to Cite
+
+Scheer, C.;Hoffmann, R. B.; Griebler, D.; Manssour, I. H.. **Performance Data Visualization of Linux Events on Multicores**. *Simpósio em Sistemas Computacionais de Alto Desempenho (WSCAD)*, 2021.[[PDF]](	https://doi.org/10.5753/wscad.2021.18516 )
+
 ## How to use?
 
 If you are interest in using VisPerf, first check out the documentation on using the tool-chain to capture and process Perf data. Afterwards, access the interactive visualization dashboard available at [https://gmap.pucrs.br/visperf](https://gmap.pucrs.br/visperf).
